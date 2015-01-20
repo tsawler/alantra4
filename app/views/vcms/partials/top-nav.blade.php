@@ -6,6 +6,8 @@
 
             <div class="pull-right fsize13 margin-top10 hide_mobile">
 
+
+
                 <!-- mail , phone -->
                 <a href="mailto:info@alantraleasing.com">info@alantraleasing.com</a> &bull; 800-456-1800
 
@@ -13,6 +15,8 @@
                     <a href="#" class="social fa fa-twitter"></a>
                     <a href="#" class="social fa fa-linkedin"></a>
                 </div><!-- /social -->
+                <br>
+                @include('vcms::partials.language-menu')
 
             </div>
 
