@@ -152,6 +152,7 @@ class ProductsController extends BaseController {
         return Redirect::to('/admin/products/all-products');
     }
 
+
     public function getDeleteProductImage()
     {
         $product = ProductImage::find(Input::get('id'));
