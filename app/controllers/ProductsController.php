@@ -24,6 +24,41 @@ class ProductsController extends BaseController {
             ->with('products', $products);
     }
 
+    public function getProductPublic()
+    {
+        $slug = Request::segment(2);
+        $product_id = 0;
+
+        $results = DB::table('products')->where('slug', '=', $slug)
+            ->remember(Config::get('vcms::cache_lifetime'))
+            ->get();
+
+        foreach ($results as $result)
+        {
+            $active = $result->active;
+            if ($active > 0)
+            {
+                $product_id = $result->id;
+
+            }
+        }
+
+        if ($product_id > 0)
+        {
+            $product = Product::find($product_id);
+        } else
+        {
+            return Redirect::to('/error');
+        }
+
+        return View::make('product')
+            ->with('page_title', '')
+            ->with('meta_tags', '')
+            ->with('meta', '')
+            ->with('product', $product);
+
+    }
+
 
     public function getEditProduct()
     {
@@ -63,6 +98,7 @@ class ProductsController extends BaseController {
         }
 
         $product->title = Input::get('title');
+        $product->slug = Str::slug(Input::get('title'));
         $product->title_fr = Input::get('title_fr');
         $product->description = Input::get('description');
         $product->description_fr = Input::get('description_fr');
@@ -97,32 +133,35 @@ class ProductsController extends BaseController {
             $destinationPath = base_path() . '/public/product_images/';
             $filename = $file->getClientOriginalName();
             $upload_success = Input::file('image_name')->move($destinationPath, $filename);
-            if(! File::exists($destinationPath."thumbs")) {
-                File::makeDirectory($destinationPath."thumbs");
+            if (!File::exists($destinationPath . "thumbs"))
+            {
+                File::makeDirectory($destinationPath . "thumbs");
             }
-            $thumb_img = Image::make($destinationPath. $filename);
+            $thumb_img = Image::make($destinationPath . $filename);
             $height = $thumb_img->height();
             $width = $thumb_img->width();
 
-            if (($height < Config::get('vcms::min_img_height')) || ($width < Config::get('vcms::min_img_width'))) {
-                return Redirect::to('/admin/products/product?id='.$id)
-                    ->with('error','Your image is too small. It must be at least '
+            if (($height < Config::get('vcms::min_img_height')) || ($width < Config::get('vcms::min_img_width')))
+            {
+                return Redirect::to('/admin/products/product?id=' . $id)
+                    ->with('error', 'Your image is too small. It must be at least '
                         . Config::get('vcms::min_img_width')
                         . ' pixels wide, and '
                         . Config::get('vcms::min_img_height')
                         . ' pixels tall!');
-                File::delete($destinationPath.$filename);
+                File::delete($destinationPath . $filename);
                 exit;
             }
 
-            $thumb_img->fit(Config::get('vcms::thumb_size'),Config::get('vcms::thumb_size'))
-                ->save($destinationPath."thumbs/".$filename);
+            $thumb_img->fit(Config::get('vcms::thumb_size'), Config::get('vcms::thumb_size'))
+                ->save($destinationPath . "thumbs/" . $filename);
 
             unset($thumb_img);
-            $img = Image::make($destinationPath.$filename);
+            $img = Image::make($destinationPath . $filename);
 
             $width = $img->width();
-            if (($width > Config::get('vcms::max_img_width')) || ($height > Config::get('vcms::max_image_height'))) {
+            if (($width > Config::get('vcms::max_img_width')) || ($height > Config::get('vcms::max_image_height')))
+            {
                 // this image is very large; we'll need to resize it.
                 $img = $img->fit(Config::get('vcms::max_img_width'), Config::get('vcms::max_img_height'));
                 $img->save();
@@ -149,6 +188,7 @@ class ProductsController extends BaseController {
     {
         $product = Product::find(Input::get('id'));
         $product->delete();
+
         return Redirect::to('/admin/products/all-products');
     }
 
@@ -157,7 +197,8 @@ class ProductsController extends BaseController {
     {
         $product = ProductImage::find(Input::get('id'));
         $product->delete();
-        return Redirect::to('/admin/products/product?id='.Input::get('pid'));
+
+        return Redirect::to('/admin/products/product?id=' . Input::get('pid'));
     }
 
 }

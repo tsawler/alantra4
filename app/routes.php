@@ -82,6 +82,7 @@ Route::post('/contact', 'ContactController@postContact');
  * Product Routes
  */
 Route::get('/products', 'ProductsController@allProducts');
+Route::get('products/{product_name}', 'ProductsController@getProductPublic');
 
 
 /**
