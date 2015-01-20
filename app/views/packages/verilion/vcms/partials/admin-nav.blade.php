@@ -109,7 +109,7 @@
                     <a href=""><i class="fa fa-envelope"></i> <span class="nav-label">Contact Form</span><span
                                 class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li><a href="/admin/contacts/all-contact">All Contacts</a></li>
+                        <li><a href="/admin/contacts/list-all-website-contacts">All Contacts</a></li>
                     </ul>
                 </li>
             @endif
