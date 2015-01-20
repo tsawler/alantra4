@@ -136,7 +136,7 @@
                         @if (sizeof($product->images) > 0)
                             @foreach($product->images as $image)
                                 <img alt="image" class="img-thumbnail"
-                                     src="/productimages/thumbs/{{ $image->image_name }}" />
+                                     src="/product_images/thumbs/{{ $image->image_name }}" />
                             &nbsp;
                                 <a href="#!" onclick="confirmDeleteImage({{ $image->id }})">
                                     <i class="fa fa-trash"></i>
@@ -498,7 +498,7 @@
                     bootbox.confirm("Are you sure you want to delete this image?", function(result) {
                         if (result==true)
                         {
-                            window.location.href = '/admin/products/deleteproductimage?id='+x;
+                            window.location.href = '/admin/products/deleteproductimage?pid={{ $product_id }}&id='+x;
                         }
                     });
                 }

@@ -52,6 +52,7 @@ class ProductsController extends BaseController {
     public function postEditProduct()
     {
         $id = Input::get('product_id');
+        $file = Input::file('image_name');
 
         if ($id > 0)
         {
@@ -90,6 +91,53 @@ class ProductsController extends BaseController {
 
         $id = $product->id;
 
+        // handle image, if any
+        if (Input::hasFile('image_name'))
+        {
+            $destinationPath = base_path() . '/public/product_images/';
+            $filename = $file->getClientOriginalName();
+            $upload_success = Input::file('image_name')->move($destinationPath, $filename);
+            if(! File::exists($destinationPath."thumbs")) {
+                File::makeDirectory($destinationPath."thumbs");
+            }
+            $thumb_img = Image::make($destinationPath. $filename);
+            $height = $thumb_img->height();
+            $width = $thumb_img->width();
+
+            if (($height < Config::get('vcms::min_img_height')) || ($width < Config::get('vcms::min_img_width'))) {
+                return Redirect::to('/admin/products/product?id='.$id)
+                    ->with('error','Your image is too small. It must be at least '
+                        . Config::get('vcms::min_img_width')
+                        . ' pixels wide, and '
+                        . Config::get('vcms::min_img_height')
+                        . ' pixels tall!');
+                File::delete($destinationPath.$filename);
+                exit;
+            }
+
+            $thumb_img->fit(Config::get('vcms::thumb_size'),Config::get('vcms::thumb_size'))
+                ->save($destinationPath."thumbs/".$filename);
+
+            unset($thumb_img);
+            $img = Image::make($destinationPath.$filename);
+
+            $width = $img->width();
+            if (($width > Config::get('vcms::max_img_width')) || ($height > Config::get('vcms::max_image_height'))) {
+                // this image is very large; we'll need to resize it.
+                $img = $img->fit(Config::get('vcms::max_img_width'), Config::get('vcms::max_img_height'));
+                $img->save();
+            }
+
+            if ($upload_success)
+            {
+                $item = new ProductImage;
+                $item->product_id = $id;
+                $item->image_name = $filename;
+                $item->save();
+            }
+
+        }
+
         if (Input::get('action') == 0)
             return Redirect::to('/admin/products/all-products');
         else
@@ -102,6 +150,13 @@ class ProductsController extends BaseController {
         $product = Product::find(Input::get('id'));
         $product->delete();
         return Redirect::to('/admin/products/all-products');
+    }
+
+    public function getDeleteProductImage()
+    {
+        $product = ProductImage::find(Input::get('id'));
+        $product->delete();
+        return Redirect::to('/admin/products/product?id='.Input::get('pid'));
     }
 
 }
