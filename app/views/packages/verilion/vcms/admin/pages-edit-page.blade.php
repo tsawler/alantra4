@@ -139,11 +139,13 @@
                 <div class="form-group">
                 <div class="controls">
                     {{ Form::submit('Save', array('class' => 'btn btn-primary submit')) }}
-                    <a class="btn btn-danger" href="#!" onclick='confirmDelete({{$page->id}})'>Delete this page</a>
+                    @if ($page_id > 0)
+                    <a class="btn btn-danger" href="#!" onclick='confirmDelete({{$page_id}})'>Delete this page</a>
+                    @endif
                 </div>
             </div>
             <div>&nbsp;</div>
-            {{ Form::hidden('page_id', $page->id )}}
+            {{ Form::hidden('page_id', $page_id )}}
 
             {{ Form::close() }}
         </div>

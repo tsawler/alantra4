@@ -84,6 +84,11 @@ Route::get('/contact', 'ContactController@getContact');
 Route::post('/contact', 'ContactController@postContact');
 
 /**
+ * Product Routes
+ */
+Route::get('/products', 'ProductsController@allProducts');
+
+/**
  * Admin routes
  */
 Route::group(array('before' => 'auth.admin'), function ()
@@ -100,6 +105,16 @@ Route::group(array('before' => 'auth.admin'), function ()
 		Route::post('/menu/deletemenuitem', 'verilion\vcms\MenuController@postDeletemenuitem');
 		Route::post('/menu/deleteddmenuitem', 'verilion\vcms\MenuController@postDeleteddmenuitem');
 	});
+
+	// pages
+	Route::group(array('before' => 'auth.admin.products'), function ()
+	{
+		Route::get('/admin/products/all-products', 'ProductsController@getAllProducts');
+		Route::get('/admin/products/product', 'ProductsController@getEditproduct');
+//		Route::post('/admin/products/product', 'ProductsController@postEditproduct');
+//		Route::get('/admin/products/deleteproduct', 'ProductsController@getDeleteproduct');
+	});
+
 
 	// pages
 	Route::group(array('before' => 'auth.admin.pages'), function ()

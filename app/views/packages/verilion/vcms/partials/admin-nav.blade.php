@@ -56,6 +56,64 @@
                 </li>
             @endif
 
+            @if (Auth::user()->hasRole('products'))
+                @if (Request::segment(2) == 'products')
+                    <li class='active'>
+                @else
+                    <li>
+                @endif
+                    <a href="#"><i class="fa fa-home"></i> <span class="nav-label">Products</span><span
+                                class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="/admin/products/all-products">All Products</a></li>
+                        <li><a href="/admin/products/product?id=0">Add Product</a></li>
+                    </ul>
+                </li>
+            @endif
+
+            @if (Auth::user()->hasRole('product-categories'))
+                @if (Request::segment(2) == 'product-categories')
+                    <li class='active'>
+                @else
+                    <li>
+                @endif
+                    <a href="#"><i class="fa fa-gear"></i> <span class="nav-label">Categories</span><span
+                                class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="/admin/product-categories/all-product-categories">All Categories</a></li>
+                        <li><a href="/admin/product-categories/product-category?id=0">Add Category</a></li>
+                    </ul>
+                </li>
+            @endif
+
+            @if (Auth::user()->hasRole('quotes'))
+                @if (Request::segment(2) == 'quotes')
+                    <li class='active'>
+                @else
+                    <li>
+                @endif
+                    <a href=""><i class="fa fa-exclamation"></i> <span class="nav-label">Quote Requests</span><span
+                                class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="/admin/quotes/all-quotes">All Requests</a></li>
+                    </ul>
+                </li>
+            @endif
+
+            @if (Auth::user()->hasRole('contact'))
+                @if (Request::segment(2) == 'contacts')
+                    <li class='active'>
+                @else
+                    <li>
+                @endif
+                    <a href=""><i class="fa fa-envelope"></i> <span class="nav-label">Contact Form</span><span
+                                class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="/admin/contacts/all-contact">All Contacts</a></li>
+                    </ul>
+                </li>
+            @endif
+
             @if (Auth::user()->hasRole('calendars'))
                 @if (Request::segment(2) == 'calendar')
                     <li class='active'>

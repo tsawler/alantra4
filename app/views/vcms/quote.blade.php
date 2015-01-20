@@ -16,6 +16,11 @@
     @endif
 @stop
 
+
+@section('title')
+    Request a Quote
+@stop
+
 @section('content')
 
     <!-- FORM -->
