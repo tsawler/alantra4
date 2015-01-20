@@ -81,7 +81,7 @@
                                 class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a href="/admin/product-categories/all-product-categories">All Categories</a></li>
-                        <li><a href="/admin/product-categories/product-category?id=0">Add Category</a></li>
+                        <li><a href="/admin/product-categories/category?id=0">Add Category</a></li>
                     </ul>
                 </li>
             @endif

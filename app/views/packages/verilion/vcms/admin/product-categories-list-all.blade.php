@@ -5,7 +5,7 @@ $active = ['<span class="text-danger">Inactive</span>', '<span class="text-succe
 ?>
 
 @section('top-white')
-    <h1>All Products</h1>
+    <h1>All Product Categories</h1>
 @stop
 
 @section('content-title')
@@ -16,7 +16,7 @@ $active = ['<span class="text-danger">Inactive</span>', '<span class="text-succe
     <div class="col-lg-12">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
-                <h5>Products</h5>
+                <h5>Product Categories</h5>
                 <div class="ibox-tools">
                     <a class="collapse-link">
                         <i class="fa fa-chevron-up"></i>
@@ -29,21 +29,17 @@ $active = ['<span class="text-danger">Inactive</span>', '<span class="text-succe
                 <table id="itable" class="table table-compact table-striped table-hover">
                     <thead>
                     <tr>
-                        <th>Product</th>
                         <th>Category</th>
                         <th>Created</th>
                         <th>Updated</th>
-                        <th>Status</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach ($products as $product)
+                    @foreach ($categories as $category)
                         <tr>
-                            <td><a href="/admin/products/product?id={{ $product->id}}">{{ $product->title }}</a></td>
-                            <td>{{ $product->category->category_name }}</td>
-                            <td>{{ $product->created_at }}</td>
-                            <td>{{ $product->updated_at }}</td>
-                            <td>{{ $active[$product->active] }}</td>
+                            <td><a href="/admin/product-categories/category?id={{ $category->id}}">{{ $category->category_name }}</a></td>
+                            <td>{{ $category->created_at }}</td>
+                            <td>{{ $category->updated_at }}</td>
                         </tr>
                     @endforeach
                     </tbody>

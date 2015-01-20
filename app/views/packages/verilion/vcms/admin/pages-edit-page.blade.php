@@ -104,7 +104,7 @@
                             {{ Form::select('active', array(
                                     '1' => 'Yes',
                                     '0' => 'No'),
-                                    1,
+                                    null,
                                     array('class' => 'form-control',
                                         'style' => 'max-width: 400px;')) }}
                         </div>

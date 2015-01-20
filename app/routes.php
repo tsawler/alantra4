@@ -106,13 +106,22 @@ Route::group(array('before' => 'auth.admin'), function ()
 		Route::post('/menu/deleteddmenuitem', 'verilion\vcms\MenuController@postDeleteddmenuitem');
 	});
 
-	// pages
+	// products
 	Route::group(array('before' => 'auth.admin.products'), function ()
 	{
 		Route::get('/admin/products/all-products', 'ProductsController@getAllProducts');
 		Route::get('/admin/products/product', 'ProductsController@getEditproduct');
-//		Route::post('/admin/products/product', 'ProductsController@postEditproduct');
-//		Route::get('/admin/products/deleteproduct', 'ProductsController@getDeleteproduct');
+		Route::post('/admin/products/product', 'ProductsController@postEditproduct');
+		Route::get('/admin/products/deleteproduct', 'ProductsController@getDeleteproduct');
+	});
+
+	// product categories
+	Route::group(array('before' => 'auth.admin.product-categories'), function ()
+	{
+		Route::get('/admin/product-categories/all-product-categories', 'ProductCategoriesController@getAllProductCategories');
+		Route::get('/admin/product-categories/category', 'ProductCategoriesController@getEditCategory');
+		Route::post('/admin/product-categories/category', 'ProductCategoriesController@postEditCategory');
+		Route::get('/admin/product-categories/deletecategory', 'ProductCategoriesController@getDeleteCategory');
 	});
 
 

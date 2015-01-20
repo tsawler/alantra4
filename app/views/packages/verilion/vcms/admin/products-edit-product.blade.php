@@ -98,6 +98,19 @@
                     </div>
 
                     <div class="form-group">
+                        {{ Form::label('category_id', 'Product Category:', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('category_id', $categories,
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         {{ Form::label('active', 'Product active?', array('class' => 'control-label')); }}
                         <div class="controls">
                             <div class="input-group">
@@ -112,12 +125,350 @@
                         </div>
                     </div>
 
+                    <hr>
+
+                    <h2>Images</h2>
+
+                    <div class="form-group">
+                        {{ Form::label('image_name', 'Product Image', ['class' => 'control-label']) }}
+                        <br>
+
+                        @if (sizeof($product->images) > 0)
+                            @foreach($product->images as $image)
+                                <img alt="image" class="img-thumbnail"
+                                     src="/productimages/thumbs/{{ $image->image_name }}" />
+                            &nbsp;
+                                <a href="#!" onclick="confirmDeleteImage({{ $image->id }})">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                             @endforeach
+                        @else
+                            <img class="img-thumbnail" src="http://placehold.it/140x100&text=No+Image">
+                        @endif
+                        <br><br>
+                        <div class="controls">
+                            {{ Form::file('image_name',['id' => 'image_name']) }}
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <h2>Features</h2>
+
+                    <div class="form-group">
+                        {{ Form::label('electric_heat', 'Electric Heat?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('electric_heat', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('electric_mast', 'Electric Mast?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('electric_mast', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('electric_heat', 'Electric Heat?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('electric_heat', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('communications_panel', 'Communications Panel?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('communications_panel', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('ac', 'Air Conditioning?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('ac', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('drawing_tables', 'Drawing Tables?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('drawing_tables', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('emergency_lights', 'Emergency Lights?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('emergency_lights', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('coat_hooks', 'Coat Hooks?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('coat_hooks', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('bulletin_boards', 'Bulletin Boards?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('bulletin_boards', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('window_bars', 'Security Window Bars?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('window_bars', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <h2>Options</h2>
+
+                    <div class="form-group">
+                        {{ Form::label('office_desks', 'Office Desks Available?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('office_desks', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('office_chairs', 'Office Chairs Available?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('office_chairs', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('folding_chairs', 'Folding Chairs Available?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('folding_chairs', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('folding_tables', 'Folding Tables Available?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('folding_tables', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('filing_cabinets', 'Filing Cabinets Available?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('filing_cabinets', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('lockers', 'Lockers Available?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('lockers', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('fridges', 'Fridges Available?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('fridges', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('microwaves', 'Microwaves Available?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('microwaves', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('water_coolers', 'Water Coolers Available?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('water_coolers', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('insurance', 'Insurance Available?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('insurance', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+
 
 
                     <hr>
                     <div class="form-group">
                         <div class="controls">
                             {{ Form::submit('Save', array('class' => 'btn btn-primary submit')) }}
+
+                            <a class="btn btn-info" href="#!" onclick="saveContinue()">Save and Continue</a>
+
                             @if ($product_id > 0)
                             <a class="btn btn-danger" href="#!" onclick='confirmDelete({{$product_id}})'>Delete this product</a>
                             @endif
@@ -125,7 +476,7 @@
                     </div>
                     <div>&nbsp;</div>
                     {{ Form::hidden('product_id', $product_id )}}
-
+                    {{ Form::hidden('action', 0, ['id' => 'action'] )}}
                     {{ Form::close() }}
                 </div>
             </div>
@@ -135,14 +486,29 @@
         @section('bottom-js')
             <script>
                 function confirmDelete(x){
-                    bootbox.confirm("Are you sure you want to delete this page? This will "
-                    + "also delete any menu items referencing this page.", function(result) {
+                    bootbox.confirm("Are you sure you want to delete this product?", function(result) {
                         if (result==true)
                         {
                             window.location.href = '/admin/products/deleteproduct?id='+x;
                         }
                     });
                 }
+
+                function confirmDeleteImage(x){
+                    bootbox.confirm("Are you sure you want to delete this image?", function(result) {
+                        if (result==true)
+                        {
+                            window.location.href = '/admin/products/deleteproductimage?id='+x;
+                        }
+                    });
+                }
+
+                function saveContinue(){
+                    $("#action").val(1);
+                    $("#bookform").submit();
+                }
+
+
                 $(document).ready(function () {
                     $("#bookform").validate({
                         errorClass:'has-error',
