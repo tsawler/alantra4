@@ -10,10 +10,10 @@
 
 @section('breadcrumb')
     @if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
-        / {{ $product->category->category_name_fr }}
+        / <a href='/products/{{ $product->category->slug }}'>{{ $product->category->category_name_fr }}</a>
         / {{ $product->title_fr }}
     @else
-        / {{ $product->category->category_name_fr }}
+        / <a href='/products/{{ $product->category->slug }}'>{{ $product->category->category_name }}</a>
         / {{ $product->title }}
     @endif
 @stop
@@ -55,7 +55,7 @@
                             <p>{{ $product->description }}</p>
                     @endif
 
-                        <h3>Features</h3>
+                        <h4>Features</h4>
                         <ul class="list-icon star-o">
                             @if ($product->electric_heat == 1)
                                 <li>Electric Heat</li>
@@ -93,8 +93,8 @@
                                 <li>Security Window Bars</li>
                             @endif
                         </ul>
-                        <hr>
-                        <h3>Optional Features</h3>
+
+                        <h4>Optional Features</h4>
                         <ul class="list-icon star-o">
 
                             @if ($product->office_desks == 1)

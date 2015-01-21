@@ -44,6 +44,7 @@ class ProductCategoriesController extends BaseController {
 
         $category->category_name = Input::get('category_name');
         $category->category_name_fr = Input::get('category_name_fr');
+        $category->slug = Str::slug(Input::get('category_name'));
 
         $category->save();
 
@@ -56,6 +57,40 @@ class ProductCategoriesController extends BaseController {
         $category = ProductCategory::find(Input::get('id'));
         $category->delete();
         return Redirect::to('/admin/product-categories/all-product-categories');
+    }
+
+
+
+    public function getCategoryPublic()
+    {
+        $category = Request::segment(2);
+        $id = 0;
+
+        // get all products for category name
+        $cat = ProductCategory::where('slug','=', $category)->get();
+
+        foreach ($cat as $c){
+            $id = $c->id;
+            if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
+            {
+                $category_name = $c->category_name_fr;
+            } else
+            {
+                $category_name = $c->category_name;
+            }
+        }
+
+        $products = Product::where('category_id', '=', $id)
+                        ->where('active', '=', 1)
+                        ->orderBy('title')
+                        ->get();
+
+        return View::make('product-category')
+            ->with('meta_tags', '')
+            ->with('meta', '')
+            ->with('category_name', $category_name)
+            ->with('products', $products);
+
     }
 
 }
