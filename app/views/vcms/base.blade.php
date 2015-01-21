@@ -64,7 +64,7 @@
 
             <header>
 
-                <ul class="breadcrumb"><!-- breadcrumb -->
+                <ul class="breadcrumb pull-right"><!-- breadcrumb -->
                     <li><a href="/">{{ Lang::get('vcms::menu.home') }}</a> </li>
                     @yield('breadcrumb')
                 </ul><!-- /breadcrumb -->
