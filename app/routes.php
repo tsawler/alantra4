@@ -112,6 +112,14 @@ Route::group(array('before' => 'auth.admin'), function ()
 		Route::get('/admin/contacts/deletecontact', 'ContactController@deleteContactForAdmin');
 	});
 
+	// website quote requests
+	Route::group(array('before' => 'auth.admin.quotes'), function ()
+	{
+		Route::get('/admin/quotes/all-quotes', 'QuoteController@getAllQuotes');
+		Route::get('/admin/quotes/quote', 'QuoteController@getQuoteForAdmin');
+		Route::get('/admin/quotes/deletequote', 'QuoteController@deleteQuoteForAdmin');
+	});
+
 	// products
 	Route::group(array('before' => 'auth.admin.products'), function ()
 	{

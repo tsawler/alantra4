@@ -11,7 +11,7 @@
 @section('content')
     <p>The following message was received from the website on {{ $contact->created_at }}:</p>
 
-    <div class="panel panel-primary">
+    <div class="panel panel-success">
         <div class="panel-heading">Website Contact</div>
         <div class="panel-body">
 

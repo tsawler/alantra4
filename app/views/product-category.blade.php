@@ -15,7 +15,22 @@
 
 @section('content')
 
+    @if (($category->description != null) && (strlen($category->description) > 0))
+        <div class="row">
+            @if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
+                <div class="col-md-1"></div>
+                <div class="col-md-10">{{ $category->description_fr }}</div>
+                <div class="col-md-1"></div>
+            @else
+                <div class="col-md-1"></div>
+                <div class="col-md-10">{{ $category->description }}</div>
+                <div class="col-md-1"></div>
+            @endif
+        </div>
+    @endif
+
     @foreach($products as $product)
+
         <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">

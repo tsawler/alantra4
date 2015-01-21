@@ -34,7 +34,10 @@
             <div class="form-group">
                 <div class="col-md-12">
                     <label>Company *</label>
-                    <input type="text" value="" maxlength="100" class="form-control required" name="company" id="company">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-building"></i></span>
+                        <input type="text" value="" maxlength="100" class="form-control required" name="company" id="company">
+                    </div>
                 </div>
             </div>
         </div>
@@ -43,19 +46,29 @@
             <div class="form-group">
                 <div class="col-md-6">
                     <label>Full Name *</label>
-                    <input type="text" value="" maxlength="100" class="form-control required" name="contact_name" id="contact_name">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" value="" maxlength="100" class="form-control required" name="full_name" id="full_name">
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <label>E-mail Address *</label>
-                    <input type="email" value="" data-msg-email="Please enter a valid email address." maxlength="100" class="form-control required" name="contact_email" id="contact_email">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <input type="email" value="" maxlength="100" class="form-control required" name="email" id="email">
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="form-group">
                 <div class="col-md-12">
                     <label>Phone</label>
-                    <input type="text" value="" maxlength="100" class="form-control required" name="phone" id="phone">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                        <input type="text" value="" maxlength="100" class="form-control" name="phone" id="phone">
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,7 +77,10 @@
             <div class="form-group">
                 <div class="col-md-12">
                     <label>Address</label>
-                    <input type="text" value="" maxlength="100" class="form-control required" name="address" id="address">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                        <input type="text" value="" maxlength="100" class="form-control" name="address" id="address">
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,7 +89,10 @@
             <div class="form-group">
                 <div class="col-md-12">
                     <label>City</label>
-                    <input type="text" value="" maxlength="100" class="form-control required" name="city" id="city">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-info"></i></span>
+                        <input type="text" value="" maxlength="100" class="form-control" name="city" id="city">
+                    </div>
                 </div>
             </div>
         </div>
@@ -82,7 +101,9 @@
             <div class="form-group">
                 <div class="col-md-12">
                     <label>Province</label>
-                    <select name="province">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+                    <select name="province" class="form-control">
                         <option value="AB">Alberta</option>
                         <option value="BC">British Columbia</option>
                         <option value="MB">Manitoba</option>
@@ -94,6 +115,7 @@
                         <option value="QC">Quebec</option>
                         <option value="SK">Saskatchewan</option>
                     </select>
+                        </div>
                 </div>
             </div>
         </div>
@@ -102,7 +124,22 @@
             <div class="form-group">
                 <div class="col-md-12">
                     <label>Date Needed</label>
-                    <input type="text" value="" maxlength="100" class="form-control required" name="date" id="date">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            <input type="text" value="" maxlength="100" class="form-control required" name="date_needed" id="date">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label>Products</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-gear"></i></span>
+                        <input type="text" value="{{ $interested_in }}" maxlength="100" class="form-control" name="interested_in">
+                    </div>
                 </div>
             </div>
         </div>
@@ -111,7 +148,7 @@
             <div class="form-group">
                 <div class="col-md-12">
                     <label>Message *</label>
-                    <textarea  maxlength="5000" rows="10" class="form-control required" name="contact_comment" id="contact_comment"></textarea>
+                    <textarea  maxlength="5000" rows="10" class="form-control required" name="message" id="contact_comment"></textarea>
                 </div>
             </div>
         </div>

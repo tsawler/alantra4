@@ -59,6 +59,13 @@
                                 </div>
                             </div>
 
+                            <div class="form-group">
+                                {{ Form::label('description', 'Description', array('class' => 'control-label')); }}
+                                <div class="controls">
+                                    {{ Form::textarea('description', null); }}
+                                </div>
+                            </div>
+
                         </div>
 
                         <div role="tabpanel" class="tab-pane fade" id="french">
@@ -73,6 +80,13 @@
                                                                                 'style' => 'max-width: 400px;',
                                                                                 'placeholder' => 'Category name')); }}
                                         </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    {{ Form::label('description_fr', 'Description (French)', array('class' => 'control-label')); }}
+                                    <div class="controls">
+                                        {{ Form::textarea('description_fr', null); }}
                                     </div>
                                 </div>
                             @endif
@@ -122,6 +136,28 @@
                         }
                     });
 
-                });
+                    CKEDITOR.replace( 'description',
+                            {
+                                toolbar : 'MyToolbar',
+                                forcePasteAsPlainText: true,
+                                filebrowserBrowseUrl : '/filemgmt/browse.php?type=files',
+                                filebrowserImageBrowseUrl : '/filemgmt/browse.php?type=images',
+                                filebrowserFlashBrowseUrl : '/filemgmt/browse.php?type=flash',
+                                enterMode : '1'
+                            });
+
+                    @if (Config::get('vcms::use_french'))
+                    CKEDITOR.replace( 'description_fr',
+                            {
+                                toolbar : 'MyToolbar',
+                                forcePasteAsPlainText: true,
+                                filebrowserBrowseUrl : '/filemgmt/browse.php?type=files',
+                                filebrowserImageBrowseUrl : '/filemgmt/browse.php?type=images',
+                                filebrowserFlashBrowseUrl : '/filemgmt/browse.php?type=flash',
+                                enterMode : '1'
+                            });
+                    @endif
+
+                                });
             </script>
 @stop
