@@ -21,11 +21,17 @@
             <div class="form-group">
                 <div class="col-md-6">
                     <label>Full Name *</label>
-                    <input type="text" value="" maxlength="100" class="form-control required" name="contact_name" id="contact_name">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" value="" maxlength="100" class="form-control required" name="contact_name" id="contact_name">
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <label>E-mail Address *</label>
-                    <input type="email" value="" data-msg-email="Please enter a valid email address." maxlength="100" class="form-control required" name="contact_email" id="contact_email">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <input type="email" value="" maxlength="100" class="form-control required" name="contact_email" id="contact_email">
+                    </div>
                 </div>
             </div>
         </div>
@@ -33,7 +39,10 @@
             <div class="form-group">
                 <div class="col-md-12">
                     <label>Subject</label>
-                    <input type="text" value="" maxlength="100" class="form-control required" name="contact_subject" id="contact_subject">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                        <input type="text" value="" maxlength="100" class="form-control required" name="contact_subject" id="contact_subject">
+                    </div>
                 </div>
             </div>
         </div>
