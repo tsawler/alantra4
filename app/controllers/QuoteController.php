@@ -6,7 +6,7 @@ class QuoteController extends BaseController {
     {
         $interested_in = "";
         if (Input::has('i')){
-            $interested_in = Input::get('i');
+            $interested_in = urldecode(Input::get('i'));
         }
         return View::make('vcms.quote')
             ->with('page_title', 'Request a Quote')

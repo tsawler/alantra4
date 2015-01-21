@@ -136,7 +136,17 @@
                             @endif
                     </ul>
 
-                    <a href="#" class="btn btn-primary btn-lg btn-margin-top"><i class="fa fa-external-link"></i> Request a Quote</a>
+                        @if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
+                            <a href="/quote?i={{ urlencode($product->title_fr) }}"
+                                class="btn btn-primary btn-lg btn-margin-top">
+                                <i class="fa fa-external-link"></i> Request a Quote
+                            </a>
+                        @else
+                            <a href="/quote?i={{ urlencode($product->title) }}"
+                               class="btn btn-primary btn-lg btn-margin-top">
+                                <i class="fa fa-external-link"></i> Request a Quote
+                            </a>
+                        @endif
 
                 </div>
             </div>
