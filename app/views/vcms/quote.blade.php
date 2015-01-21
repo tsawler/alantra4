@@ -6,6 +6,7 @@
     @else
         {{ $page_title }}
     @endif
+
 @stop
 
 @section('breadcrumb')
@@ -19,6 +20,9 @@
 
 @section('title')
     Request a Quote
+    @if(strlen($interested_in) > 0)
+        : {{ $interested_in }}
+    @endif
 @stop
 
 @section('content')
