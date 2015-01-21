@@ -232,7 +232,7 @@
                     <h3 class="panel-title">Products</h3>
                 </div>
                 <div class="panel-body">
-                    <a href="/"><img class="img-responsive" src="/assets/custom/images/products.jpg" alt=""></a>
+                    <a href="/products"><img class="img-responsive" src="/assets/custom/images/products.jpg" alt=""></a>
                     <p>
                         The unit you need. When you need it.
                         From offices to wash cars, modular structures and more,
@@ -241,7 +241,7 @@
                     </p>
                 </div>
                 <div class="panel-footer hidden-md hidden-sm hidden-xs">
-                    <h4><a href="/">Read More</a></h4>
+                    <h4><a href="/products">Read More</a></h4>
                 </div>
             </div>
 
@@ -253,13 +253,13 @@
                     <h3 class="panel-title">Service</h3>
                 </div>
                 <div class="panel-body">
-                    <a href="/"><img class="img-responsive" src="/assets/custom/images/service.jpg" alt=""></a>
+                    <a href="/one-stop-shop"><img class="img-responsive" src="/assets/custom/images/service.jpg" alt=""></a>
                     <p>
                         With Alantra, you can depend on our turn-on-a dime service and support.
                     </p>
                 </div>
                 <div class="panel-footer hidden-md hidden-sm hidden-xs">
-                    <h4><a href="/">Read More</a></h4>
+                    <h4><a href="/one-stop-shop">Read More</a></h4>
                 </div>
             </div>
         </div>
@@ -270,13 +270,13 @@
                     <h3 class="panel-title">Locations</h3>
                 </div>
                 <div class="panel-body">
-                    <a href="/"><img class="img-responsive" src="/assets/custom/images/locations.jpg" alt=""></a>
+                    <a href="/contact"><img class="img-responsive" src="/assets/custom/images/locations.jpg" alt=""></a>
                     <p>
                         Our locations, team members and units cover eastern Canada.
                     </p>
                 </div>
                 <div class="panel-footer hidden-md hidden-sm hidden-xs">
-                    <h4><a href="/">Read More</a></h4>
+                    <h4><a href="/contact">Read More</a></h4>
                 </div>
             </div>
         </div>
@@ -288,13 +288,13 @@
                     <h3 class="panel-title">Quote</h3>
                 </div>
                 <div class="panel-body">
-                    <a href="/"><img class="img-responsive" src="/assets/custom/images/quote.jpg" alt=""></a>
+                    <a href="/quote"><img class="img-responsive" src="/assets/custom/images/quote.jpg" alt=""></a>
                     <p>
                         Just send along your project’s requirements, any challenges you may be facing and we’ll take it from there.
                     </p>
                 </div>
                 <div class="panel-footer hidden-md hidden-sm hidden-xs">
-                    <h4><a href="/">Read More</a></h4>
+                    <h4><a href="/quote">Read More</a></h4>
                 </div>
             </div>
 
