@@ -12,8 +12,8 @@
                 <a href="mailto:info@alantraleasing.com">info@alantraleasing.com</a> &bull; 800-456-1800
 
                 <div class="block text-right"><!-- social -->
-                    <a href="#" class="social fa fa-twitter"></a>
-                    <a href="#" class="social fa fa-linkedin"></a>
+                    <a href="https://twitter.com/AlantraLeasing" target="_blank"  class="social fa fa-twitter"></a>
+                    <a href="https://www.linkedin.com/company/5065231" target="_blank" class="social fa fa-linkedin"></a>
                 </div><!-- /social -->
                 <br>
                 @include('vcms::partials.language-menu')
