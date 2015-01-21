@@ -25,7 +25,7 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
-            <p>Intro paragraph on products goes here</p>
+            <p>Sed tincidunt, diam sit amet mattis finibus, nunc nibh accumsan eros, vitae consectetur nunc quam a dolor. Nulla et iaculis libero. Aliquam erat volutpat. Curabitur maximus, elit nec malesuada ullamcorper, mi turpis pellentesque dolor, non posuere ipsum turpis eget felis. Curabitur vestibulum leo ipsum, in dignissim leo imperdiet non. Nunc imperdiet volutpat auctor. Nulla faucibus arcu id massa elementum auctor. Nam in sapien sapien. Vestibulum vel egestas diam, ac consequat dui.</p>
         </div>
         <div class="col-md-1"></div>
     </div>
