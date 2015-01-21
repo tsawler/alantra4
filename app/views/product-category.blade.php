@@ -5,8 +5,8 @@
 @stop
 
 @section('breadcrumb')
-        / Products
-        / {{ $category_name }}
+    / <a href="/products">Products</a>
+    / {{ $category_name }}
 @stop
 
 @section('title')

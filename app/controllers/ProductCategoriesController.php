@@ -3,6 +3,18 @@
 class ProductCategoriesController extends BaseController {
 
 
+    public function allCategories()
+    {
+        $categories = ProductCategory::orderBy('category_name')->get();
+
+        return View::make('products')
+            ->with('page_title', 'Products')
+            ->with('meta_tags', '')
+            ->with('meta', '')
+            ->with('categories', $categories);
+    }
+
+
     public function getAllProductCategories()
     {
         $categories = ProductCategory::orderBy('category_name')->get();

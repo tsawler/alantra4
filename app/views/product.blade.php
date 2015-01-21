@@ -10,9 +10,11 @@
 
 @section('breadcrumb')
     @if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
-        / <a href='/products/{{ $product->category->slug }}'>{{ $product->category->category_name_fr }}</a>
+        / <a href="/products">Products</a>
+        / <a href='/products/{{ $product->category->slug }}'>{{ $product->category->category_name_Fr }}</a>
         / {{ $product->title_fr }}
     @else
+        / <a href="/products">Products</a>
         / <a href='/products/{{ $product->category->slug }}'>{{ $product->category->category_name }}</a>
         / {{ $product->title }}
     @endif
@@ -93,7 +95,7 @@
                                 <li>Security Window Bars</li>
                             @endif
                         </ul>
-
+                        <hr>
                         <h4>Optional Features</h4>
                         <ul class="list-icon star-o">
 
