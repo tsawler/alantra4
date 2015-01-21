@@ -130,7 +130,7 @@
                     <label>Date Needed</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                            <input type="text" value="" maxlength="100" class="form-control required" name="date_needed" id="date">
+                            <input type="text" value="" maxlength="100" class="form-control" name="date_needed" id="date">
                     </div>
                 </div>
             </div>
