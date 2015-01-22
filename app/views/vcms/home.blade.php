@@ -219,6 +219,7 @@
     </div>
     <!-- /REVOLUTION SLIDER -->
 
+
     <!-- main page content -->
     <div class="row"  id="home-content">
         <div class="col-lg-2 hidden-sm hidden-md hidden-xs">

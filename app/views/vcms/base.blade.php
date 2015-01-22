@@ -57,6 +57,8 @@
 
     @include('vcms.partials.top-nav')
 
+    @yield('banner')
+
 
     <!-- PAGE TOP -->
     <section class="page-title">

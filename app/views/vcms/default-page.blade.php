@@ -20,16 +20,18 @@
     @include('vcms::partials.edit-title')
 @stop
 
-@section('content')
+@section('banner')
     @if (sizeof($images) > 0)
         @if (sizeof($images) == 1)
-            <div class="row">
-                <div class="col-md-12">
+            <div class="slider fullwidthbanner-container roundedcorners">
+                <div class="fullwidthbanner">
                     <img src="/page_images/{{ $images[0]->image_name }}">
                 </div>
             </div>
         @endif
     @endif
+@stop
 
+@section('content')
     @include('vcms::partials.edit-region')
 @stop
