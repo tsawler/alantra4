@@ -57,7 +57,7 @@
 
     @include('vcms.partials.top-nav')
 
-    @yield('banner')
+
 
 
     <!-- PAGE TOP -->
@@ -81,6 +81,8 @@
     </section>
     <!-- /PAGE TOP -->
 
+
+    @yield('banner')
 
 
     <!-- CONTENT -->
