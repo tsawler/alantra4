@@ -270,14 +270,14 @@ class AlantraPageController extends BaseController{
             $height = $thumb_img->height();
             $width = $thumb_img->width();
 
-            if (($height < 532) || ($width < 1600))
+            if (($height < 350) || ($width < 1600))
             {
                 File::delete($destinationPath . $filename);
                 return Redirect::to('/admin/page/page?id=' . $page_id)
                     ->with('error', 'Your image is too small. It must be at least '
                         . '1600 '
                         . ' pixels wide, and '
-                        . '532 '
+                        . '350 '
                         . ' pixels tall!');
                 exit;
             }
@@ -289,10 +289,10 @@ class AlantraPageController extends BaseController{
             $img = Image::make($destinationPath . $filename);
 
             $width = $img->width();
-            if (($width > 1600) || ($height > 532))
+            if (($width > 1600) || ($height > 350))
             {
                 // this image is very large; we'll need to resize it.
-                $img = $img->fit(1600, 532);
+                $img = $img->fit(1600, 350);
                 $img->save();
             }
 
