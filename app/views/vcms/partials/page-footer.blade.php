@@ -90,7 +90,16 @@
 <script type="text/javascript" src="/assets/plugins/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/flexslider/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+<!-- REVOLUTION SLIDER -->
+<script type="text/javascript" src="/assets/plugins/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="/assets/js/revolution_slider.js"></script>
+
+
 @include("vcms::partials.vcms-js")
 @include('vcms::partials.messages')
 @yield('bottom-js')
