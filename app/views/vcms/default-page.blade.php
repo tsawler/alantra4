@@ -30,7 +30,7 @@
             </div>
         @else
             <div class="fullwidthbanner-container roundedcorners">
-                <div class="owl-carousel fullwidthbanner"
+                <div class="owl-carousel controlls-over fullwidthbanner"
                      data-plugin-options='{
                                 "items": {{ sizeof($images) }},
                                 "singleItem": true,
