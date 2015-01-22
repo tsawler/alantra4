@@ -28,7 +28,7 @@
                     <img src="/page_images/{{ $images[0]->file_name }}">
                 </div>
             </div>
-        @stop
+        @endif
     @endif
 
     @include('vcms::partials.edit-region')
