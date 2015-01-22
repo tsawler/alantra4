@@ -34,7 +34,13 @@
 
             <div class="row">
                 <div class="col-sm-6 col-md-7">
-                    <div class="owl-carousel controlls-over product-image" data-plugin-options='{"items": 1, "singleItem": true, "navigation": true, "pagination": false, "transitionStyle":"fadeUp"}'>
+                    <div class="owl-carousel controlls-over product-image"
+                         data-plugin-options='{
+                            "items": 1,
+                            "singleItem": true,
+                            "navigation": true,
+                            "pagination": false,
+                            "transitionStyle":"fadeUp"}'>
                         @foreach($product->images as $image)
                         <div>
                             <img alt="" class="img-responsive" src="/product_images/{{ $image->image_name }}">
@@ -95,7 +101,7 @@
                                 <li>Security Window Bars</li>
                             @endif
                         </ul>
-                        <hr>
+
                         <h4>Optional Features</h4>
                         <ul class="list-icon star-o">
 
