@@ -23,12 +23,6 @@
 
         <h3>Send Us a Message</h3>
 
-        <!-- Alert -->
-        <div id="_sent_ok_" class="alert alert-success fade in fsize16 hide">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <span id="_msg_txt_"><strong>Thank You!</strong> Your message successfully sent!</span>
-        </div><!-- /Alert -->
-
         {{ Form::open(array('url' => '/contact', 'role' => 'form', 'name' => 'bookform', 'id' => 'bookform', 'method' => 'post')) }}
 
         <div class="row">
