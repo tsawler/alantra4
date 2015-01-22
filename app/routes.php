@@ -148,6 +148,7 @@ Route::group(array('before' => 'auth.admin'), function ()
 		Route::get('/admin/page/page', 'verilion\vcms\PageController@getEditpage');
 		Route::post('/admin/page/page', 'verilion\vcms\PageController@postEditpage');
 		Route::get('/admin/page/deletepage', 'verilion\vcms\PageController@getDeletePage');
+		Route::post('/page/savefragment', 'verilion\vcms\FragmentsController@postSavefragment');
 	});
 
 	// calendar

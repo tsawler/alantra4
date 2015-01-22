@@ -323,9 +323,22 @@
 								</span>
 							</span><!-- /word rotator -->
                 </h2>
-                <p class="lead">
-                    Eastern Canada's leader in modular mobile and prefabricated structures since 1981, Alantra offers your project a diverse range of fully-featured mobile offices, job site trailers, washcars, kitchen/dining facilities, sleeping accommodations, training facilities, furniture and accessories as well as custom builds tailored to your needs. Company branches in NB, NS, PEI, Quebec, NL & Labrador ensure your project turn-on-a-dime response and the products you need, when you need them. With head offices in Sussex, NB, Alantra is a family-owned company with a true passion for quality, professionalism, customer service and innovation.
-                </p>
+
+                {{ Form::open(array('url' => '/page/savefragment', 'id' => 'savefrag1', 'name' => 'savefrag1')) }}
+                <h1><span class="editablecontenttitle" id="thetitle1">{{ $fragments[0]->fragment_title }}</span></h1>
+                <article class="editablefragment" id="f1" data-id="4">
+                    {{ $fragments[0]->fragment_text }}
+                </article>
+                <article class="admin-hidden">
+                    <a class="btn btn-primary" href="javascript:void(0)" onclick="saveEditedFragment(1)">Save</a>
+                    <a class="btn btn-info" href="javascript:void(0)" onclick="turnOffEditing()">Cancel</a>
+                    &nbsp;&nbsp;&nbsp;
+                </article>
+                <input type="hidden" name="fid" value="{{ $fragments[0]->id }}">
+                <input type="hidden" name="thedata" id="thedata1">
+                <input type="hidden" name="thetitle" id="thetitledata1">
+                {{ Form::close() }}
+
             </header>
         </div>
     </section>

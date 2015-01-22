@@ -15,7 +15,7 @@
 
 @section('content')
 
-    @if (($category->description != null) && (strlen($category->description) > 0))
+    @if (($category->description != null) && (strlen($category->description) > 1))
         <div class="row">
             @if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
                 <div class="col-md-1"></div>
