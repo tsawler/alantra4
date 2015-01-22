@@ -100,7 +100,7 @@
                 </li>
             @endif
 
-            @if (Auth::user()->hasRole('contact'))
+            @if (Auth::user()->hasRole('contacts'))
                 @if (Request::segment(2) == 'contacts')
                     <li class='active'>
                 @else
