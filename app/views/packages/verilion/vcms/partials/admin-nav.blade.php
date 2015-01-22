@@ -114,8 +114,8 @@
                 </li>
             @endif
 
-            @if (Auth::user()->hasRole('calendars'))
-                @if (Request::segment(2) == 'calendar')
+            @if (Auth::user()->hasRole('events'))
+                @if (Request::segment(2) == 'events')
                     <li class='active'>
                 @else
                     <li>
