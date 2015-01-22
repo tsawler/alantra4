@@ -100,7 +100,6 @@
                 <div class="form-group">
                     {{ Form::label('image_name', 'Page Images (header)', ['class' => 'control-label']) }}
                     <br>
-
                     @if (sizeof($page->images) > 0)
                         @foreach($page->images as $image)
                             <img alt="image" class="img-thumbnail"
@@ -169,7 +168,7 @@
             </div>
             <div>&nbsp;</div>
             {{ Form::hidden('page_id', $page_id )}}
-
+            {{ Form::hidden('action', 0, ['id' => 'action'] )}}
             {{ Form::close() }}
         </div>
     </div>
@@ -186,6 +185,18 @@ function confirmDelete(x){
 			window.location.href = '/admin/page/deletepage?id='+x;
 		}
 	});
+}
+function confirmDeleteImage(x){
+    bootbox.confirm("Are you sure you want to delete this image?", function(result) {
+        if (result==true)
+        {
+            window.location.href = '/admin/page/deletepageimage?pid={{ $page_id }}&id='+x;
+        }
+    });
+}
+function saveContinue(){
+    $("#action").val(1);
+    $("#bookform").submit();
 }
 $(document).ready(function () {
 	$("#bookform").validate({

@@ -149,6 +149,7 @@ Route::group(array('before' => 'auth.admin'), function ()
 		Route::post('/admin/page/page', 'AlantraPageController@postEditpage');
 		Route::get('/admin/page/deletepage', 'AlantraPageController@getDeletePage');
 		Route::post('/page/savefragment', 'AlantraPageController@postSavefragment');
+		Route::get('/admin/page/deletepageimage', 'AlantraPageController@getDeletePageImage');
 	});
 
 	// calendar
@@ -241,4 +242,4 @@ Route::post('/search', 'verilion\vcms\SearchController@performSearch');
 /**
  * Page Routes
  */
-Route::get('/{pagename?}', 'verilion\vcms\PageController@showPage');
+Route::get('/{pagename?}', 'AlantraPageController@showPage');

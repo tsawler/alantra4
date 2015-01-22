@@ -21,5 +21,8 @@
 @stop
 
 @section('content')
+    @if (sizeof($images) > 0)
+        Has image;
+    @endif
     @include('vcms::partials.edit-region')
 @stop
