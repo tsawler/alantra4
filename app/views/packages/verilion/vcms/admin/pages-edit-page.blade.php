@@ -161,6 +161,7 @@
                 <div class="form-group">
                 <div class="controls">
                     {{ Form::submit('Save', array('class' => 'btn btn-primary submit')) }}
+                    <a class="btn btn-info" href="#!" onclick="saveContinue()">Save and Continue</a>
                     @if ($page_id > 0)
                     <a class="btn btn-danger" href="#!" onclick='confirmDelete({{$page_id}})'>Delete this page</a>
                     @endif
