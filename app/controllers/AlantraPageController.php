@@ -33,7 +33,8 @@ class AlantraPageController extends \verilion\vcms\PageController {
             $page->page_content_fr = Input::get('page_content_fr');
         }
 
-        $page_id = $page->save();
+        $page->save();
+        $page_id = $page->id;
 
         // handle image, if any
         if (Input::hasFile('image_name'))
@@ -52,7 +53,7 @@ class AlantraPageController extends \verilion\vcms\PageController {
             if (($height < 532) || ($width < 1600))
             {
                 File::delete($destinationPath . $filename);
-                return Redirect::to('/admin/pages/page?id=' . $id)
+                return Redirect::to('/admin/pages/page?id=' . $page_id)
                     ->with('error', 'Your image is too small. It must be at least '
                         . '1600 '
                         . ' pixels wide, and '
