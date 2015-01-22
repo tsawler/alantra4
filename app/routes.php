@@ -152,7 +152,7 @@ Route::group(array('before' => 'auth.admin'), function ()
 	});
 
 	// calendar
-	Route::group(array('before' => 'auth.admin.calendars'), function ()
+	Route::group(array('before' => 'auth.admin.events'), function ()
 	{
 		Route::get('/events/movedate', 'verilion\vcms\EventsController@getMoveDate');
 		Route::get('/events/moveenddates', 'verilion\vcms\EventsController@getMoveEndDate');
