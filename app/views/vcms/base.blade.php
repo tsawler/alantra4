@@ -113,6 +113,7 @@
 
                     <p class="block"><!-- social -->
                         <a href="https://twitter.com/AlantraLeasing" target="_blank" class="social fa fa-twitter"></a>
+                        <a href="https://www.facebook.com/alantratrailers" target="_blank"  class="social fa fa-facebook"></a>
                         <a href="https://www.linkedin.com/company/5065231" target="_blank" class="social fa fa-linkedin"></a>
                     </p><!-- /social -->
                 </div>
