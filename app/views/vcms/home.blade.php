@@ -344,11 +344,6 @@
     </section>
     <!-- /WELCOME -->
 
-
-
-
-
-
     <!-- DARK CALLOUT -->
     <div class="callout dark arrow-down">
         <div class="container text-center">
@@ -414,7 +409,7 @@
                 </div>
 
                 <div class="col-md-3"><!-- button -->
-                    <a href="/quote" rel="nofollow" target="_blank" class="btn btn-primary btn-lg">Request a Quote</a>
+                    <a href="/quote" rel="nofollow" class="btn btn-primary btn-lg">Request a Quote</a>
                 </div>
 
             </div>
