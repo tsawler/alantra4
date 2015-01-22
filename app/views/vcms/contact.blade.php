@@ -16,6 +16,14 @@
     @endif
 @stop
 
+@section('banner')
+    <div class="slider fullwidthbanner-container roundedcorners">
+        <div class="fullwidthbanner">
+            <img src="/page_images/contact.jpg">
+        </div>
+    </div>
+@stop
+
 @section('content')
 
     <!-- FORM -->
