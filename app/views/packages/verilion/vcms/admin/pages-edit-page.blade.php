@@ -100,7 +100,7 @@
                 <div class="form-group">
                     {{ Form::label('image_name', 'Page Images (header)', ['class' => 'control-label']) }}
                     <br>
-                    <?php dd($page->images); ?>
+
                     @if (sizeof($page->images) > 0)
                         @foreach($page->images as $image)
                             <img alt="image" class="img-thumbnail"
