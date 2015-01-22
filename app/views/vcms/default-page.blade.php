@@ -29,13 +29,8 @@
                 </div>
             </div>
         @else
-            {{--<div class="owl-carousel controlls-over fullwidthbanner-container roundedcorners">--}}
-                {{--<div class="fullwidthbanner">--}}
-                    {{--<img src="/page_images/{{ $images[0]->image_name }}">--}}
-                {{--</div>--}}
-            {{--</div>--}}
-            <div class="slider fullwidthbanner-container roundedcorners">
-                <div class="owl-carousel controlls-over fullwidthbanner"
+            <div class="fullwidthbanner-container roundedcorners">
+                <div class="owl-carousel fullwidthbanner"
                      data-plugin-options='{
                                 "items": {{ sizeof($images) }},
                                 "singleItem": true,
