@@ -33,7 +33,7 @@ class AlantraPageController extends \verilion\vcms\PageController {
             $page->page_content_fr = Input::get('page_content_fr');
         }
 
-        $id = $page->save();
+        $page_id = $page->save();
 
         // handle image, if any
         if (Input::hasFile('image_name'))
@@ -78,7 +78,7 @@ class AlantraPageController extends \verilion\vcms\PageController {
             if ($upload_success)
             {
                 $item = new PageImage;
-                $item->page_id = $id;
+                $item->page_id = $page_id;
                 $item->image_name = $filename;
                 $item->save();
             }
