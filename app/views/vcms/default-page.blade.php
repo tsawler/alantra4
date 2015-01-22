@@ -37,7 +37,7 @@
             <div class="slider fullwidthbanner-container roundedcorners">
                 <div class="owl-carousel controlls-over fullwidthbanner"
                      data-plugin-options='{
-                                "items": 1,
+                                "items": {{ sizeof($images) }},
                                 "singleItem": true,
                                 "navigation": true,
                                 "pagination": false,

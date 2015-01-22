@@ -186,9 +186,8 @@
 
 <!-- JAVASCRIPT FILES -->
 <script type="text/javascript" src="/assets/plugins/jquery-2.1.1.min.js"></script>
-
 <script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-
+<script type="text/javascript" src="/assets/plugins/owl-carousel/owl.carousel.min.js"></script>
 <script type="text/javascript" src="/assets/js/scripts.js"></script>
 @include("vcms::partials.vcms-js")
 @include('vcms::partials.messages')

@@ -160,7 +160,3 @@
 
     <!-- /CONTENT -->
 @stop
-
-@section('bottom-js')
-    <script type="text/javascript" src="/assets/plugins/owl-carousel/owl.carousel.min.js"></script>
-@stop
