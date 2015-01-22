@@ -4,7 +4,7 @@ class Page extends \verilion\vcms\Page {
 
     public function images()
     {
-        return $this->hasMany('Page', 'page_id', 'id');
+        return $this->hasMany('PageImage', 'page_id', 'id');
     }
 
 }
