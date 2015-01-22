@@ -28,6 +28,27 @@
                     <img src="/page_images/{{ $images[0]->image_name }}">
                 </div>
             </div>
+        @else
+            {{--<div class="owl-carousel controlls-over fullwidthbanner-container roundedcorners">--}}
+                {{--<div class="fullwidthbanner">--}}
+                    {{--<img src="/page_images/{{ $images[0]->image_name }}">--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            <div class="slider fullwidthbanner-container roundedcorners">
+                <div class="owl-carousel controlls-over fullwidthbanner"
+                     data-plugin-options='{
+                                "items": 1,
+                                "singleItem": true,
+                                "navigation": true,
+                                "pagination": false,
+                                "transitionStyle":"fadeUp"}'>
+                    @foreach($images as $image)
+                        <div>
+                            <img alt="" class="img-responsive" src="/page_images/{{ $image->image_name }}">
+                        </div>
+                    @endforeach
+                </div>
+            </div>
         @endif
     @endif
 @stop
