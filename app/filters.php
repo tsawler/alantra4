@@ -85,3 +85,27 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+Route::filter('auth.admin.product-categories', function(){
+	if (! Auth::user()->hasRole('product-categories')){
+		return Redirect::to('/admin/unauthorized', 301);
+	}
+});
+
+Route::filter('auth.admin.products', function(){
+	if (! Auth::user()->hasRole('products')){
+		return Redirect::to('/admin/unauthorized', 301);
+	}
+});
+
+Route::filter('auth.admin.quotes', function(){
+	if (! Auth::user()->hasRole('quotes')){
+		return Redirect::to('/admin/unauthorized', 301);
+	}
+});
+
+Route::filter('auth.admin.contacts', function(){
+	if (! Auth::user()->hasRole('contacts')){
+		return Redirect::to('/admin/unauthorized', 301);
+	}
+});

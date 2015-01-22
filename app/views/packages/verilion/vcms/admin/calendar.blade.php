@@ -6,7 +6,7 @@
 
 @section('content')
     <div id="calendar"></div>
-    @if ((Auth::user() && Auth::user()->access_level == 3) && (Auth::user()->hasRole('calendars')))
+    @if ((Auth::user()) && (Auth::user()->hasRole('events')))
         <!-- Add/Edit Event Modal -->
         <div class="modal fade" id="eventModal" tabindex="-1" data-backdrop="false" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
@@ -111,7 +111,7 @@
                     right: 'month,agendaWeek,agendaDay'
                 },
                 events: '/events/jsonevents',
-                @if ((Auth::user() && Auth::user()->access_level == 3) && (Auth::user()->hasRole('calendars')))
+                @if ((Auth::user()) && (Auth::user()->hasRole('events')))
                 selectable: true,
                 select: function(start, end, allDay) {
                     $("#start_date").val(start.format('YYYY[-]MM-DD'));
