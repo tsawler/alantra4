@@ -34,7 +34,7 @@
 
             <div class="row">
                 <div class="col-sm-6 col-md-7">
-                    <div class="owl-carousel controlls-over product-image" data-plugin-options='{"items": 1, "singleItem": true, "navigation": true, "pagination": true, "transitionStyle":"fadeUp"}'>
+                    <div class="owl-carousel controlls-over product-image" data-plugin-options='{"items": 1, "singleItem": true, "navigation": true, "pagination": false, "transitionStyle":"fadeUp"}'>
                         @foreach($product->images as $image)
                         <div>
                             <img alt="" class="img-responsive" src="/product_images/{{ $image->image_name }}">
