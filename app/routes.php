@@ -143,12 +143,12 @@ Route::group(array('before' => 'auth.admin'), function ()
 	// pages
 	Route::group(array('before' => 'auth.admin.pages'), function ()
 	{
-		Route::post('/page/savepage', 'verilion\vcms\PageController@savePage');
-		Route::get('/admin/page/all-pages', 'verilion\vcms\PageController@getAllPages');
-		Route::get('/admin/page/page', 'verilion\vcms\PageController@getEditpage');
-		Route::post('/admin/page/page', 'verilion\vcms\PageController@postEditpage');
-		Route::get('/admin/page/deletepage', 'verilion\vcms\PageController@getDeletePage');
-		Route::post('/page/savefragment', 'verilion\vcms\FragmentsController@postSavefragment');
+		Route::post('/page/savepage', 'AlantraPageController@savePage');
+		Route::get('/admin/page/all-pages', 'AlantraPageController@getAllPages');
+		Route::get('/admin/page/page', 'AlantraPageController@getEditpage');
+		Route::post('/admin/page/page', 'AlantraPageController@postEditpage');
+		Route::get('/admin/page/deletepage', 'AlantraPageController@getDeletePage');
+		Route::post('/page/savefragment', 'AlantraPageController@postSavefragment');
 	});
 
 	// calendar

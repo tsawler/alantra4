@@ -27,7 +27,8 @@
             {{ Form::model($page, array(
                                     'role' => 'form',
                                     'name' => 'bookform', 'id' => 'bookform',
-                                    'url' => 'admin/page/page'
+                                    'url' => 'admin/page/page',
+                                    'files' => 'true'
                                     )
                        )
             }}
@@ -95,6 +96,28 @@
                     </div>
                 @endif
             </div>
+
+                <div class="form-group">
+                    {{ Form::label('image_name', 'Page Images (header)', ['class' => 'control-label']) }}
+                    <br>
+
+                    @if (sizeof($page->images) > 0)
+                        @foreach($page->images as $image)
+                            <img alt="image" class="img-thumbnail"
+                                 src="/page_images/thumbs/{{ $image->image_name }}" />
+                            &nbsp;
+                            <a href="#!" onclick="confirmDeleteImage({{ $image->id }})">
+                                <i class="fa fa-trash"></i>
+                            </a>
+                        @endforeach
+                    @else
+                        <img class="img-thumbnail" src="http://placehold.it/140x100&text=No+Image">
+                    @endif
+                    <br><br>
+                    <div class="controls">
+                        {{ Form::file('image_name',['id' => 'image_name']) }}
+                    </div>
+                </div>
 
                 <div class="form-group">
                 {{ Form::label('active', 'Page active?', array('class' => 'control-label')); }}

@@ -11,14 +11,5 @@ class ProductImage extends Eloquent {
      */
     protected $table = 'product_images';
 
-//    public function author()
-//    {
-//        return $this->belongsTo('Author');
-//    }
-//
-//    public function pages()
-//    {
-//        return $this->hasMany('LetterDetail')->orderBy('sort_order');
-//    }
 
 }
