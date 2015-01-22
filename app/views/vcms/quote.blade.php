@@ -25,6 +25,14 @@
     @endif
 @stop
 
+@section('banner')
+    <div class="slider fullwidthbanner-container roundedcorners">
+        <div class="fullwidthbanner">
+            <img src="/page_images/quote.jpg">
+        </div>
+    </div>
+@stop
+
 @section('content')
 
     <!-- FORM -->
