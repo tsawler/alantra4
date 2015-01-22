@@ -188,7 +188,7 @@
             })
         });
 
-        @if ((Auth::user()) && (Auth::user()->hasRole('calendars')))
+        @if ((Auth::user()) && (Auth::user()->hasRole('events')))
         function submitEvent(){
             var okay = $("#event_form").validate({
                 errorClass:'text-danger',
