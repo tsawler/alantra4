@@ -46,5 +46,5 @@ return array(
     'user_prefs_table'          => 'user_prefs',
     'news_table'                => 'news',
     'faqs_table'                => 'faqs',
-
+    'fragments_table'           => 'fragments',
 );
