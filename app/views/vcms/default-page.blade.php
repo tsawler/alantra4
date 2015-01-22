@@ -22,7 +22,14 @@
 
 @section('content')
     @if (sizeof($images) > 0)
-        Has image;
+        @if (sizeof($images) == 1)
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="/page_images/{{ $images[0]->file_name }}">
+                </div>
+            </div>
+        @stop
     @endif
+
     @include('vcms::partials.edit-region')
 @stop
