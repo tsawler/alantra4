@@ -323,21 +323,36 @@
 								</span>
 							</span><!-- /word rotator -->
                 </h2>
-
-                {{ Form::open(array('url' => '/page/savefragment', 'id' => 'savefrag1', 'name' => 'savefrag1')) }}
-                <h1><span class="editablecontenttitle" id="thetitle1">{{ $fragments[0]->fragment_title }}</span></h1>
-                <article class="editablefragment" id="f1" data-id="4">
-                    {{ $fragments[0]->fragment_text }}
-                </article>
-                <article class="admin-hidden">
-                    <a class="btn btn-primary" href="javascript:void(0)" onclick="saveEditedFragment(1)">Save</a>
-                    <a class="btn btn-info" href="javascript:void(0)" onclick="turnOffEditing()">Cancel</a>
-                    &nbsp;&nbsp;&nbsp;
-                </article>
-                <input type="hidden" name="fid" value="{{ $fragments[0]->id }}">
-                <input type="hidden" name="thedata" id="thedata1">
-                <input type="hidden" name="thetitle" id="thetitledata1">
+                @if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
+                    {{ Form::open(array('url' => '/page/savefragment', 'id' => 'savefrag1', 'name' => 'savefrag1')) }}
+                    <h1><span class="editablecontenttitle" id="thetitle1">{{ $fragments[0]->fragment_title_fr }}</span></h1>
+                    <article class="editablefragment" id="f1" data-id="4">
+                        {{ $fragments[0]->fragment_text_fr }}
+                    </article>
+                    <article class="admin-hidden">
+                        <a class="btn btn-primary" href="javascript:void(0)" onclick="saveEditedFragment(1)">Save</a>
+                        <a class="btn btn-info" href="javascript:void(0)" onclick="turnOffEditing()">Cancel</a>
+                        &nbsp;&nbsp;&nbsp;
+                    </article>
+                    <input type="hidden" name="fid" value="{{ $fragments[0]->id }}">
+                    <input type="hidden" name="thedata" id="thedata1">
+                    <input type="hidden" name="thetitle" id="thetitledata1">
                 {{ Form::close() }}
+                @else
+                    {{ Form::open(array('url' => '/page/savefragment', 'id' => 'savefrag1', 'name' => 'savefrag1')) }}
+                    <h1><span class="editablecontenttitle" id="thetitle1">{{ $fragments[0]->fragment_title }}</span></h1>
+                    <article class="editablefragment" id="f1" data-id="4">
+                        {{ $fragments[0]->fragment_text }}
+                    </article>
+                    <article class="admin-hidden">
+                        <a class="btn btn-primary" href="javascript:void(0)" onclick="saveEditedFragment(1)">Save</a>
+                        <a class="btn btn-info" href="javascript:void(0)" onclick="turnOffEditing()">Cancel</a>
+                        &nbsp;&nbsp;&nbsp;
+                    </article>
+                    <input type="hidden" name="fid" value="{{ $fragments[0]->id }}">
+                    <input type="hidden" name="thedata" id="thedata1">
+                    <input type="hidden" name="thetitle" id="thetitledata1">
+                @endif
 
             </header>
         </div>
