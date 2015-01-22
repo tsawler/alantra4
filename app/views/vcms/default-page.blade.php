@@ -25,7 +25,7 @@
         @if (sizeof($images) == 1)
             <div class="row">
                 <div class="col-md-12">
-                    <img src="/page_images/{{ $images[0]->file_name }}">
+                    <img src="/page_images/{{ $images[0]->image_name }}">
                 </div>
             </div>
         @endif
