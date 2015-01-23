@@ -137,7 +137,7 @@
     <div class="form-group">
         <div class="controls">
             <div class="input-group">
-                @foreach (verilion\vcms\Role::orderBy('role_name')->get() as $role)
+                @foreach (verilion\vcms\Role::orderBy('role_name')->where('active','=',1)->get() as $role)
                     <?php
                     $hasRole = false;
                     $results = DB::table(Config::get('vcms::user_roles_table'))->where('user_id', $user->id)->lists('role_id');
