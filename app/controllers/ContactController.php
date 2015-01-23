@@ -2,6 +2,11 @@
 
 class ContactController extends BaseController {
 
+    /**
+     * Display the contact page
+     *
+     * @return mixed
+     */
     public function getContact()
     {
         return View::make('vcms.contact')
@@ -10,6 +15,11 @@ class ContactController extends BaseController {
             ->with('meta', '');
     }
 
+    /**
+     * Handle post of contact page
+     *
+     * @return mixed
+     */
     public function postContact()
     {
 
@@ -47,6 +57,11 @@ class ContactController extends BaseController {
     }
 
 
+    /**
+     * Get all website contacts for display in admin tool
+     *
+     * @return mixed
+     */
     public function getAllWebsiteContacts()
     {
         $contacts = Contact::orderBy('full_name')->get();
@@ -59,6 +74,10 @@ class ContactController extends BaseController {
     }
 
 
+    /**
+     * Get a single contact for display in admin
+     * @return mixed
+     */
     public function getContactForAdmin()
     {
         $id = Input::get('id');
@@ -72,6 +91,12 @@ class ContactController extends BaseController {
 
     }
 
+
+    /**
+     * Delete a contact from the admin tool
+     *
+     * @return mixed
+     */
     public function deleteContactForAdmin()
     {
         $id = Input::get('id');

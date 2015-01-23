@@ -2,6 +2,9 @@
 
 class QuoteController extends BaseController {
 
+    /**
+     * @return mixed
+     */
     public function getQuote()
     {
         $interested_in = "";
@@ -15,6 +18,10 @@ class QuoteController extends BaseController {
             ->with('meta', '');
     }
 
+
+    /**
+     * @return mixed
+     */
     public function postQuote()
     {
         $quote = new Quote;
@@ -56,6 +63,9 @@ class QuoteController extends BaseController {
     }
 
 
+    /**
+     * @return mixed
+     */
     public function getAllQuotes()
     {
         $quotes = Quote::orderBy('company')->get();
@@ -68,6 +78,9 @@ class QuoteController extends BaseController {
     }
 
 
+    /**
+     * @return mixed
+     */
     public function getQuoteForAdmin()
     {
         $id = Input::get('id');
@@ -81,6 +94,10 @@ class QuoteController extends BaseController {
 
     }
 
+
+    /**
+     * @return mixed
+     */
     public function deleteQuoteForAdmin()
     {
         $id = Input::get('id');

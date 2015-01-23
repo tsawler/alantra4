@@ -1,6 +1,6 @@
 <?php
 
-class AlantraPageController extends BaseController{
+class AlantraPageController extends BaseController {
 
     public function __construct()
     {
@@ -169,6 +169,11 @@ class AlantraPageController extends BaseController{
             ->with('page_id', $page_id);
     }
 
+
+    /**
+     * Generate a page without the top banner(s)
+     * @return mixed
+     */
     public function showPageNoBanner()
     {
         $slug = Request::segment(2);
@@ -269,7 +274,7 @@ class AlantraPageController extends BaseController{
         return Redirect::to('/admin/page/all-pages')
             ->with('message', 'Page deleted');
     }
-    
+
     /**
      * Save edited page
      *
@@ -321,6 +326,7 @@ class AlantraPageController extends BaseController{
             if (($height < 350) || ($width < 1600))
             {
                 File::delete($destinationPath . $filename);
+
                 return Redirect::to('/admin/page/page?id=' . $page_id)
                     ->with('error', 'Your image is too small. It must be at least '
                         . '1600 '
@@ -363,6 +369,11 @@ class AlantraPageController extends BaseController{
     }
 
 
+    /**
+     * Delete an image from a page
+     *
+     * @return mixed
+     */
     public function getDeletePageImage()
     {
         $product = PageImage::find(Input::get('id'));

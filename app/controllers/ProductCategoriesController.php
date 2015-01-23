@@ -3,6 +3,9 @@
 class ProductCategoriesController extends BaseController {
 
 
+    /**
+     * @return mixed
+     */
     public function allCategories()
     {
         $categories = ProductCategory::orderBy('category_name')->get();
@@ -15,6 +18,9 @@ class ProductCategoriesController extends BaseController {
     }
 
 
+    /**
+     * @return mixed
+     */
     public function getAllProductCategories()
     {
         $categories = ProductCategory::orderBy('category_name')->get();
@@ -27,6 +33,9 @@ class ProductCategoriesController extends BaseController {
     }
 
 
+    /**
+     * @return mixed
+     */
     public function getEditCategory()
     {
         if (Input::get('id') > 0)
@@ -42,6 +51,9 @@ class ProductCategoriesController extends BaseController {
             ->with('category', $category);
     }
 
+    /**
+     * @return mixed
+     */
     public function postEditCategory()
     {
         $id = Input::get('category_id');
@@ -66,6 +78,9 @@ class ProductCategoriesController extends BaseController {
     }
 
 
+    /**
+     * @return mixed
+     */
     public function getDeleteCategory()
     {
         $category = ProductCategory::find(Input::get('id'));
@@ -74,7 +89,9 @@ class ProductCategoriesController extends BaseController {
     }
 
 
-
+    /**
+     * @return mixed
+     */
     public function getCategoryPublic()
     {
         $c = Request::segment(2);

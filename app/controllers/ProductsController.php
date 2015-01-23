@@ -2,6 +2,9 @@
 
 class ProductsController extends BaseController {
 
+    /**
+     * @return mixed
+     */
     public function allProducts()
     {
         $products = Product::all();
@@ -13,6 +16,9 @@ class ProductsController extends BaseController {
             ->with('products', $products);
     }
 
+    /**
+     * @return mixed
+     */
     public function getAllProducts()
     {
         $products = Product::orderBy('title')->get();
@@ -24,6 +30,9 @@ class ProductsController extends BaseController {
             ->with('products', $products);
     }
 
+    /**
+     * @return mixed
+     */
     public function getProductPublic()
     {
         $slug = Request::segment(3);
@@ -60,6 +69,9 @@ class ProductsController extends BaseController {
     }
 
 
+    /**
+     * @return mixed
+     */
     public function getEditProduct()
     {
         if (Input::get('id') > 0)
@@ -84,6 +96,9 @@ class ProductsController extends BaseController {
             ->with('categories', $categories);
     }
 
+    /**
+     * @return mixed
+     */
     public function postEditProduct()
     {
         $id = Input::get('product_id');
@@ -184,6 +199,9 @@ class ProductsController extends BaseController {
     }
 
 
+    /**
+     * @return mixed
+     */
     public function getDeleteproduct()
     {
         $product = Product::find(Input::get('id'));
@@ -193,6 +211,9 @@ class ProductsController extends BaseController {
     }
 
 
+    /**
+     * @return mixed
+     */
     public function getDeleteProductImage()
     {
         $product = ProductImage::find(Input::get('id'));
