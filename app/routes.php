@@ -143,9 +143,9 @@ Route::group(array('before' => 'auth.admin'), function ()
 	Route::group(array('before' => 'auth.admin.testimonials'), function ()
 	{
 		Route::get('/admin/testimonials/all-testimonials', 'TestimonialController@getAllTestimonials');
-		Route::get('/admin/testimonials/testimonial', 'TestimonialController@getEditCategory');
-		Route::post('/admin/testimonials/testimonial', 'TestimonialController@postEditCategory');
-		Route::get('/admin/testimonials/deletetetestimonial', 'TestimonialController@getDeleteTestimonial');
+		Route::get('/admin/testimonials/testimonial', 'TestimonialController@getEditTestimonial');
+		Route::post('/admin/testimonials/testimonial', 'TestimonialController@postEditTestimonial');
+		Route::get('/admin/testimonials/deletetestimonial', 'TestimonialController@getDeleteTestimonial');
 	});
 
 
