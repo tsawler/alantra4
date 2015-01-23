@@ -37,7 +37,7 @@
                 <ul class="list-unstyled fsize13">
                     <ul class="list-unstyled fsize13">
                         <?php
-                        $tests = Testimonial::orderByRaw("RANDOM()")->take(4)->get();
+                        $tests = Testimonial::orderByRaw("RANDOM()")->take(3)->get();
                         ?>
                         @foreach($tests as $t)
                             <?php
