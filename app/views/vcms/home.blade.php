@@ -396,24 +396,6 @@
                         </div>
                     </div>
                 @endforeach
-                {{--<div class="col-md-4">--}}
-                    {{--<div class="testimonial classic male animate_from_bottom">--}}
-                        {{--<p>The quality and customer-focused service is exceptional and we know that we can always count on Alantra. We appreciate that the delivering is always on time and trailer is spotless on arrival. All our staff insists that these trailers are the most secure when compared with other brands and have excellent configurations and features.</p>--}}
-                        {{--<cite><strong>Donnie Sencabaugh</strong></cite><br><cite>Dora Construction</cite>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-4">--}}
-                    {{--<div class="testimonial classic male animate_from_bottom">--}}
-                        {{--<p>This is to inform you that I am VERY happy of the trailers that you send me at Beechwood Project. Everything is exactly what I was expecting, no less and making my job easier.</p>--}}
-                        {{--<cite><strong>Guy Cauchon, Site Manager </strong></cite><br><cite>Hydropower ANDRITZ HYDRO LTD</cite>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-4">--}}
-                    {{--<div class="testimonial classic male animate_from_bottom">--}}
-                        {{--<p>We are very happy with the office trailers and office complex Alantra Leasing has built and delivered to Churchill Falls, Labrador for us recently. Their ability to deliver to remote locations and complete the setup within a short period of time shows their commitment to customer satisfaction. We are also impressed with the quality and custom details they put into their office buildings/trailers. We look forward to future projects with Alantra Leasing.</p>--}}
-                        {{--<cite><strong>Steve Christiansen</strong></cite><br><cite>Asplundh Tree Service ULC</cite>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
             </div>
 
         </div>

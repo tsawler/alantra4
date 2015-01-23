@@ -51,7 +51,7 @@ class AlantraPageController extends BaseController {
             }
         }
 
-        $testimonials = Testimonial::orderByRaw("RANDOM()")->take(3)->get();
+        $testimonials = Testimonial::orderByRaw("RANDOM()")->take(6)->get();
 
         return View::make('vcms.home')
             ->with('page_title', $page_title)

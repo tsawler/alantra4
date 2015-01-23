@@ -35,15 +35,23 @@
             <div class="spaced col-md-3 col-sm-4 hidden-xs">
                 <h4>Recent <strong>Tweets</strong></h4>
                 <ul class="list-unstyled fsize13">
-                    <li>
-                        <i class="fa fa-twitter"></i> <a href="#">@John Doe</a> Pilsum dolor lorem sit consectetur adipiscing orem sequat <small class="ago">8 mins ago</small>
-                    </li>
-                    <li>
-                        <i class="fa fa-twitter"></i> <a href="#">@John Doe</a> Remonde sequat ipsum dolor lorem sit consectetur adipiscing  <small class="ago">8 mins ago</small>
-                    </li>
-                    <li>
-                        <i class="fa fa-twitter"></i> <a href="#">@John Doe</a> Imperdiet condimentum diam dolor lorem sit consectetur adipiscing <small class="ago">8 mins ago</small>
-                    </li>
+                    <ul class="list-unstyled fsize13">
+                        <?php
+                        $tests = Testimonial::orderByRaw("RANDOM()")->take(5)->get();
+                        ?>
+                        @foreach($tests as $t)
+                            <?php
+                            if (strlen($t->testimonial) > 40){
+                                $test_short = substr(strip_tags($t->testimonial), 0, 145) . "...";
+                            } else {
+                                $test_short = strip_tags($t->testimonial);
+                            }
+                            ?>
+                            <li>
+                                <i class="fa fa-user"></i>&nbsp;&nbsp;{{ $test_short }}
+                            </li>
+                        @endforeach
+                    </ul>
                 </ul>
             </div>
             <!-- /col #3 -->
