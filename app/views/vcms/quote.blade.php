@@ -28,7 +28,7 @@
 @section('banner')
     <div class="slider fullwidthbanner-container roundedcorners">
         <div class="fullwidthbanner">
-            <img src="/page_images/quote.jpg">
+            <img src="/page_images/writing.jpg">
         </div>
     </div>
 @stop
