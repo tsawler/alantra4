@@ -242,4 +242,5 @@ Route::post('/search', 'verilion\vcms\SearchController@performSearch');
 /**
  * Page Routes
  */
+Route::get('/alternate/{pagename', 'AlantraPageController@showNoBannerPage');
 Route::get('/{pagename?}', 'AlantraPageController@showPage');
