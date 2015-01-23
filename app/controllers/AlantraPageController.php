@@ -169,6 +169,54 @@ class AlantraPageController extends BaseController{
             ->with('page_id', $page_id);
     }
 
+    public function showPageNoBanner()
+    {
+        $slug = Request::segment(2);
+        $page_title = "Not active";
+        $page_content = "Either the page you requested is not active, or it does not exist.";
+        $meta = "";
+        $meta_keywords = "";
+        $active = 1;
+        $page_id = 0;
+
+        $results = DB::table('pages')->where('slug', '=', $slug)->remember(Config::get('vcms::cache_lifetime'))->get();
+
+        foreach ($results as $result)
+        {
+            $active = $result->active;
+            if (($active > 0) || ((Auth::check()) && (Auth::user()->hasRole('pages'))))
+            {
+                if ((Session::get('lang') == null) || (Session::get('lang') == "en"))
+                {
+                    $page_title = $result->page_title;
+                    $page_content = $result->page_content;
+                    $meta = $result->meta;
+                    $page_id = $result->id;
+                    $meta_keywords = $result->meta_tags;
+                    $images = AlantraPage::find($page_id)->images;
+                } else
+                {
+                    $page_title = $result->page_title_fr;
+                    $page_content = $result->page_content_fr;
+                    $meta = $result->meta;
+                    $page_id = $result->id;
+                    $meta_keywords = $result->meta_tags;
+                    $images = AlantraPage::find($page_id)->images;
+                }
+
+            }
+        }
+
+        return View::make('vcms.default-page')
+            ->with('images', $images)
+            ->with('page_title', $page_title)
+            ->with('page_content', $page_content)
+            ->with('meta', $meta)
+            ->with('meta_tags', $meta_keywords)
+            ->with('active', $active)
+            ->with('page_id', $page_id);
+    }
+
 
     /**
      * List all pages
