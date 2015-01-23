@@ -109,3 +109,9 @@ Route::filter('auth.admin.contacts', function(){
 		return Redirect::to('/admin/unauthorized', 301);
 	}
 });
+
+Route::filter('auth.admin.testimonials', function(){
+	if (! Auth::user()->hasRole('testimonials')){
+		return Redirect::to('/admin/unauthorized', 301);
+	}
+});
