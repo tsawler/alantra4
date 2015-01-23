@@ -49,8 +49,9 @@ class AlantraPageController extends BaseController {
                 }
 
             }
-            //dd($fragments);
         }
+
+        $testimonials = Testimonial::orderByRaw("RANDOM()")->take(3)->get();
 
         return View::make('vcms.home')
             ->with('page_title', $page_title)
@@ -59,7 +60,8 @@ class AlantraPageController extends BaseController {
             ->with('meta_tags', $meta_keywords)
             ->with('active', $active)
             ->with('page_id', $page_id)
-            ->with('fragments', $fragments);
+            ->with('fragments', $fragments)
+            ->with('testimonials', $testimonials);
     }
 
 

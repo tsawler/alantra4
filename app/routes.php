@@ -14,7 +14,7 @@
 /**
  * Show home page
  */
-Route::get('/', 'verilion\vcms\PageController@showHome');
+Route::get('/', 'AlantraPageController@showHome');
 
 /**
  * Change language prefs
