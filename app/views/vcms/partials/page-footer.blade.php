@@ -33,11 +33,11 @@
 
             <!-- col #3 -->
             <div class="spaced col-md-3 col-sm-4 hidden-xs">
-                <h4>Recent <strong>Tweets</strong></h4>
+                <h4>Customer <strong>Testimonials</strong></h4>
                 <ul class="list-unstyled fsize13">
                     <ul class="list-unstyled fsize13">
                         <?php
-                        $tests = Testimonial::orderByRaw("RANDOM()")->take(5)->get();
+                        $tests = Testimonial::orderByRaw("RANDOM()")->take(4)->get();
                         ?>
                         @foreach($tests as $t)
                             <?php
