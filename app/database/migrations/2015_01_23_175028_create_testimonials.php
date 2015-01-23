@@ -15,10 +15,10 @@ class CreateTestimonials extends Migration {
         Schema::create('testimonials', function ($table)
         {
             $table->increments('id');
-            $table->string('testimonial_name');
             $table->string('person');
             $table->string('company');
             $table->text('testimonial');
+            $table->text('testimonial_fr');
             $table->date('testimonial_date');
             $table->timestamps();
         });

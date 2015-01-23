@@ -139,6 +139,15 @@ Route::group(array('before' => 'auth.admin'), function ()
 		Route::get('/admin/product-categories/deletecategory', 'ProductCategoriesController@getDeleteCategory');
 	});
 
+	// testimonials
+	Route::group(array('before' => 'auth.admin.testimonials'), function ()
+	{
+		Route::get('/admin/testimonials/all-testimonials', 'TestimonialController@getAllTestimonials');
+		Route::get('/admin/testimonials/testimonial', 'TestimonialController@getEditCategory');
+		Route::post('/admin/testimonials/testimonial', 'TestimonialController@postEditCategory');
+		Route::get('/admin/testimonials/deletetetestimonial', 'TestimonialController@getDeleteTestimonial');
+	});
+
 
 	// pages
 	Route::group(array('before' => 'auth.admin.pages'), function ()

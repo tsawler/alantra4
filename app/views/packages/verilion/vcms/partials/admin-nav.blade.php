@@ -189,6 +189,21 @@
                 </li>
             @endif
 
+            @if (Auth::user()->hasRole('testimonials'))
+                @if (Request::segment(2) == 'testimonials')
+                    <li class='active'>
+                @else
+                    <li>
+                @endif
+                <a href="#"><i class="fa fa-check"></i> <span
+                            class="nav-label">Testimonials</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="/admin/testimonials/all-testimonials">All Testimonials</a></li>
+                        <li><a href="/admin/testimonials/testimonial?id=0">Add Testimonial</a></li>
+                    </ul>
+                </li>
+            @endif
+
             @if (Auth::user()->hasRole('users'))
                 @if (Request::segment(2) == 'users')
                     <li class='active'>
