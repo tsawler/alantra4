@@ -207,7 +207,7 @@ class AlantraPageController extends BaseController{
             }
         }
 
-        return View::make('vcms.default-page')
+        return View::make('vcms.default-page-no-banner')
             ->with('images', $images)
             ->with('page_title', $page_title)
             ->with('page_content', $page_content)
