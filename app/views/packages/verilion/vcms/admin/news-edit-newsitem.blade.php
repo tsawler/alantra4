@@ -183,9 +183,9 @@
                     {
                         toolbar : 'MyToolbar',
                         forcePasteAsPlainText: true,
-                        filebrowserBrowseUrl : '/packages/verilion/vcms/filemgmt/browse.php?type=files',
-                        filebrowserImageBrowseUrl : '/packages/verilion/vcms/filemgmt/browse.php?type=images',
-                        filebrowserFlashBrowseUrl : '/packages/verilion/vcms/filemgmt/browse.php?type=flash',
+                        filebrowserBrowseUrl : '/filemgmt/browse.php?type=files',
+                        filebrowserImageBrowseUrl : '/filemgmt/browse.php?type=images',
+                        filebrowserFlashBrowseUrl : '/filemgmt/browse.php?type=flash',
                         enterMode : '1'
                     });
 
@@ -194,9 +194,9 @@
                     {
                         toolbar : 'MyToolbar',
                         forcePasteAsPlainText: true,
-                        filebrowserBrowseUrl : '/packages/verilion/vcms/filemgmt/browse.php?type=files',
-                        filebrowserImageBrowseUrl : '/packages/verilion/vcms/filemgmt/browse.php?type=images',
-                        filebrowserFlashBrowseUrl : '/packages/verilion/vcms/filemgmt/browse.php?type=flash',
+                        filebrowserBrowseUrl : '/filemgmt/browse.php?type=files',
+                        filebrowserImageBrowseUrl : '/filemgmt/browse.php?type=images',
+                        filebrowserFlashBrowseUrl : '/filemgmt/browse.php?type=flash',
                         enterMode : '1'
                     });
             @endif
