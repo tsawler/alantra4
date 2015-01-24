@@ -21,6 +21,7 @@ class AlantraPageController extends BaseController {
         $meta_keywords = "";
         $active = 1;
         $page_id = 0;
+        $fragments = array();
 
         $results = DB::table('pages')->where('slug', '=', "home")->remember(Config::get('vcms::cache_lifetime'))->get();
 
@@ -114,6 +115,9 @@ class AlantraPageController extends BaseController {
             {
                 return "Error!";
             }
+        } else
+        {
+            return "Access denied";
         }
     }
 
@@ -132,6 +136,7 @@ class AlantraPageController extends BaseController {
         $meta_keywords = "";
         $active = 1;
         $page_id = 0;
+        $images = null;
 
         $results = DB::table('pages')->where('slug', '=', $slug)->remember(Config::get('vcms::cache_lifetime'))->get();
 
@@ -185,6 +190,7 @@ class AlantraPageController extends BaseController {
         $meta_keywords = "";
         $active = 1;
         $page_id = 0;
+        $images = null;
 
         $results = DB::table('pages')->where('slug', '=', $slug)->remember(Config::get('vcms::cache_lifetime'))->get();
 
@@ -335,7 +341,6 @@ class AlantraPageController extends BaseController {
                         . ' pixels wide, and '
                         . '350 '
                         . ' pixels tall!');
-                exit;
             }
 
             $thumb_img->fit(Config::get('vcms::thumb_size'), Config::get('vcms::thumb_size'))
