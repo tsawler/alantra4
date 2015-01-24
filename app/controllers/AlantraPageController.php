@@ -253,7 +253,7 @@ class AlantraPageController extends BaseController {
             $page = AlantraPage::find($page_id);
         } else
         {
-            $page = new Page;
+            $page = new AlantraPage;
         }
 
         //dd($page->images);
