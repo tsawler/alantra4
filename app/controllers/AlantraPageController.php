@@ -292,7 +292,7 @@ class AlantraPageController extends BaseController {
             $page = AlantraPage::find($page_id);
         } else
         {
-            $page = new Page;
+            $page = new AlantraPage;
         }
 
         $page->page_title = trim(Input::get('page_title'));
