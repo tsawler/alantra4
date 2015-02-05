@@ -35,7 +35,7 @@ class Product extends Eloquent {
      */
     public function drawings()
     {
-        return $this->hasMany('Drawing', 'product_id', 'id');
+        return $this->hasMany('ProductDrawing', 'product_id', 'id');
     }
 
 }
