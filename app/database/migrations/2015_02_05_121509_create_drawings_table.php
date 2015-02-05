@@ -10,6 +10,7 @@ class CreateDrawingsTable extends Migration {
 			$table->increments('id');
 			$table->integer('product_id')->unsigned();
 			$table->string('drawing_title');
+			$table->string('drawing_file');
 			$table->integer('active');
 			$table->timestamps();
 

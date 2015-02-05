@@ -52,6 +52,8 @@ class ProductsController extends BaseController {
             }
         }
 
+        $drawings = Product::find($product_id)->drawings()->get();
+
         if ($product_id > 0)
         {
             $product = Product::find($product_id);
@@ -64,6 +66,7 @@ class ProductsController extends BaseController {
             ->with('page_title', '')
             ->with('meta_tags', '')
             ->with('meta', '')
+            ->with('drawings', $drawings)
             ->with('product', $product);
 
     }

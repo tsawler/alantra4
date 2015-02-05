@@ -48,6 +48,15 @@
                         @endforeach
                     </div>
 
+                    @if(sizeof($drawings) > 0)
+                        <h3>Drawings</h3>
+                        <ul>
+                            @foreach($drawings as $drawing)
+                                <li>{{ $drawing->drawing_title }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+
                 </div>
 
                 <div class="col-sm-6 col-md-5">
