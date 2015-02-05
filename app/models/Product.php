@@ -29,4 +29,13 @@ class Product extends Eloquent {
         return $this->hasMany('ProductImage', 'product_id', 'id');
     }
 
+
+    /**
+     * @return mixed
+     */
+    public function drawings()
+    {
+        return $this->hasMany('Drawing', 'product_id', 'id');
+    }
+
 }

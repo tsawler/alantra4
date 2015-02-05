@@ -75,4 +75,18 @@ class TestimonialController extends BaseController {
         return Redirect::to('/admin/testimonials/all-testimonials');
     }
 
+
+    /**
+     * return mixed
+     */
+    public function getTestimonialsPage()
+    {
+        $testimonials = Testimonial::orderBy('testimonial_date')->get();
+        return View::make('testimonials')
+            ->with('testimonials', $testimonials)
+            ->with('page_title', '')
+            ->with('meta_tags', '')
+            ->with('meta', '');
+    }
+
 }

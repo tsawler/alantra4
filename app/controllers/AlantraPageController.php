@@ -368,6 +368,7 @@ class AlantraPageController extends BaseController {
         }
 
         Cache::flush();
+
         if (Input::get('action') == 0)
             return Redirect::to('/admin/page/all-pages')->with('message', 'Page saved successfully');
         else

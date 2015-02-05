@@ -85,6 +85,10 @@ Route::get('/products', 'ProductCategoriesController@allCategories');
 Route::get('/products/{product_category}', 'ProductCategoriesController@getCategoryPublic');
 Route::get('/products/{product_category}/{product_name}', 'ProductsController@getProductPublic');
 
+/**
+ * Testimonial Routes
+ */
+Route::get('/testimonials', 'TestimonialController@getTestimonialsPage');
 
 /**
  * Admin routes
