@@ -153,6 +153,50 @@
 
                     <hr>
 
+                    <h2>Drawings</h2>
+
+                    <div class="form-group">
+                        <br>
+
+                        @if (sizeof($product->drawings) > 0)
+                            <ul>
+                            @foreach($product->drawings as $drawing)
+                                <li>
+                                    <a href="/drawings/{{ $drawing->drawing_file }}">
+                                        {{ $drawing->drawing_title }}
+                                    </a>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="#!" onclick="confirmDeleteDrawing({{ $drawing->id }})">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </li>
+                            @endforeach
+                            </ul>
+                        @else
+                            <ul>
+                                <li>No drawings</li>
+                            </ul>
+                        @endif
+                        <br><br>
+                        <div class="form-group">
+                            {{ Form::label('drawing_title', 'Add a Drawing', array('class' => 'control-label')); }}
+                            <div class="controls">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-font"></i></span>
+                                    {{ Form::text('drawing_title', null, array('class' => 'form-control',
+                                                                        'style' => 'max-width: 400px;',
+                                                                        'placeholder' => 'Title')); }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="controls">
+                            {{ Form::file('drawing_name',['id' => 'drawing_name']) }}
+                        </div>
+                    </div>
+
+                    <hr>
+
                     <h2>Features</h2>
 
                     <div class="form-group">
@@ -499,6 +543,15 @@
                         if (result==true)
                         {
                             window.location.href = '/admin/products/deleteproductimage?pid={{ $product_id }}&id='+x;
+                        }
+                    });
+                }
+
+                function confirmDeleteDrawing(x){
+                    bootbox.confirm("Are you sure you want to delete this drawing?", function(result) {
+                        if (result==true)
+                        {
+                            window.location.href = '/admin/products/deleteproductdrawing?pid={{ $product_id }}&id='+x;
                         }
                     });
                 }

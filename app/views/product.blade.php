@@ -52,7 +52,11 @@
                         <h3>Drawings</h3>
                         <ul>
                             @foreach($drawings as $drawing)
-                                <li>{{ $drawing->drawing_title }}</li>
+                                <li>
+                                    <a href="/product_drawings/{{ $drawing->drawing_file }}">
+                                        {{ $drawing->drawing_title }}
+                                    </a>
+                                </li>
                             @endforeach
                         </ul>
                     @endif

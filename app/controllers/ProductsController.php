@@ -106,6 +106,7 @@ class ProductsController extends BaseController {
     {
         $id = Input::get('product_id');
         $file = Input::file('image_name');
+        $drawing_file = Input::file('drawing_name');
 
         if ($id > 0)
         {
@@ -195,6 +196,26 @@ class ProductsController extends BaseController {
 
         }
 
+        // handle drawing, if any
+        if (Input::hasFile('drawing_name'))
+        {
+            $destinationPath = base_path() . '/public/product_drawings/';
+            $filename = $drawing_file->getClientOriginalName();
+            $upload_success = Input::file('drawing_name')->move($destinationPath, $filename);
+
+
+            if ($upload_success)
+            {
+                $item = new ProductDrawing;
+                $item->product_id = $id;
+                $item->drawing_file = $filename;
+                $item->active = 1;
+                $item->drawing_title = Input::get('drawing_title');
+                $item->save();
+            }
+
+        }
+
         if (Input::get('action') == 0)
             return Redirect::to('/admin/products/all-products');
         else
@@ -220,6 +241,18 @@ class ProductsController extends BaseController {
     public function getDeleteProductImage()
     {
         $product = ProductImage::find(Input::get('id'));
+        $product->delete();
+
+        return Redirect::to('/admin/products/product?id=' . Input::get('pid'));
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getDeleteProductDrawing()
+    {
+        $product = ProductDrawing::find(Input::get('id'));
         $product->delete();
 
         return Redirect::to('/admin/products/product?id=' . Input::get('pid'));

@@ -7,4 +7,5 @@ composer.lock
 .DS_Store
 Thumbs.db
 /public/product_images
+/public/product_drawings
 /public/userimages

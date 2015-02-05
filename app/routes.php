@@ -132,6 +132,7 @@ Route::group(array('before' => 'auth.admin'), function ()
 		Route::post('/admin/products/product', 'ProductsController@postEditproduct');
 		Route::get('/admin/products/deleteproduct', 'ProductsController@getDeleteproduct');
 		Route::get('/admin/products/deleteproductimage', 'ProductsController@getDeleteProductImage');
+		Route::get('/admin/products/deleteproductdrawing', 'ProductsController@getDeleteProductDrawing');
 	});
 
 	// product categories
