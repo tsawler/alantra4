@@ -269,6 +269,7 @@ class AlantraPageController extends BaseController {
             ->with('page', $page);
     }
 
+
     /**
      * Delete a page
      *
@@ -282,6 +283,7 @@ class AlantraPageController extends BaseController {
         return Redirect::to('/admin/page/all-pages')
             ->with('message', 'Page deleted');
     }
+
 
     /**
      * Save edited page
