@@ -39,7 +39,7 @@
         <p>You can also <a href="/quote">Request a Quote</a> and we’ll get back to you within two hours. That’s our
             commitment.</p>
         <p>You can also contact one of our head office team for a personalized meeting or to arrange a visit to see our wide
-            range of products and services. How to find us.</p>
+            range of products and services. <a href="https://www.google.ca/maps/place/98+Cougle+Rd,+Sussex+Corner,+NB+E4E+2S6/@45.7246302,-65.4709224,15z/data=!4m2!3m1!1s0x4ca722cec36ef9bb:0xc52dd29c7a4db238" target="_blank">How to find us</a>.</p>
         <p>Our <a href="/satellite-offices">satellite offices</a> are conveniently located throughout Eastern Canada. Contact information is listed with each
             satellite office.</p>
 
