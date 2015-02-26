@@ -2,9 +2,9 @@
 
 @section('browser-title')
     @if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
-        {{ $product->title }}
-    @else
         {{ $product->title_fr }}
+    @else
+        {{ $product->title }}
     @endif
 @stop
 
@@ -22,9 +22,9 @@
 
 @section('title')
     @if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
-        {{ $product->title }}
+        <h3>{{ $product->title_fr }}</h3>
     @else
-        {{ $product->title_fr }}
+        <h3>{{ $product->title }}</h3>
     @endif
 @stop
 

@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-    'local' => array('MBAir.local'),
+    'local' => array('homestead'),
     'staging' => array('epsilon.verilion.com'),
 
 ));
