@@ -10,10 +10,10 @@
 
 @section('breadcrumb')
     @if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
-        / <a href="/products">Products</a>
+        / Products
         / {{ $product->title_fr }}
     @else
-        / <a href="/products">Products</a>
+        / Products
         / {{ $product->title }}
     @endif
 @stop
