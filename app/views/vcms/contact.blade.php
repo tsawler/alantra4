@@ -67,6 +67,8 @@
         <a href="mailto:rob@alantraleasing.com">Rob Aiton</a>, Purchasing</p>
 
 
+        <hr>
+
         {{ Form::open(array('url' => '/contact', 'role' => 'form', 'name' => 'bookform', 'id' => 'bookform', 'method' => 'post')) }}
 
         <div class="row">
