@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/s', function(){
+   return Str::slug("Six Bedroom Hunting/Fishing Camp");
+});
 /**
  * Show home page
  */
