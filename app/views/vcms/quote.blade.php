@@ -31,7 +31,7 @@
             <img src="/page_images/writing.jpg">
         </div>
     </div>
-@sto
+@stop
 
 @section('content')
 
