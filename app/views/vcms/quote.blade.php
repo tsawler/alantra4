@@ -31,7 +31,7 @@
             <img src="/page_images/writing.jpg">
         </div>
     </div>
-@stop
+@sto
 
 @section('content')
 
@@ -39,6 +39,16 @@
     <div class="col-md-2"></div>
 
     <div class="col-md-8">
+
+        <p>If you know your specifications, just fill out the form below and we will be in touch promptly with any questions and/or your quote. Or you can call or e mail us for assistance in helping determine the best solutions for your needs.</p>
+
+        <p>
+        <a href="tel:18004561800>"<i class="fa fa-fw fa-phone"></i></a> Toll Free: 800-456-1800<br>
+        <a href="tel:15064333757"><i class="fa fa-fw fa-phone"></i></a> Phone: 506-433-3757<br>
+        <i class="fa fa-fw fa-fax"></i> Fax: 506-432-9076<br>
+        <a href mailto:'info@alantraleasing.com'><i class="fa fa-fw fa-envelope"></i> info@alantraleasing.com</a>
+        </p>
+
 
         {{ Form::open(array('url' => '/quote', 'role' => 'form', 'name' => 'bookform', 'id' => 'bookform', 'method' => 'post')) }}
 
