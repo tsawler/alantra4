@@ -35,7 +35,7 @@ class ProductsController extends BaseController {
      */
     public function getProductPublic()
     {
-        $slug = Request::segment(3);
+        $slug = Request::segment(2);
         $product_id = 0;
 
         $results = DB::table('products')->where('slug', '=', $slug)
