@@ -85,18 +85,9 @@ class ProductsController extends BaseController {
             $product = new Product;
         }
 
-        $cats = ProductCategory::orderBy('category_name')->get();
-        $categories = array();
-
-        foreach ($cats as $c)
-        {
-            $categories[$c->id] = $c->category_name;
-        }
-
         return View::make('vcms::admin.products-edit-product')
             ->with('product_id', Input::get('id'))
-            ->with('product', $product)
-            ->with('categories', $categories);
+            ->with('product', $product);
     }
 
     /**
@@ -141,7 +132,7 @@ class ProductsController extends BaseController {
         $product->microwaves = Input::get('microwaves');
         $product->water_coolers = Input::get('water_coolers');
         $product->insurance = Input::get('insurance');
-        $product->category_id = Input::get('category_id');
+        $product->category_id = 1;
         $product->save();
 
         $id = $product->id;
