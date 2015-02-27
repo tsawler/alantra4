@@ -98,19 +98,6 @@
                     </div>
 
                     <div class="form-group">
-                        {{ Form::label('category_id', 'Product Category:', array('class' => 'control-label')); }}
-                        <div class="controls">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
-                                {{ Form::select('category_id', $categories,
-                                        null,
-                                        array('class' => 'form-control',
-                                            'style' => 'max-width: 400px;')) }}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         {{ Form::label('active', 'Product active?', array('class' => 'control-label')); }}
                         <div class="controls">
                             <div class="input-group">
