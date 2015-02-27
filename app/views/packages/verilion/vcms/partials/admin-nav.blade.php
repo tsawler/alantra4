@@ -71,21 +71,6 @@
                 </li>
             @endif
 
-            @if (Auth::user()->hasRole('product-categories'))
-                @if (Request::segment(2) == 'product-categories')
-                    <li class='active'>
-                @else
-                    <li>
-                @endif
-                    <a href="#"><i class="fa fa-gear"></i> <span class="nav-label">Categories</span><span
-                                class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li><a href="/admin/product-categories/all-product-categories">All Categories</a></li>
-                        <li><a href="/admin/product-categories/category?id=0">Add Category</a></li>
-                    </ul>
-                </li>
-            @endif
-
             @if (Auth::user()->hasRole('quotes'))
                 @if (Request::segment(2) == 'quotes')
                     <li class='active'>
