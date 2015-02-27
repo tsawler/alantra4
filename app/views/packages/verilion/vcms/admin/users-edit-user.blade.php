@@ -116,7 +116,7 @@
         </div>
 
     <div>&nbsp;</div>
-    {{ Form::hidden('id', $user->id )}}
+    {{ Form::hidden('id', $user_id )}}
 
 {{ Form::close() }}
 
