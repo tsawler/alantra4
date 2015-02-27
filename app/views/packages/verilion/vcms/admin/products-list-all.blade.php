@@ -30,7 +30,6 @@ $active = ['<span class="text-danger">Inactive</span>', '<span class="text-succe
                     <thead>
                     <tr>
                         <th>Product</th>
-                        <th>Category</th>
                         <th>Created</th>
                         <th>Updated</th>
                         <th>Status</th>
@@ -40,7 +39,6 @@ $active = ['<span class="text-danger">Inactive</span>', '<span class="text-succe
                     @foreach ($products as $product)
                         <tr>
                             <td><a href="/admin/products/product?id={{ $product->id}}">{{ $product->title }}</a></td>
-                            <td>{{ $product->category->category_name }}</td>
                             <td>{{ $product->created_at }}</td>
                             <td>{{ $product->updated_at }}</td>
                             <td>{{ $active[$product->active] }}</td>
