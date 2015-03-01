@@ -134,20 +134,6 @@
 
         <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ca/maps?q=98+Cougle+Rd,+Sussex+Corner,+NB+E4E+2S6&amp;ie=UTF8&amp;hq=&amp;hnear=98+Cougle+Rd,+Sussex+Corner,+New+Brunswick+E4E+2S6&amp;t=m&amp;z=14&amp;ll=45.72463,-65.470922&amp;output=embed"></iframe><br /><small><a href="https://maps.google.ca/maps?q=98+Cougle+Rd,+Sussex+Corner,+NB+E4E+2S6&amp;ie=UTF8&amp;hq=&amp;hnear=98+Cougle+Rd,+Sussex+Corner,+New+Brunswick+E4E+2S6&amp;t=m&amp;z=14&amp;ll=45.72463,-65.470922&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
 
-        <h2>Visit Us</h2>
-
-        <div class="divider half-margins"><!-- divider --></div>
-
-        <p>
-            <span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 98 Cougle Road, Sussex NB E4V 5L5</span>
-            <span class="block"><strong><i class="fa fa-phone"></i> Toll Free:</strong> <a href="tel:18004561800">800-456-1800</a></span>
-            <span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:15064333757">506-433-3757</a></span>
-            <span class="block"><strong><i class="fa fa-phone"></i> Fax:</strong> <a
-                        href="tel:5064329076">506-432-9076</a></span>
-            <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a
-                        href="mailto:info@alantraleasing.com">info@alantraleasing</a></span>
-        </p>
-
         <div class="divider half-margins"><!-- divider --></div>
 
         <h4 class="font300">Business Hours</h4>
