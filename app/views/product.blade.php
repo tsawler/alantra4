@@ -112,45 +112,48 @@
                     @endif
                 </ul>
 
-                <h4>Optional Features</h4>
-                <ul class="list-icon star-o">
+                @if (($product->id != 4) && ($product->id != 6))
 
-                    @if ($product->office_desks == 1)
-                        <li>Office Desks (5' Wood with Drawers)</li>
-                    @endif
+                    <h4>Optional Features</h4>
+                    <ul class="list-icon star-o">
 
-                    @if ($product->office_chairs == 1)
-                        <li>Office Chairs (Leather Manager)</li>
-                    @endif
+                        @if ($product->office_desks == 1)
+                            <li>Office Desks (5' Wood with Drawers)</li>
+                        @endif
 
-                    @if ($product->folding_chairs == 1)
-                        <li>Folding Chairs</li>
-                    @endif
+                        @if ($product->office_chairs == 1)
+                            <li>Office Chairs (Leather Manager)</li>
+                        @endif
 
-                    @if ($product->folding_tables == 1)
-                        <li>6' Folding Tables</li>
-                    @endif
+                        @if ($product->folding_chairs == 1)
+                            <li>Folding Chairs</li>
+                        @endif
 
-                    @if ($product->filing_cabinets == 1)
-                        <li>Filing Cabinets</li>
-                    @endif
+                        @if ($product->folding_tables == 1)
+                            <li>6' Folding Tables</li>
+                        @endif
 
-                    @if ($product->lockers == 1)
-                        <li>Lockers</li>
-                    @endif
+                        @if ($product->filing_cabinets == 1)
+                            <li>Filing Cabinets</li>
+                        @endif
 
-                    @if ($product->fridges == 1)
-                        <li>Fridges</li>
-                    @endif
+                        @if ($product->lockers == 1)
+                            <li>Lockers</li>
+                        @endif
 
-                    @if ($product->microwaves == 1)
-                        <li>Microwaves</li>
-                    @endif
+                        @if ($product->fridges == 1)
+                            <li>Fridges</li>
+                        @endif
 
-                    @if ($product->insurance == 1)
-                        <li>File &amp; Theft Insurance ($25.00/month)</li>
-                    @endif
-            </ul>
+                        @if ($product->microwaves == 1)
+                            <li>Microwaves</li>
+                        @endif
+
+                        @if ($product->insurance == 1)
+                            <li>File &amp; Theft Insurance ($25.00/month)</li>
+                        @endif
+                    </ul>
+                @endif
 
                 @if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
                     <a href="/quote?i={{ urlencode($product->title_fr) }}"
