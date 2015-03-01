@@ -132,6 +132,8 @@
     <!-- INFO -->
     <div class="col-md-4">
 
+        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ca/maps?q=98+Cougle+Rd,+Sussex+Corner,+NB+E4E+2S6&amp;ie=UTF8&amp;hq=&amp;hnear=98+Cougle+Rd,+Sussex+Corner,+New+Brunswick+E4E+2S6&amp;t=m&amp;z=14&amp;ll=45.72463,-65.470922&amp;output=embed"></iframe><br /><small><a href="https://maps.google.ca/maps?q=98+Cougle+Rd,+Sussex+Corner,+NB+E4E+2S6&amp;ie=UTF8&amp;hq=&amp;hnear=98+Cougle+Rd,+Sussex+Corner,+New+Brunswick+E4E+2S6&amp;t=m&amp;z=14&amp;ll=45.72463,-65.470922&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+
         <h2>Visit Us</h2>
 
         <div class="divider half-margins"><!-- divider --></div>
