@@ -142,7 +142,7 @@
                 <li data-transition="fade" data-slotamount="14"  data-masterspeed="300" data-delay="10000">
 
                     <!-- COVER IMAGE -->
-                    <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/2.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
+                    <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/a.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
 
                     <div class="tp-caption large_text block_styleColor block_black lft tp-resizeme start"
                          data-x="60"
@@ -166,7 +166,7 @@
                 <li data-transition="fade" data-slotamount="14"  data-masterspeed="300" data-delay="10000">
 
                     <!-- COVER IMAGE -->
-                    <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/5.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
+                    <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/b.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
 
                     <div class="tp-caption large_text block_styleColor block_black lft tp-resizeme start"
                          data-x="760"
@@ -190,7 +190,7 @@
                 <li data-transition="fade" data-slotamount="14"  data-masterspeed="300" data-delay="10000">
 
                     <!-- COVER IMAGE -->
-                    <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/3.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
+                    <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/c.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
 
 
                     <div class="tp-caption large_text block_styleColor lft tp-resizeme start"
