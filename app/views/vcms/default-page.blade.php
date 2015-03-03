@@ -35,6 +35,7 @@
                                 "items": {{ sizeof($images) }},
                                 "singleItem": true,
                                 "navigation": true,
+                                "autoPlay": true,
                                 "pagination": false,
                                 "transitionStyle":"fadeUp"}'>
                     @foreach($images as $image)
