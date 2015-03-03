@@ -213,6 +213,14 @@
 
                 </li>
 
+                <!-- SLIDE  -->
+                <li data-transition="fade" data-slotamount="14"  data-masterspeed="300" data-delay="10000">
+
+                    <!-- COVER IMAGE -->
+                    <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/d.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
+
+                </li>
+
             </ul>
             <div class="tp-bannertimer"></div>
         </div>
