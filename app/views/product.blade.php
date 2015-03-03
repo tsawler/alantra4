@@ -37,6 +37,7 @@
                     "singleItem": true,
                     "navigation": true,
                     "pagination": false,
+                    "autoPlay": true,
                     "transitionStyle":"fadeUp"}'>
                 @foreach($product->images as $image)
                 <div>
