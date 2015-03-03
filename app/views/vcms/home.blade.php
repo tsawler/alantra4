@@ -242,7 +242,7 @@
                     </p>
                 </div>
                 <div class="panel-footer hidden-md hidden-sm hidden-xs">
-                    <h4><a href="/products">Read More</a></h4>
+                    <h4><a href="/superior-quality-fully-featured-diverse">Read More</a></h4>
                 </div>
             </div>
 

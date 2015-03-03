@@ -84,7 +84,7 @@ Route::post('/contact', 'ContactController@postContact');
 /**
  * Product Routes
  */
-Route::get('/products', 'ProductCategoriesController@allCategories');
+//Route::get('/products', 'ProductCategoriesController@allCategories');
 //Route::get('/products/{product_category}', 'ProductCategoriesController@getCategoryPublic');
 Route::get('/products/{product_name}','ProductsController@getProductPublic');
 //Route::get('/products/{product_category}/{product_name}', 'ProductsController@getProductPublic');
