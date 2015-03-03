@@ -233,7 +233,7 @@
                     <h3 class="panel-title">Products</h3>
                 </div>
                 <div class="panel-body">
-                    <a href="/products"><img class="img-responsive" src="/assets/custom/images/products.jpg" alt=""></a>
+                    <a href="/superior-quality-fully-featured-diverse"><img class="img-responsive" src="/assets/custom/images/products.jpg" alt=""></a>
                     <p>
                         The unit you need. When you need it.
                         From offices to wash cars, modular structures and more,
