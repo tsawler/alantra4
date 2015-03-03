@@ -112,7 +112,7 @@
                     @endif
                 </ul>
 
-                @if (($product->id != 4) && ($product->id != 6) && ($product->id != 9))
+                @if (($product->id != 4) && ($product->id != 6) && ($product->id != 9) && ($product->id != 11))
 
                     <h4>Optional Features</h4>
                     <ul class="list-icon star-o">
