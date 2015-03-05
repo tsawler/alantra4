@@ -58,12 +58,7 @@
 
             <!-- col #4 -->
             <div class="spaced col-md-3 col-sm-4">
-                <h4>About <strong>Us</strong></h4>
-                <p>
-                    Some pithy, catchy text goes here.
-                </p>
-
-                <h4><small><strong>Subscribe to our Newsletter</strong></small></h4>
+                <h4>Subscribe to our <strong>Newsletter</strong></h4>
                 <form id="newsletterSubscribe" method="post" action="php/newsletter.php" class="input-group">
                     <input required type="email" class="form-control" name="newsletter_email" id="newsletter_email" value="" placeholder="E-mail Address">
 								<span class="input-group-btn">
