@@ -2,7 +2,7 @@
 
 @section('top-white')
 <div class="col-sm-6">
-
+    Dashboard
 </div>
 @stop
 
