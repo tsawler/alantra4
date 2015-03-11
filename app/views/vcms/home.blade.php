@@ -173,16 +173,16 @@
                          data-y="200"
                          data-speed="300"
                          data-start="500"
-                         data-easing="easeOutExpo">Trusted Quality.
+                         data-easing="easeOutExpo">Fully Featured Units
                     </div>
 
-                    <div class="tp-caption medium_text block_styleColor sft stb"
-                         data-x="760"
-                         data-y="280"
-                         data-speed="300"
-                         data-start="1000"
-                         data-easing="easeOutExpo">Service Excellence.
-                    </div>
+                    {{--<div class="tp-caption medium_text block_styleColor sft stb"--}}
+                         {{--data-x="760"--}}
+                         {{--data-y="280"--}}
+                         {{--data-speed="300"--}}
+                         {{--data-start="1000"--}}
+                         {{--data-easing="easeOutExpo">Service Excellence.--}}
+                    {{--</div>--}}
 
                 </li>
 
