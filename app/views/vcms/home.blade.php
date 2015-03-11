@@ -219,6 +219,21 @@
                     <!-- COVER IMAGE -->
                     <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/d.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
 
+                    <div class="tp-caption large_text block_styleColor block_black lft tp-resizeme start"
+                         data-x="760"
+                         data-y="200"
+                         data-speed="300"
+                         data-start="500"
+                         data-easing="easeOutExpo">Comfort.
+                    </div>
+
+                    <div class="tp-caption medium_text block_styleColor sft stb"
+                    data-x="760"
+                    data-y="280"
+                    data-speed="300"
+                    data-start="1000"
+                    data-easing="easeOutExpo">Durability in the most remote locations.
+                    </div>
                 </li>
 
             </ul>
