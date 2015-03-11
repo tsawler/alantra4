@@ -14,7 +14,8 @@
 		"laravel/framework": "4.2.*",
 		"intervention/image": "2.*",
         	"francodacosta/phmagick": "0.4.*@dev",
-		"verilion/vcms": "dev-master"
+		"verilion/vcms": "dev-master",
+		"barryvdh/laravel-debugbar": "~1.8"
 	},
 	"autoload": {
 		"classmap": [

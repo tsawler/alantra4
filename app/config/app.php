@@ -123,6 +123,7 @@ return array(
 		//'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
 		'verilion\vcms\VcmsServiceProvider',
+        'Barryvdh\Debugbar\ServiceProvider',
 
 	),
 
