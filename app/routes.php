@@ -240,7 +240,7 @@ Route::group(array('before' => 'auth.admin'), function ()
 	Route::get('/admin/logout', 'verilion\vcms\LoginController@getLogout');
 
 	// admin dashboard
-	Route::get('/admin/dashboard', 'verilion\vcms\AdminController@getDashboard');
+	Route::get('/admin/dashboard', 'AlantraAdminController@getDashboard');
 
 	// profile
 	Route::get('/admin/users/profile', 'verilion\vcms\ProfileController@getProfile');
