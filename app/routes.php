@@ -5,6 +5,8 @@
  */
 Route::get('/', 'AlantraPageController@showHome');
 
+Route::post('/subscribe', 'SubscriberController@postSubscribe');
+
 /**
  * Change language prefs
  */
