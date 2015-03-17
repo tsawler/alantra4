@@ -175,7 +175,6 @@
             <div class="container text-center fsize12">
                 All Right Reserved &copy; {{ date('Y') }} Alantra Leasing Inc. &nbsp;
                 <a href="/privacy-policy" class="fsize11">Privacy Policy</a> &bull;
-                <a href="/terms-of-service" class="fsize11">Terms of Service</a>
             </div>
         </div>
     </footer>
