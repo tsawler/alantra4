@@ -78,7 +78,8 @@
     <div class="copyright">
         <div class="container text-center fsize12">
             All Right Reserved &copy; {{ date('Y') }} Alantra Leasing Inc. &nbsp;
-            <a href="/privacy-policy" class="fsize11">Privacy Policy</a>
+            <a href="/privacy-policy" class="fsize11">Privacy Policy</a> &bull;
+            <a href="/sitemap">Sitemap</a>
         </div>
     </div>
 </footer>
