@@ -55,7 +55,8 @@ $active = ['<span class="text-danger">Inactive</span>', '<span class="text-succe
     <script>
         $(document).ready(function() {
             $('#itable').dataTable({
-                responsive: true
+                responsive: true,
+                stateSave: true
             });
         });
     </script>

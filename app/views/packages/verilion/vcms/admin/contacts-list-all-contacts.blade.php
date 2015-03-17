@@ -49,7 +49,8 @@
     <script>
         $(document).ready(function() {
             $('#itable').dataTable({
-                responsive: true
+                responsive: true,
+                stateSave: true
             });
         });
     </script>
