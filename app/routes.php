@@ -246,6 +246,40 @@ Route::group(array('before' => 'auth.admin'), function ()
 Route::post('/search', 'verilion\vcms\SearchController@performSearch');
 
 /**
+ * sitemap
+ */
+Route::get('sitemap.xml', function(){
+
+    // create new sitemap object
+    $sitemap = App::make("sitemap");
+
+    // add items to the sitemap (url, date, priority, freq)
+    $sitemap->add(URL::to('/'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
+    $sitemap->add(URL::to('//products/coming-soon-new-products-2015'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
+    $sitemap->add(URL::to('/products/wash-cars'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
+    $sitemap->add(URL::to('/products/mining-trailers'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
+    $sitemap->add(URL::to('/products/storage-units'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
+    $sitemap->add(URL::to('/products/custom-trailersmodular-buildings'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
+    $sitemap->add(URL::to('/products/bunkhouses'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
+    $sitemap->add(URL::to('/products/clearanace'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
+    $sitemap->add(URL::to('/products/officelunchroom'), '2012-08-26T12:30:00+02:00', '0.9', 'monthly');
+
+    // get all pages from db
+    $pages = DB::table('pages')->orderBy('created_at', 'desc')->get();
+
+    // add every page to the sitemap
+    foreach ($pages as $page)
+    {
+        $sitemap->add(URL::to('/'.$page->slug), $page->updated_at, '0.9', 'weekly');
+    }
+
+    // generate your sitemap (format, filename)
+    //$sitemap->store('xml', 'mysitemap');
+    // this will generate file mysitemap.xml to your public folder
+    return $sitemap->render('xml');
+});
+
+/**
  * Page Routes
  */
 Route::get('/alternate/{pagename}', 'AlantraPageController@showPageNoBanner');

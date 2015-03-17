@@ -124,6 +124,7 @@ return array(
 		'Intervention\Image\ImageServiceProvider',
 		'verilion\vcms\VcmsServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
+        'Roumen\Sitemap\SitemapServiceProvider',
 
 	),
 

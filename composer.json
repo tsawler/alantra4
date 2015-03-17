@@ -11,11 +11,12 @@
 	}
 	],
 	"require": {
-		"laravel/framework": "4.2.*",
-		"intervention/image": "2.*",
-        	"francodacosta/phmagick": "0.4.*@dev",
-		"verilion/vcms": "dev-master",
-		"barryvdh/laravel-debugbar": "~1.8"
+      "laravel/framework": "4.2.*",
+      "intervention/image": "2.*",
+      "francodacosta/phmagick": "0.4.*@dev",
+      "verilion/vcms": "dev-master",
+      "barryvdh/laravel-debugbar": "~1.8",
+      "roumen/sitemap": "2.4.15"
 	},
 	"autoload": {
 		"classmap": [
