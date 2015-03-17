@@ -61,9 +61,9 @@
                 <h4>Subscribe to our <strong>Newsletter</strong></h4>
                 <form id="newsletterSubscribe" method="post" action="/subscribe" class="input-group">
                     <input required type="email" class="form-control" name="newsletter_email" id="newsletter_email" value="" placeholder="E-mail Address">
-								<span class="input-group-btn">
-									<button class="btn btn-primary">SUBMIT</button>
-								</span>
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary">SUBMITT</button>
+                        </span>
                 </form>
 
             </div>
