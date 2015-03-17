@@ -56,7 +56,7 @@ class QuoteController extends BaseController {
         Mail::later(5, 'emails.quote_email', $data, function ($message) use ($user)
         {
             $message->from('donotreply@alantraleasing.com', 'Do not reply');
-            $message->to('trevor.sawler@gmail.com')->subject('Request for Quotation from website');
+            $message->to('melissa@alantraleasing.com')->subject('Request for Quotation from website');
         });
 
         return Redirect::to('/')->with('message', 'Your request has been delivered');

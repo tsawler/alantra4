@@ -50,7 +50,7 @@ class ContactController extends BaseController {
         Mail::later(5, 'emails.contact_email', $data, function ($message) use ($user)
         {
             $message->from('donotreply@alantraleasing.com', 'Do not reply');
-            $message->to('trevor.sawler@gmail.com')->subject('Contact form from website');
+            $message->to('melissa@alantraleasing.com')->subject('Contact form from website');
         });
 
         return Redirect::to('/')->with('message', 'Your message has been delivered');
