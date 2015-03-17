@@ -376,6 +376,7 @@
                     <input type="hidden" name="fid" value="{{ $fragments[0]->id }}">
                     <input type="hidden" name="thedata" id="thedata1">
                     <input type="hidden" name="thetitle" id="thetitledata1">
+                    {{ Form::close() }}
                 @endif
 
             </header>
