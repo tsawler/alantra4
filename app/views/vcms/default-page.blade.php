@@ -36,8 +36,7 @@
                                 "singleItem": true,
                                 "navigation": true,
                                 "autoPlay": true,
-                                "pagination": false,
-                                "transitionStyle":"scaleUp"}'>
+                                "pagination": false}'>
                     @foreach($images as $image)
                         <div>
                             <img alt="" class="img-responsive" src="/page_images/{{ $image->image_name }}">
