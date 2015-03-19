@@ -272,10 +272,6 @@ Route::get('sitemap.xml', function(){
     {
         $sitemap->add(URL::to('/'.$page->slug), $page->updated_at, '0.9', 'weekly');
     }
-
-    // generate your sitemap (format, filename)
-    //$sitemap->store('xml', 'mysitemap');
-    // this will generate file mysitemap.xml to your public folder
     return $sitemap->render('xml');
 });
 
