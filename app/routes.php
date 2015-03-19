@@ -284,3 +284,11 @@ Route::get('sitemap.xml', function(){
  */
 Route::get('/alternate/{pagename}', 'AlantraPageController@showPageNoBanner');
 Route::get('/{pagename?}', 'AlantraPageController@showPage');
+
+/**
+ * Catch all
+ */
+Route::any('{path?}', function ($path)
+{
+    return Redirect::to('/not-active');
+})->where('path', '.+');
