@@ -336,6 +336,126 @@
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        {{ Form::label('water_septic', 'Water and Septic?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('water_septic', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('exhaust_fans', 'Exhaust Fans?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('exhaust_fans', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('hot_water_heaters', 'Hot Water Heaters?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('hot_water_heaters', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('laundry_sink', 'Laundry Sink?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('laundry_sink', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('hand_dryers', 'Hand Dryers?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('hand_dryers', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('toilets', 'Toilets?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('toilets', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('urinals', 'Urinals?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('urinals', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ Form::label('sinks', 'Sinks?', array('class' => 'control-label')); }}
+                        <div class="controls">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-question"></i></span>
+                                {{ Form::select('sinks', array(
+                                        '1' => 'Yes',
+                                        '0' => 'No'),
+                                        null,
+                                        array('class' => 'form-control',
+                                            'style' => 'max-width: 400px;')) }}
+                            </div>
+                        </div>
+                    </div>
+
                     <hr>
 
                     <h2>Options</h2>

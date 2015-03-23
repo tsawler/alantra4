@@ -132,6 +132,16 @@ class ProductsController extends BaseController {
         $product->microwaves = Input::get('microwaves');
         $product->water_coolers = Input::get('water_coolers');
         $product->insurance = Input::get('insurance');
+
+        $product->water_septic = Input::get('water_septic');
+        $product->exhaust_fans = Input::get('exhaust_fans');
+        $product->hot_water_heaters = Input::get('hot_water_heaters');
+        $product->laundry_sink = Input::get('laundry_sink');
+        $product->hand_dryers = Input::get('hand_dryers');
+        $product->toilets = Input::get('toilets');
+        $product->urinals = Input::get('urinals');
+        $product->sinks = Input::get('sinks');
+
         $product->category_id = 1;
         $product->save();
 
