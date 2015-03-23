@@ -108,8 +108,36 @@
                         <li>Bulletin Boards</li>
                     @endif
 
-                    @if ($product->window_bars == 1)
-                        <li>Security Window Bars</li>
+                    @if ($product->water_septic == 1)
+                        <li>Water and Septic Tanks</li>
+                    @endif
+
+                    @if ($product->exhaust_fans == 1)
+                        <li>Exhaust Fans</li>
+                    @endif
+
+                    @if ($product->hot_water_heaters == 1)
+                        <li>Hot Water Heaters</li>
+                    @endif
+
+                    @if ($product->laundry_sink == 1)
+                        <li>Laundry Sink</li>
+                    @endif
+
+                    @if ($product->hand_dryers == 1)
+                        <li>Hand Dryers</li>
+                    @endif
+
+                    @if ($product->toilets == 1)
+                        <li>Toilets</li>
+                    @endif
+
+                    @if ($product->urinals == 1)
+                        <li>Urinals</li>
+                    @endif
+
+                    @if ($product->sinks == 1)
+                        <li>Sinks</li>
                     @endif
                 </ul>
 
