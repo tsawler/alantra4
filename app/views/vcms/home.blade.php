@@ -120,6 +120,12 @@
             line-height: 140%;
             color: black;
         }
+        #topNav form.search {
+            float:right;
+            max-width:160px;
+            margin:12px 0 0 0;
+            padding:0;
+        }
     </style>
 </head>
 

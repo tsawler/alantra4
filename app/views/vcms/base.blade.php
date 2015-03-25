@@ -46,6 +46,14 @@
     <script src="/assets/plugins/respond.js"></script>
     <![endif]-->
     @include("vcms::partials.vcms-css")
+    <style>
+        #topNav form.search {
+            float:right;
+            max-width:160px;
+            margin:12px 0 0 0;
+            padding:0;
+        }
+    </style>
 </head>
 
 <body class="smoothscroll">
