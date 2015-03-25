@@ -72,7 +72,7 @@
             }
         }
         #home-content .panel-body {
-            height: 300px;
+            height: 350px;
         }
         #home-content .panel-body > img {
             width: 100%;

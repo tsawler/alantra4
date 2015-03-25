@@ -16,6 +16,7 @@
             align-items: center;
         }
     </style>
+@stop
 
 @section('content-title')
 
