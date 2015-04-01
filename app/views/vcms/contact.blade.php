@@ -33,7 +33,7 @@
     <!-- FORM -->
     <div class="col-md-8">
 
-        <p>Just give us a call or e mail us for help from our knowledgeable staff with everything from a needs analysis,
+        <p>Just give us a call or email us for help from our knowledgeable staff with everything from a needs analysis,
             project assessment and recommendations and information about everything from manufacturing, installation, and
             delivery.</p>
         <p>You can also <a href="/quote">Request a Quote</a> and we’ll get back to you within two hours. That’s our
@@ -57,15 +57,14 @@
 
         <strong>Alantra&rsquo;s Corporate Headquarters Team</strong><br><br>
         <a href="mailto:marcus@alantraleasing.com">Marcus deWinter</a>, President<br>
-        <a href="mailto:alain@alantraleasing.com">Alain (AJ) Leclerc</a>, National Director of Sales<br>
         <a href="mailto:melissa@alantraleasing.com">Melissa Brown</a>, Sales Representative / Marketing<br>
         <a href="mailto:kim@alantraleasing.com">Kim Benson</a>, Sales Representative<br>
         <a href="mailto:mark@alantraleasing.com">Mark Green</a>, Comptroller<br>
         <a href="mailto:mary@alantraleasing.com">Mary Maxwell</a>, Accounts Department<br>
-        <a href="mailto:rebecca@alantraleasing.com">Rebecca Kyle</a>, Operations Manager<br>
-        <a href="mailto:ryan@alantraleasing.com">Ryan Colpitts</a>, Design &amp; Service<br>
+        <a href="mailto:rebecca@alantraleasing.com">Rebecca Kyle</a>, Operations Manager, Service<br>
+        <a href="mailto:ryan@alantraleasing.com">Ryan Colpitts</a>, Design<br>
         <a href="mailto:denise@alantraleasing.com">Denise Brown</a>, Design &amp; Quality Assurance<br>
-        <a href="mailto:sharon@alantraleasing.com">Sharon Turner</a>, Accounting<br>
+        <a href="mailto:sharon@alantraleasing.com">Sharon Turner</a>, Accounting Department<br>
         <a href="mailto:stacy@alantraleasing.com">Stacy Mazerolle</a>, Administration<br>
         <a href="mailto:rob@alantraleasing.com">Rob Aiton</a>, Purchasing</p>
 

@@ -180,7 +180,7 @@
                         @endif
 
                         @if ($product->insurance == 1)
-                            <li>File &amp; Theft Insurance ($25.00/month)</li>
+                            <li>Fire &amp; Theft Insurance ($25.00/month)</li>
                         @endif
                     </ul>
                 @endif
