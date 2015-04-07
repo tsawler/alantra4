@@ -66,16 +66,16 @@
         <strong>Denise Brown</strong>, Design &amp; Quality Assurance<br>
         <strong>Sharon Turner</strong>, Accounting Department<br>
         <strong>Stacy Mazerolle</strong>, Administration<br>
-        <strong>Rob Aiton</strong>, Purchasing</p>
-        <strong>Graham Moore</strong>, PreFab Panel Manager</p>
-        <strong>Richard Buxton</strong>, Sales Rep/Manager for Nova Scotia</p>
-        <strong>Earl MacLeod</strong>, Sales Rep/Manager for Prince Edward Island</p>
-        <strong>Ronald Irving</strong>, Sales Rep/Manager for Quebec</p>
-        <strong>George Rodgers</strong>, Sales Rep/Manager for Labrador</p>
-        <strong>Colin Britt</strong>, Sales Rep/Manager for West Newfoundland</p>
-        <strong>Tom Cush</strong>, Sales Rep/Manager for East Newfoundland</p>
-        <strong>Eugene Stagg</strong>, Maintenance Manager for East</p>
-        <strong>Claude Belange</strong>, Maintenance Manager for Quebec</p>
+        <strong>Rob Aiton</strong>, Purchasing<br>
+        <strong>Graham Moore</strong>, PreFab Panel Manager<br>
+        <strong>Richard Buxton</strong>, Sales Rep/Manager for Nova Scotia<br>
+        <strong>Earl MacLeod</strong>, Sales Rep/Manager for Prince Edward Island<br>
+        <strong>Ronald Irving</strong>, Sales Rep/Manager for Quebec<br>
+        <strong>George Rodgers</strong>, Sales Rep/Manager for Labrador<br>
+        <strong>Colin Britt</strong>, Sales Rep/Manager for West Newfoundland<br>
+        <strong>Tom Cush</strong>, Sales Rep/Manager for East Newfoundland<br>
+        <strong>Eugene Stagg</strong>, Maintenance Manager for East<br>
+        <strong>Claude Belange</strong>, Maintenance Manager for Quebec<br></p>
 
 
         <hr>
