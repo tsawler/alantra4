@@ -61,7 +61,7 @@
         <strong>Kim Benson</strong>, Sales Representative<br>
         <strong>Mark Green</strong>, Comptroller<br>
         <strong>Mary Maxwell</strong>, Accounts Department<br>
-        <strong>Rebecca Kyle</strong>, Operations Manager, Service<br>
+        <strong>Rebecca Richardson</strong>, Operations Manager, Service<br>
         <strong>Ryan Colpitts</strong>, Design<br>
         <strong>Denise Brown</strong>, Design &amp; Quality Assurance<br>
         <strong>Sharon Turner</strong>, Accounting Department<br>
@@ -72,10 +72,10 @@
         <strong>Earl MacLeod</strong>, Sales Rep/Manager for Prince Edward Island<br>
         <strong>Ronald Irving</strong>, Sales Rep/Manager for Quebec<br>
         <strong>George Rodgers</strong>, Sales Rep/Manager for Labrador<br>
-        <strong>Colin Britt</strong>, Sales Rep/Manager for West Newfoundland<br>
-        <strong>Tom Cush</strong>, Sales Rep/Manager for East Newfoundland<br>
+        <strong>Colin Butt</strong>, Sales Rep/Manager for West Newfoundland<br>
+        <strong>Tom Lush</strong>, Sales Rep/Manager for East Newfoundland<br>
         <strong>Eugene Stagg</strong>, Maintenance Manager for East<br>
-        <strong>Claude Belange</strong>, Maintenance Manager for Quebec<br></p>
+        <strong>Claude Belanger</strong>, Maintenance Manager for Quebec<br></p>
 
 
         <hr>
@@ -147,7 +147,7 @@
         <h4 class="font300">Business Hours</h4>
 
         <p>
-            <span class="block"><strong>Monday - Friday:</strong> 9am to 5pm</span>
+            <span class="block"><strong>Monday - Friday:</strong> 8am to 5pm</span>
             <span class="block"><strong>Saturday:</strong> Closed</span>
             <span class="block"><strong>Sunday:</strong> Closed</span>
         </p>
