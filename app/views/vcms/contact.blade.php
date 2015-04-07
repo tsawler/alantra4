@@ -56,17 +56,26 @@
         <br><br>
 
         <strong>Alantra&rsquo;s Corporate Headquarters Team</strong><br><br>
-        <a href="mailto:marcus@alantraleasing.com">Marcus deWinter</a>, President<br>
-        <a href="mailto:melissa@alantraleasing.com">Melissa Brown</a>, Sales Representative / Marketing<br>
-        <a href="mailto:kim@alantraleasing.com">Kim Benson</a>, Sales Representative<br>
-        <a href="mailto:mark@alantraleasing.com">Mark Green</a>, Comptroller<br>
-        <a href="mailto:mary@alantraleasing.com">Mary Maxwell</a>, Accounts Department<br>
-        <a href="mailto:rebecca@alantraleasing.com">Rebecca Kyle</a>, Operations Manager, Service<br>
-        <a href="mailto:ryan@alantraleasing.com">Ryan Colpitts</a>, Design<br>
-        <a href="mailto:denise@alantraleasing.com">Denise Brown</a>, Design &amp; Quality Assurance<br>
-        <a href="mailto:sharon@alantraleasing.com">Sharon Turner</a>, Accounting Department<br>
-        <a href="mailto:stacy@alantraleasing.com">Stacy Mazerolle</a>, Administration<br>
-        <a href="mailto:rob@alantraleasing.com">Rob Aiton</a>, Purchasing</p>
+        <strong>Marcus deWinter</strong>, President &amp; General Manager<br>
+        <strong>Melissa Brown</strong>, Sales Representative / Marketing<br>
+        <strong>Kim Benson</strong>, Sales Representative<br>
+        <strong>Mark Green</strong>, Comptroller<br>
+        <strong>Mary Maxwell</strong>, Accounts Department<br>
+        <strong>Rebecca Kyle</strong>, Operations Manager, Service<br>
+        <strong>Ryan Colpitts</strong>, Design<br>
+        <strong>Denise Brown</strong>, Design &amp; Quality Assurance<br>
+        <strong>Sharon Turner</strong>, Accounting Department<br>
+        <strong>Stacy Mazerolle</strong>, Administration<br>
+        <strong>Rob Aiton</strong>, Purchasing</p>
+        <strong>Graham Moore</strong>, PreFab Panel Manager</p>
+        <strong>Richard Buxton</strong>, Sales Rep/Manager for Nova Scotia</p>
+        <strong>Earl MacLeod</strong>, Sales Rep/Manager for Prince Edward Island</p>
+        <strong>Ronald Irving</strong>, Sales Rep/Manager for Quebec</p>
+        <strong>George Rodgers</strong>, Sales Rep/Manager for Labrador</p>
+        <strong>Colin Britt</strong>, Sales Rep/Manager for West Newfoundland</p>
+        <strong>Tom Cush</strong>, Sales Rep/Manager for East Newfoundland</p>
+        <strong>Eugene Stagg</strong>, Maintenance Manager for East</p>
+        <strong>Claude Belange</strong>, Maintenance Manager for Quebec</p>
 
 
         <hr>
