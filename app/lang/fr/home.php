@@ -38,7 +38,7 @@ return array(
     'service_excellence'    => 'Excellence du service.',
     'comfort'               => 'Confort.',
     'durability_in'         => 'Durabilité dans la plupart <br>des régions éloignées.',
-    'search'                => 'Search…',
+    'search'                => 'Recherche…',
 
     'phone'                 => 'Téléphone',
     'fax'                   => 'Télécopieur',
