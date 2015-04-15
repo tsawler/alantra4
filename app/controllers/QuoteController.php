@@ -11,11 +11,22 @@ class QuoteController extends BaseController {
         if (Input::has('i')){
             $interested_in = urldecode(Input::get('i'));
         }
-        return View::make('vcms.quote')
-            ->with('page_title', 'Request a Quote')
-            ->with('meta_tags', '')
-            ->with('interested_in', $interested_in)
-            ->with('meta', '');
+
+        if (Session::get('lang') == 'en')
+        {
+            return View::make('vcms.quote')
+                ->with('page_title', 'Request a Quote')
+                ->with('meta_tags', '')
+                ->with('interested_in', $interested_in)
+                ->with('meta', '');
+        } else
+        {
+            return View::make('vcms.quote-fr')
+                ->with('page_title', 'Demander un estimé')
+                ->with('meta_tags', '')
+                ->with('interested_in', $interested_in)
+                ->with('meta', '');
+        }
     }
 
 

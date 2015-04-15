@@ -105,6 +105,9 @@
 
 @include("vcms::partials.vcms-js")
 @include('vcms::partials.messages')
+@if (Session::get('lang') == 'fr')
+    <script type="text/javascript" src="/assets/js/messages_fr.js"></script>
+@endif
 @yield('bottom-js')
 </body>
 </html>
