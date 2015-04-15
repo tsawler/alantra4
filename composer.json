@@ -16,7 +16,8 @@
       "francodacosta/phmagick": "0.4.*@dev",
       "verilion/vcms": "dev-master",
       "barryvdh/laravel-debugbar": "~1.8",
-      "roumen/sitemap": "2.4.15"
+      "roumen/sitemap": "2.4.15",
+      "vlucas/phpdotenv": "~1.1"
 	},
 	"autoload": {
 		"classmap": [
