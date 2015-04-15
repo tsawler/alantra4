@@ -9,10 +9,19 @@ class ContactController extends BaseController {
      */
     public function getContact()
     {
-        return View::make('vcms.contact')
-            ->with('page_title', 'Contact')
-            ->with('meta_tags', '')
-            ->with('meta', '');
+        if (Session::get('lang') == 'en')
+        {
+            return View::make('vcms.contact')
+                ->with('page_title', 'Contact')
+                ->with('meta_tags', '')
+                ->with('meta', '');
+        } else
+        {
+            return View::make('vcms.contact-fr')
+                ->with('page_title', 'Contact')
+                ->with('meta_tags', '')
+                ->with('meta', '');
+        }
     }
 
     /**
