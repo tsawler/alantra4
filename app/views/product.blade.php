@@ -47,7 +47,7 @@
             </div>
 
             @if(sizeof($drawings) > 0)
-                <h3>Drawings</h3>
+                <h3>{{ Lang::get('products.drawings') }}</h3>
                 <ul>
                     @foreach($drawings as $drawing)
                         <li>
@@ -74,38 +74,38 @@
                     <p>{{ $product->description }}</p>
             @endif
 
-                <h4>Features</h4>
+                <h4>{{ Lang::get('products.features') }}</h4>
                 <ul class="list-icon star-o">
                     @if ($product->electric_heat == 1)
-                        <li>Electric Heat</li>
+                        <li>{{ Lang::get('products.electric_heat') }}</li>
                     @endif
 
                     @if ($product->communications_panel == 1)
-                        <li>Communications Panel</li>
+                        <li>{{ Lang::get('products.communications_panel') }}</li>
                     @endif
 
                     @if ($product->ac == 1)
-                        <li>Air Conditioning</li>
+                        <li>{{ Lang::get('products.air_conditioning') }}</li>
                     @endif
 
                     @if ($product->electric_mast == 1)
-                        <li>Electric Mast</li>
+                        <li>{{ Lang::get('products.electric_mast') }}</li>
                     @endif
 
                     @if ($product->drawing_tables == 1)
-                        <li>Drawing Tables</li>
+                        <li>{{ Lang::get('products.drawing_tables') }}</li>
                     @endif
 
                     @if ($product->emergency_lights == 1)
-                        <li>Emergency/Exit Lights</li>
+                        <li>{{ Lang::get('products.emergency_exit') }}</li>
                     @endif
 
                     @if ($product->coat_hooks == 1)
-                        <li>Coat Hooks</li>
+                        <li>{{ Lang::get('products.coat_hooks') }}</li>
                     @endif
 
                     @if ($product->bulletin_boards == 1)
-                        <li>Bulletin Boards</li>
+                        <li>{{ Lang::get('products.bulletin_boards') }}</li>
                     @endif
 
                     @if ($product->water_septic == 1)
