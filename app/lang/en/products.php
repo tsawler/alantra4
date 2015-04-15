@@ -21,4 +21,12 @@ return array(
     'microwaves'           => 'Microwaves',
     'fire_theft'           => 'Fire &amp; Theft Insurance ($25/month)',
     'drawing_tables'       => 'Drawing Tables',
+    'water_and'            => 'Water and Septic Tanks',
+    'exhaust_fans'         => 'Exhaust Fans',
+    'hot_water'            => 'Hot Water Heaters',
+    'laundry_sink'         => 'Laundry Sinks',
+    'hand_dryers'          => 'Hand Dryers',
+    'toilets'              => 'Toilets',
+    'urinals'              => 'Urinals',
+    'sinks'                => 'Sinks',
 );

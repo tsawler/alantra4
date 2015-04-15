@@ -21,4 +21,12 @@ return array(
     'microwaves'           => 'Fours à micro-onde',
     'fire_theft'           => 'Assurance contre le feu et le vol (25 $ par mois)',
     'drawing_tables'       => 'Tables à dessin',
+    'water_and'            => 'Réservoirs pour eaux et fosse septique',
+    'exhaust_fans'         => 'Ventilateur d’extraction',
+    'hot_water'            => 'Chauffe-eau',
+    'laundry_sink'         => 'Lavabo de laverie',
+    'hand_dryers'          => 'Sèche-mains',
+    'toilets'              => 'Toilettes',
+    'urinals'              => 'Urinoirs',
+    'sinks'                => 'Lavabos',
 );

@@ -109,35 +109,35 @@
                     @endif
 
                     @if ($product->water_septic == 1)
-                        <li>Water and Septic Tanks</li>
+                        <li>{{ Lang::get('products.water_and') }}</li>
                     @endif
 
                     @if ($product->exhaust_fans == 1)
-                        <li>Exhaust Fans</li>
+                        <li>{{ Lang::get('products.exhaust_fans') }}</li>
                     @endif
 
                     @if ($product->hot_water_heaters == 1)
-                        <li>Hot Water Heaters</li>
+                        <li>{{ Lang::get('products.hot_water') }}</li>
                     @endif
 
                     @if ($product->laundry_sink == 1)
-                        <li>Laundry Sink</li>
+                        <li>{{ Lang::get('products.laundry_sink') }}</li>
                     @endif
 
                     @if ($product->hand_dryers == 1)
-                        <li>Hand Dryers</li>
+                        <li>{{ Lang::get('products.hand_dryers') }}</li>
                     @endif
 
                     @if ($product->toilets == 1)
-                        <li>Toilets</li>
+                        <li>{{ Lang::get('products.toilets') }}</li>
                     @endif
 
                     @if ($product->urinals == 1)
-                        <li>Urinals</li>
+                        <li>{{ Lang::get('products.urinals') }}</li>
                     @endif
 
                     @if ($product->sinks == 1)
-                        <li>Sinks</li>
+                        <li>{{ Lang::get('products.sinks') }}</li>
                     @endif
                 </ul>
 
@@ -148,39 +148,39 @@
                     <ul class="list-icon star-o">
 
                         @if ($product->office_desks == 1)
-                            <li>Office Desks (5' Wood with Drawers)</li>
+                            <li>{{ Lang::get('products.office_desks') }}</li>
                         @endif
 
                         @if ($product->office_chairs == 1)
-                            <li>Office Chairs (Leather Manager)</li>
+                            <li>{{ Lang::get('products.office_chairs') }}</li>
                         @endif
 
                         @if ($product->folding_chairs == 1)
-                            <li>Folding Chairs</li>
+                            <li>{{ Lang::get('products.folding_chairs') }}</li>
                         @endif
 
                         @if ($product->folding_tables == 1)
-                            <li>6' Folding Tables</li>
+                            <li>{{ Lang::get('products.six_foot') }}</li>
                         @endif
 
                         @if ($product->filing_cabinets == 1)
-                            <li>Filing Cabinets</li>
+                            <li>{{ Lang::get('products.filing_cabinets') }}</li>
                         @endif
 
                         @if ($product->lockers == 1)
-                            <li>Lockers</li>
+                            <li>{{ Lang::get('products.lockers') }}</li>
                         @endif
 
                         @if ($product->fridges == 1)
-                            <li>Fridges</li>
+                            <li>{{ Lang::get('products.fridges') }}</li>
                         @endif
 
                         @if ($product->microwaves == 1)
-                            <li>Microwaves</li>
+                            <li>{{ Lang::get('products.microwaves') }}</li>
                         @endif
 
                         @if ($product->insurance == 1)
-                            <li>Fire &amp; Theft Insurance ($25.00/month)</li>
+                            <li>{{ Lang::get('products.fire_theft') }}</li>
                         @endif
                     </ul>
                 @endif
