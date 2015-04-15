@@ -10,7 +10,7 @@
 
 @section('breadcrumb')
     @if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
-        / Products
+        / Nos produits
         / {{ $product->title_fr }}
     @else
         / Products
