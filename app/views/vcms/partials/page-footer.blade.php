@@ -7,7 +7,7 @@
             <!-- col #1 -->
             <div class="spaced col-md-3 col-sm-4 hidden-xs dark">
 
-                <h4>Contact <strong>Alantra</strong></h4>
+                <h4>{{ Lang::get('home.contact_alantra') }}</h4>
                 <p class="block">
                     98 Cougle Road<br>
                     Sussex NB E4E 5L5<br>
@@ -33,7 +33,7 @@
 
             <!-- col #3 -->
             <div class="spaced col-md-3 col-sm-4 hidden-xs">
-                <h4>Customer <strong>Testimonials</strong></h4>
+                <h4>{{ Lang::get('home.customer_testimonials') }}</h4>
                 <ul class="list-unstyled fsize13">
                     <ul class="list-unstyled fsize13">
                         <?php
@@ -58,9 +58,9 @@
 
             <!-- col #4 -->
             <div class="spaced col-md-3 col-sm-4">
-                <h4>Subscribe to our <strong>Newsletter</strong></h4>
+                <h4>{{ Lang::get('home.subscribe_to') }}</h4>
                 <form method="post" action="/subscribe" class="input-group">
-                    <input required type="email" class="form-control" name="email" id="newsletter_email" value="" placeholder="E-mail Address">
+                    <input required type="email" class="form-control" name="email" id="newsletter_email" value="" placeholder="{{ Lang::get('home.email_address') }}">
 								<span class="input-group-btn">
 									<button class="btn btn-primary">SUBMIT</button>
 								</span>
@@ -77,9 +77,9 @@
 
     <div class="copyright">
         <div class="container text-center fsize12">
-            All Right Reserved &copy; {{ date('Y') }} Alantra Leasing Inc. &nbsp;
-            <a href="/privacy-policy" class="fsize11">Privacy Policy</a> &bull;
-            <a href="/sitemap">Sitemap</a>
+            {{ Lang::get('home.all_rights') }} &copy; {{ date('Y') }} Alantra Leasing Inc. &nbsp;
+            <a href="/privacy-policy" class="fsize11">{{ Lang::get('home.privacy_policy') }}</a> &bull;
+            <a href="/sitemap">{{ Lang::get('home.sitemap') }}</a>
         </div>
     </div>
 </footer>
