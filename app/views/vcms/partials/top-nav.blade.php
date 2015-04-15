@@ -23,7 +23,7 @@
                 <!-- Search -->
                 {{ Form::open(array('url' => '/search', 'method' => 'post', 'class' => 'search')) }}
                 {{ Form::text('q', null, array('class' => 'form-control', 'placeholder' => 'Search...')) }}
-                <button class="fa fa-search"></button>
+                <button class="fa"></button>
                 {{ Form::close() }}
                 <!-- /Search -->
 
