@@ -26,7 +26,7 @@ return array(
     'email_address'         => 'Adresse courriel',
     'all_rights'            => 'Tous droits réservés',
     'privacy_policy'        => 'Politique de confidentialité',
-    'sitemap'              => 'Plan du site',
+    'sitemap'               => 'Plan du site',
     'request_a_quote'       => 'Demander un estimé',
 
     'eastern_canadas'       => 'Chef de file dans l’Est canadien pour…',
@@ -39,4 +39,10 @@ return array(
     'comfort'               => 'Confort.',
     'durability_in'         => 'Durabilité dans la plupart des régions éloignées.',
     'search'                => 'Search…',
+
+    'phone'                 => 'Téléphone',
+    'fax'                   => 'Télécopieur',
+    'toll_free'             => 'Sans frais ',
+    'email'                 => 'Adresse courriel',
+    'submit'                => 'Soumettre',
 );

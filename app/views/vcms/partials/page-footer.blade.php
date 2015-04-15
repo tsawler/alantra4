@@ -11,10 +11,10 @@
                 <p class="block">
                     98 Cougle Road<br>
                     Sussex NB E4E 5L5<br>
-                    Email: info@alantraleasing.com<br>
-                    Toll Free: 800-456-1800<br>
-                    Phone: 506-443-3757<br>
-                    Fax: 506-432-9076<br>
+                    {{ Lang::get('home.email') }}: info@alantraleasing.com<br>
+                    {{ Lang::get('home.toll_free') }}: 800-456-1800<br>
+                    {{ Lang::get('home.phone') }}: 506-443-3757<br>
+                    {{ Lang::get('home.fax') }}: 506-432-9076<br>
                 </p>
 
                 <p class="block"><!-- social -->
@@ -62,7 +62,7 @@
                 <form method="post" action="/subscribe" class="input-group">
                     <input required type="email" class="form-control" name="email" id="newsletter_email" value="" placeholder="{{ Lang::get('home.email_address') }}">
 								<span class="input-group-btn">
-									<button class="btn btn-primary">SUBMIT</button>
+									<button class="btn btn-primary">{{ Lang::get('home.submit') }}</button>
 								</span>
                 </form>
 

@@ -39,4 +39,11 @@ return array(
     'comfort'               => 'Comfort.',
     'durability_in'         => 'Durability in the most remote locations.',
     'search'                => 'Search…',
+
+    'phone'                 => 'Phone',
+    'fax'                   => 'Fax',
+    'toll_free'             => 'Toll Free',
+    'email'                 => 'Email',
+    'submit'                => 'SUBMIT',
+
 );
