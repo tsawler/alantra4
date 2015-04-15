@@ -24,12 +24,21 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
+//$env = $app->detectEnvironment(array(
+//
+//    'local' => array('homestead'),
+//    'staging' => array('epsilon.verilion.com'),
+//
+//));
 
-    'local' => array('homestead'),
-    'staging' => array('epsilon.verilion.com'),
+Dotenv::load(__DIR__ .'/../');
 
-));
+$env = $app->detectEnvironment(
+    function()
+    {
+        return getenv('APP_ENV');
+    }
+);
 
 /*
 |--------------------------------------------------------------------------
