@@ -37,7 +37,7 @@ return array(
     'trusted_quality'       => 'Confiance de la qualité',
     'service_excellence'    => 'Excellence du service.',
     'comfort'               => 'Confort.',
-    'durability_in'         => 'Durabilité dans la plupart des régions éloignées.',
+    'durability_in'         => 'Durabilité dans la plupart <br>des régions éloignées.',
     'search'                => 'Search…',
 
     'phone'                 => 'Téléphone',

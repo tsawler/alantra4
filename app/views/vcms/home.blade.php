@@ -163,6 +163,9 @@
             margin:12px 0 0 0;
             padding:0;
         }
+        /*.nav-pills > li {*/
+            /*max-width: 170px;*/
+        /*}*/
     </style>
 </head>
 
@@ -266,7 +269,7 @@
                          data-y="200"
                          data-speed="300"
                          data-start="500"
-                         data-easing="easeOutExpo">{{ Lang::get('home.comformt')}}
+                         data-easing="easeOutExpo">{{ Lang::get('home.comfort')}}
                     </div>
 
                     <div class="tp-caption medium_text block_styleColor sft stb"
