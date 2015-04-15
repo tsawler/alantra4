@@ -6,10 +6,10 @@
 
             <div class="pull-right fsize13 margin-top10 hide_mobile">
 
-
-
                 <!-- mail , phone -->
                 <a href="mailto:info@alantraleasing.com">info@alantraleasing.com</a> &bull; 800-456-1800
+
+                @include('vcms::partials.language-menu')
 
                 <div class="block text-right"><!-- social -->
                     <a href="https://twitter.com/AlantraLeasing" target="_blank"  class="social fa fa-twitter"></a>
@@ -17,7 +17,18 @@
                     <a href="https://www.linkedin.com/company/5065231" target="_blank" class="social fa fa-linkedin"></a>
                 </div><!-- /social -->
                 <br>
-                @include('vcms::partials.language-menu')
+                <div class='pull-right'>
+
+
+                <!-- Search -->
+                {{ Form::open(array('url' => '/search', 'method' => 'post', 'class' => 'search')) }}
+                {{ Form::text('q', null, array('class' => 'form-control', 'placeholder' => 'Search...')) }}
+                <button class="fa fa-search"></button>
+                {{ Form::close() }}
+                <!-- /Search -->
+
+
+                </div>
 
             </div>
 
@@ -40,12 +51,7 @@
                 <i class="fa fa-bars"></i>
             </button>
 
-            <!-- Search -->
-            {{ Form::open(array('url' => '/search', 'method' => 'post', 'class' => 'search')) }}
-            {{ Form::text('q', null, array('class' => 'form-control', 'placeholder' => 'Search...')) }}
-            <button class="fa fa-search"></button>
-            {{ Form::close() }}
-            <!-- /Search -->
+
 
             <!-- Top Nav -->
             <div class="navbar-collapse nav-main-collapse collapse">

@@ -163,6 +163,9 @@
             margin:12px 0 0 0;
             padding:0;
         }
+        /*.nav-pills > li {*/
+            /*max-width: 170px;*/
+        /*}*/
     </style>
 </head>
 
