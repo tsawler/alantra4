@@ -26,7 +26,7 @@ return array(
     'email_address'         => 'Adresse courriel',
     'all_rights'            => 'Tous droits réservés',
     'privacy_policy'        => 'Politique de confidentialité',
-    'site_map'              => 'Plan du site',
+    'sitemap'              => 'Plan du site',
     'request_a_quote'       => 'Demander un estimé',
 
     'eastern_canadas'       => 'Chef de file dans l’Est canadien pour…',
