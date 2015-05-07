@@ -8,7 +8,7 @@ return array(
     'to_quality'            => 'Quality',
     'read_more'             => 'Read More',
     'products'              => 'Products',
-    'products_text'         => 'The unit you need. When you need it. From offices to wash cars, modular structures, our proven, pre-manufactured panel system and more, Alantra has what your project needs.',
+    'products_text'         => 'From offices to wash cars, modular structures, our proven, pre-manufactured panel system and more, Alantra has what your project needs.',
     'service'               => 'Service',
     'service_text'          => 'With Alantra, you can depend on our turn-on-a dime service and support.',
     'locations'             => 'Locations',
