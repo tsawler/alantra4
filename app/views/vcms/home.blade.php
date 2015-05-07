@@ -221,14 +221,17 @@
                          data-easing="easeOutExpo">{{ Lang::get('home.fully_featured')}}
                     </div>
 
-                    {{--<div class="tp-caption medium_text block_styleColor sft stb"--}}
-                         {{--data-x="760"--}}
-                         {{--data-y="280"--}}
-                         {{--data-speed="300"--}}
-                         {{--data-start="1000"--}}
-                         {{--data-easing="easeOutExpo">Service Excellence.--}}
-                    {{--</div>--}}
+                </li>
 
+                <!-- SLIDE  -->
+                <li data-transition="fade" data-slotamount="14"  data-masterspeed="300" data-delay="10000">
+
+                    <!-- COVER IMAGE -->
+                    @if(Session::get('lang') == 'en')
+                        <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/map_en.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
+                    @else
+                        <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/map_fr.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
+                    @endif
                 </li>
 
                 <!-- SLIDE  -->
