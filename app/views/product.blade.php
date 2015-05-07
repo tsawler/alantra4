@@ -74,6 +74,7 @@
                     <p>{{ $product->description }}</p>
             @endif
 
+            @if($product->id != 15)
                 <h4>{{ Lang::get('products.features') }}</h4>
                 <ul class="list-icon star-o">
                     @if ($product->electric_heat == 1)
@@ -140,9 +141,11 @@
                         <li>{{ Lang::get('products.sinks') }}</li>
                     @endif
                 </ul>
+            @endif
 
                 @if (($product->id != 4) && ($product->id != 6) && ($product->id != 9)
-                    && ($product->id != 11) && ($product->id != 12) && ($product->id != 13))
+                    && ($product->id != 11) && ($product->id != 12) && ($product->id != 13)
+                    && ($product->id != 15))
 
                     <h4>Optional Features</h4>
                     <ul class="list-icon star-o">
