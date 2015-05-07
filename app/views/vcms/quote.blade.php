@@ -26,9 +26,17 @@
 @stop
 
 @section('banner')
-    <div class="slider fullwidthbanner-container roundedcorners">
-        <div class="fullwidthbanner">
-            <img src="/page_images/writing.jpg">
+    <div class="fullwidthbanner-container">
+        <div class="owl-carousel controlls-over"
+             data-plugin-options='{
+                                "items": 1,
+                                "singleItem": true,
+                                "navigation": true,
+                                "autoPlay": true,
+                                "pagination": false}'>
+                <div>
+                    <img alt="" class="img-responsive" src="/page_images/writing.jpg">
+                </div>
         </div>
     </div>
 @stop
