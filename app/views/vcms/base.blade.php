@@ -62,9 +62,6 @@
 
     @include('vcms.partials.top-nav')
 
-
-
-
     <!-- PAGE TOP -->
     <section class="page-title">
         <div class="container">
@@ -86,19 +83,14 @@
     </section>
     <!-- /PAGE TOP -->
 
-
     @yield('banner')
-
 
     <!-- CONTENT -->
     <section>
         <div class="container">
-
             @yield('content')
-
         </div>
     </section>
     <!-- /CONTENT -->
-
 
     @include('vcms.partials.page-footer')
