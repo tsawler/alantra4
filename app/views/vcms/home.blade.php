@@ -73,7 +73,7 @@
         }
         @if (Session::get('lang') == 'en')
         #home-content .panel-body {
-            height: 420px;
+            height: 370px;
         }
         #home-content .panel-body > img {
             width: 100%;
