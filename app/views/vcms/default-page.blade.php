@@ -29,8 +29,8 @@
                 </div>
             </div>
         @else
-            <div class="fullwidthbanner-container roundedcorners">
-                <div class="owl-carousel controlls-over fullwidthbanner"
+            <div class="fullwidthbanner-container">
+                <div class="owl-carousel controlls-over"
                      data-plugin-options='{
                                 "items": {{ sizeof($images) }},
                                 "singleItem": true,
