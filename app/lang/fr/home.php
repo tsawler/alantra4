@@ -8,7 +8,7 @@ return array(
     'to_quality'            => 'à la Quality',
     'read_more'             => 'Lire pour en apprendre davantage',
     'products'              => 'Nos produits',
-    'products_text'         => 'L’unité qu’il vous faut.  Quand vous en avez besoin.  Depuis les bureaux, les unités de lavage, les structures modulaires, et bien d’autres choses, Alantra a la réponse pour votre projet.',
+    'products_text'         => 'Depuis les bureaux, les unités de lavage, les structures modulaires, notre système éprouvé de panneaux préfabriqués, et bien d’autres choses, Alantra a la réponse pour votre projet.',
     'service'               => 'Service',
     'service_text'          => 'Avec Alantra, vous aurez un service et un appui immédiats.',
     'locations'             => 'Emplacements',
