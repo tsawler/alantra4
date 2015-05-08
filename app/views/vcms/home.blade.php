@@ -228,9 +228,9 @@
 
                     <!-- COVER IMAGE -->
                     @if(Session::get('lang') == 'en')
-                        <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/map_en.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
+                        <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/location_map_en.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
                     @else
-                        <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/map_fr.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
+                        <img src="/assets/images/1x1.png" data-lazyload="/assets/custom/images/rotating/location_map_fr.jpg" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
                     @endif
                 </li>
 
