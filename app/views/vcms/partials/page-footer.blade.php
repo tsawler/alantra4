@@ -27,7 +27,8 @@
 
             <!-- col #2 -->
             <div class="spaced col-md-3 col-sm-4 hidden-xs">
-
+                <h4>Share <strong>This Page</strong></h4>
+                <div class="share-button" style="margin-top: 8px;"></div>
             </div>
             <!-- /col #2 -->
 
@@ -102,12 +103,22 @@
 <script type="text/javascript" src="/assets/plugins/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
 <script type="text/javascript" src="/assets/js/revolution_slider.js"></script>
 
+<script type="text/javascript" src="/assets/js/share.min.js"></script>
 
 @include("vcms::partials.vcms-js")
 @include('vcms::partials.messages')
 @if (Session::get('lang') == 'fr')
     <script type="text/javascript" src="/assets/js/messages_fr.js"></script>
 @endif
+<script>
+    $(document).ready(function(){
+        new Share(".share-button", {
+            networks: {
+
+            }
+        });
+    });
+</script>
 @yield('bottom-js')
 </body>
 </html>
