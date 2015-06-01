@@ -255,7 +255,7 @@ Route::get('sitemap.xml', function(){
 
     // add items to the sitemap (url, date, priority, freq)
     $sitemap->add(URL::to('/'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
-    $sitemap->add(URL::to('//products/coming-soon-new-products-2015'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
+    $sitemap->add(URL::to('/products/coming-soon-new-products-2015'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
     $sitemap->add(URL::to('/products/wash-cars'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
     $sitemap->add(URL::to('/products/mining-trailers'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
     $sitemap->add(URL::to('/products/storage-units'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
