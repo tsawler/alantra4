@@ -321,13 +321,13 @@
                     <h3 class="panel-title">{{ Lang::get('home.service') }}</h3>
                 </div>
                 <div class="panel-body">
-                    <a href="/one-stop-shop"><img class="img-responsive" src="/assets/custom/images/service.jpg" alt=""></a>
+                    <a href="/guichet-unique"><img class="img-responsive" src="/assets/custom/images/service.jpg" alt=""></a>
                     <p>
                         {{ Lang::get('home.service_text') }}
                     </p>
                 </div>
                 <div class="panel-footer hidden-md hidden-sm hidden-xs">
-                    <h4><a href="/one-stop-shop">{{ Lang::get('home.read_more') }}</a></h4>
+                    <h4><a href="/guichet-unique">{{ Lang::get('home.read_more') }}</a></h4>
                 </div>
             </div>
         </div>
