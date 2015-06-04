@@ -327,7 +327,7 @@
                     </p>
                 </div>
                 <div class="panel-footer hidden-md hidden-sm hidden-xs">
-                    <h4><a href="/one-stop-shop">{{ Lang::get('home.read_more') }}</a></h4>
+                    <h4><a href="/guichet-unique">{{ Lang::get('home.read_more') }}</a></h4>
                 </div>
             </div>
         </div>
