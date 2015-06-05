@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8" />
     <title>Alantra Leasing</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="Author" content="" />
+    <meta name="keywords" content="{{ $meta_tags }}" />
+    <meta name="description" content="{{ $meta }}" />
+    <meta name="Author" content="verilion.com" />
 
     <!-- mobile settings -->
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
