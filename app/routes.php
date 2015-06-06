@@ -262,6 +262,7 @@ Route::get('sitemap.xml', function(){
     $sitemap->add(URL::to('/products/custom-trailersmodular-buildings'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
     $sitemap->add(URL::to('/products/bunkhouses'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
     $sitemap->add(URL::to('/products/clearance'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
+    $sitemap->add(URL::to('/products/panel-systems'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
     $sitemap->add(URL::to('/products/officelunchroom'), '2012-08-26T12:30:00+02:00', '0.9', 'monthly');
 
     // get all pages from db
