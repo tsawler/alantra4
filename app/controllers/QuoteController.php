@@ -8,19 +8,17 @@ class QuoteController extends BaseController {
     public function getQuote()
     {
         $interested_in = "";
-        if (Input::has('i')){
+        if (Input::has('i')) {
             $interested_in = urldecode(Input::get('i'));
         }
 
-        if (Session::get('lang') == 'en')
-        {
+        if (Session::get('lang') == 'en') {
             return View::make('vcms.quote')
                 ->with('page_title', 'Request a Quote')
                 ->with('meta_tags', '')
                 ->with('interested_in', $interested_in)
                 ->with('meta', '');
-        } else
-        {
+        } else {
             return View::make('vcms.quote-fr')
                 ->with('page_title', 'Demander un estimé')
                 ->with('meta_tags', '')
@@ -52,26 +50,25 @@ class QuoteController extends BaseController {
 
         // build email
         $user = array(
-            'email'   => Input::get('email'),
-            'name'    => Input::get('full_name')
+            'email' => Input::get('email'),
+            'name'  => Input::get('full_name')
         );
 
         // the data that will be passed into the mail view blade template
         $data = array(
-            'users_name'  => $user['name'],
-            'company' => Input::get('company'),
-            'full_name' => Input::get('full_name'),
-            'phone' => Input::get('phone'),
-            'email' => Input::get('email'),
-            'date_needed' => Input::get('date_needed'),
+            'users_name'    => $user['name'],
+            'company'       => Input::get('company'),
+            'full_name'     => Input::get('full_name'),
+            'phone'         => Input::get('phone'),
+            'email'         => Input::get('email'),
+            'date_needed'   => Input::get('date_needed'),
             'interested_in' => Input::get('interested_in'),
-            'the_message' => Input::get('message'),
-            'email'       => Input::get('email')
+            'the_message'   => Input::get('message'),
+            'email'         => Input::get('email')
         );
 
         // use Mail::send function to send email passing the data and using the $user variable in the closure
-        Mail::later(5, 'emails.quote_email', $data, function ($message) use ($user)
-        {
+        Mail::later(5, 'emails.quote_email', $data, function ($message) use ($user) {
             $message->from('donotreply@alantraleasing.com', 'Do not reply');
             $message->to('melissa@alantraleasing.com')->subject('Request for Quotation from website');
         });
