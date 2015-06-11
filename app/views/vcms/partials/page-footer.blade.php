@@ -13,7 +13,7 @@
                     Sussex NB E4E 5L5<br>
                     {{ Lang::get('home.email') }}: info@alantraleasing.com<br>
                     {{ Lang::get('home.toll_free') }}: 800-456-1800<br>
-                    {{ Lang::get('home.phone') }}: 506-443-3757<br>
+                    {{ Lang::get('home.phone') }}: 506-433-3757<br>
                     {{ Lang::get('home.fax') }}: 506-432-9076<br>
                 </p>
 
