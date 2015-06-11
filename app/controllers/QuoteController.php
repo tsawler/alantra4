@@ -59,6 +59,12 @@ class QuoteController extends BaseController {
         // the data that will be passed into the mail view blade template
         $data = array(
             'users_name'  => $user['name'],
+            'company' => Input::get('company'),
+            'full_name' => Input::get('full_name'),
+            'phone' => Input::get('phone'),
+            'email' => Input::get('email'),
+            'date_needed' => Input::get('date_needed'),
+            'interested_in' => Input::get('interested_in'),
             'the_message' => Input::get('message'),
             'email'       => Input::get('email')
         );
