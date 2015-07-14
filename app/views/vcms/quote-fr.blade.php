@@ -169,6 +169,18 @@
         <div class="row">
             <div class="form-group">
                 <div class="col-md-12">
+                    <label>Lieu de livraison?</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa  fa-fw fa-map-marker"></i></span>
+                        <input type="text"  maxlength="100" class="form-control required" name="delivery_location">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-12">
                     <label>Message *</label>
                     <textarea  maxlength="5000" rows="10" class="form-control required" name="message" id="contact_comment"></textarea>
                 </div>

@@ -45,6 +45,7 @@ class QuoteController extends BaseController {
         $quote->date_needed = Input::get('date_needed');
         $quote->interested_in = Input::get('interested_in');
         $quote->message = Input::get('message');
+        $quote->delivery_location = Input::get('delivery_location');
 
         $quote->save();
 
@@ -63,6 +64,7 @@ class QuoteController extends BaseController {
             'email'         => Input::get('email'),
             'date_needed'   => Input::get('date_needed'),
             'interested_in' => Input::get('interested_in'),
+            'delivery_location' => Input::get('delivery_location'),
             'the_message'   => Input::get('message'),
             'email'         => Input::get('email')
         );

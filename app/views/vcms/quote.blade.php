@@ -51,10 +51,10 @@
         <p>If you know your specifications, just fill out the form below and we will be in touch promptly with any questions and/or your quote. Or you can call or e mail us for assistance in helping determine the best solutions for your needs.</p>
 
         <p>
-        <a href="tel:18004561800>"<i class="fa fa-fw fa-phone"></i></a> Toll Free: 800-456-1800<br>
-        <a href="tel:15064333757"><i class="fa fa-fw fa-phone"></i></a> Phone: 506-433-3757<br>
-        <i class="fa fa-fw fa-fax"></i> Fax: 506-432-9076<br>
-        <a href mailto:'info@alantraleasing.com'><i class="fa fa-fw fa-envelope"></i> info@alantraleasing.com</a>
+        <a href="tel:18004561800>"<i class="fa  fa-fw fa-fw fa-phone"></i></a> Toll Free: 800-456-1800<br>
+        <a href="tel:15064333757"><i class="fa  fa-fw fa-fw fa-phone"></i></a> Phone: 506-433-3757<br>
+        <i class="fa  fa-fw fa-fw fa-fax"></i> Fax: 506-432-9076<br>
+        <a href mailto:'info@alantraleasing.com'><i class="fa  fa-fw fa-fw fa-envelope"></i> info@alantraleasing.com</a>
         </p>
 
 
@@ -65,7 +65,7 @@
                 <div class="col-md-12">
                     <label>Company *</label>
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-building"></i></span>
+                        <span class="input-group-addon"><i class="fa  fa-fw fa-building"></i></span>
                         <input type="text" value="" maxlength="100" class="form-control required" name="company" id="company">
                     </div>
                 </div>
@@ -77,14 +77,14 @@
                 <div class="col-md-6">
                     <label>Full Name *</label>
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <span class="input-group-addon"><i class="fa  fa-fw fa-user"></i></span>
                         <input type="text" value="" maxlength="100" class="form-control required" name="full_name" id="full_name">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <label>E-mail Address *</label>
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <span class="input-group-addon"><i class="fa  fa-fw fa-envelope"></i></span>
                         <input type="email" value="" maxlength="100" class="form-control required" name="email" id="email">
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                 <div class="col-md-12">
                     <label>Phone</label>
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                        <span class="input-group-addon"><i class="fa  fa-fw fa-phone"></i></span>
                         <input type="text" value="" maxlength="100" class="form-control" name="phone" id="phone">
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                 <div class="col-md-12">
                     <label>Address</label>
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                        <span class="input-group-addon"><i class="fa  fa-fw fa-map-marker"></i></span>
                         <input type="text" value="" maxlength="100" class="form-control" name="address" id="address">
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                 <div class="col-md-12">
                     <label>City</label>
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-info"></i></span>
+                        <span class="input-group-addon"><i class="fa  fa-fw fa-info"></i></span>
                         <input type="text" value="" maxlength="100" class="form-control" name="city" id="city">
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                 <div class="col-md-12">
                     <label>Province</label>
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+                        <span class="input-group-addon"><i class="fa  fa-fw fa-globe"></i></span>
                     <select name="province" class="form-control">
                         <option value="AB">Alberta</option>
                         <option value="BC">British Columbia</option>
@@ -155,7 +155,7 @@
                 <div class="col-md-12">
                     <label>Date Needed</label>
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            <span class="input-group-addon"><i class="fa  fa-fw fa-calendar"></i></span>
                             <input type="text" value="" maxlength="100" class="form-control" name="date_needed" id="date">
                     </div>
                 </div>
@@ -167,8 +167,20 @@
                 <div class="col-md-12">
                     <label>Products</label>
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-gear"></i></span>
+                        <span class="input-group-addon"><i class="fa  fa-fw fa-gear"></i></span>
                         <input type="text" value="{{ $interested_in }}" maxlength="100" class="form-control" name="interested_in">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label>Delivery Location?</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa  fa-fw fa-map-marker"></i></span>
+                        <input type="text"  maxlength="100" class="form-control required" name="delivery_location">
                     </div>
                 </div>
             </div>

@@ -5,6 +5,7 @@
 <p><strong>Contact email:</strong> <a href="mailto:{{ $email }}">{{ $email }}</a></p>
 <p><strong>Phone:</strong> {{ $phone }}</p>
 <p><strong>Interested In:</strong> {{ $interested_in }}</p>
+<p><strong>Delivery Location:</strong> {{ $delivery_location }}</p>
 <p><strong>Date Needed:</strong> {{ $date_needed }}</p>
 <p><strong>Message</strong>:
     <br>
