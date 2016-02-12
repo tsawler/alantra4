@@ -87,6 +87,13 @@ Route::get('/testimonials', 'TestimonialController@getTestimonialsPage');
  */
 Route::group(array('before' => 'auth.admin'), function ()
 {
+
+	Route::group(array('before' => 'auth.admin.newsletter'), function()
+	{
+		Route::get('/admin/newsletter/create', 'NewsletterController@getCreate');
+	});
+
+
 	// menus
 	Route::group(array('before' => 'auth.admin.menus'), function ()
 	{
