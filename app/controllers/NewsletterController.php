@@ -84,7 +84,7 @@ class NewsletterController extends BaseController
 
             $data = [
                 'image'   => $image_name . "." . $ext,
-                'content' => $content
+                'content' => $new_content
             ];
 
             $user_data = [
