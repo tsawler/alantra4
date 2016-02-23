@@ -1,5 +1,9 @@
 <?php
 
+Route::post('/queue', function(){
+    return Queue::marshal();
+});
+
 /**
  * Show home page
  */
