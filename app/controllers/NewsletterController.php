@@ -32,10 +32,10 @@ class NewsletterController extends BaseController
 
             $title = Input::get('article_title');
             $content = Input::get('article_content');
-            $content = str_replace("img src=\"/", "img src=\"" . getenv('SECURE_URL') . "/", $content);
+            $new_content = str_replace("img src=\"/", "img src=\"" . getenv('SECURE_URL') . "/", $content);
 
             $newsletter->article_title = $title;
-            $newsletter->article_content = $content;
+            $newsletter->article_content = $new_content;
 
             list($image_name, $ext) = $this->handleImage();
 
@@ -44,9 +44,9 @@ class NewsletterController extends BaseController
                 ->with('content', $content)
                 ->render();
 
-            $html = str_replace("src=\"/", "src=\"" . getenv('SECURE_URL') . "/", $html);
+            $new_html = str_replace("src=\"/", "src=\"" . getenv('SECURE_URL') . "/", $html);
 
-            return $html;
+            return $new_html;
         }
 
         if (Input::get('id') > 0) {
@@ -59,18 +59,18 @@ class NewsletterController extends BaseController
 
         $title = Input::get('article_title');
         $content = Input::get('article_content');
-        $content = str_replace("img src=\"/", "img src=\"" . getenv('SECURE_URL') . "/", $content);
+        $new_content = str_replace("img src=\"/", "img src=\"" . getenv('SECURE_URL') . "/", $content);
 
         $html = View::make('emails.newsletter')
             ->with('image', $image_name . "." . $ext)
-            ->with('content', $content)
+            ->with('content', $new_content)
             ->render();
 
-        $html = str_replace("src=\"/", "src=\"" . getenv('SECURE_URL') . "/", $html);
+        $new_html = str_replace("src=\"/", "src=\"" . getenv('SECURE_URL') . "/", $html);
 
         $newsletter->article_title = $title;
-        $newsletter->article_content = $content;
-        $newsletter->newsletter = $html;
+        $newsletter->article_content = $new_content;
+        $newsletter->newsletter = $new_html;
 
         if (Input::hasFile('image_name'))
             $newsletter->image_name = $image_name . "." . $ext;
