@@ -12,6 +12,7 @@ class NewsletterController extends BaseController
         } else {
             $newsletter = new Newsletter();
         }
+
         return View::make('vcms::admin.create-newsletter')
             ->with('page_title', 'Create Newsletter')
             ->with('meta_tags', '')
@@ -23,16 +24,16 @@ class NewsletterController extends BaseController
     public function postCreate()
     {
 
-        if (Input::get('action') == 'preview') {
-            if (Input::get('id') > 0) {
-                $newsletter = Newsletter::find(Input::get('id'));
-            } else {
-                $newsletter = new Newsletter();
-            }
+        if (Input::get('id') > 0) {
+            $newsletter = Newsletter::find(Input::get('id'));
+        } else {
+            $newsletter = new Newsletter();
+        }
 
+        if (Input::get('action') == 'preview') {
             $title = Input::get('article_title');
             $content = Input::get('article_content');
-            $new_content = str_replace("src=\"/", "src=\"" . getenv('SECURE_URL') . "/", $content);
+            $new_content = str_replace('src="/', 'src="' . getenv('SECURE_URL') . '/', $content);
 
             $newsletter->article_title = $title;
             $newsletter->article_content = $new_content;
@@ -41,36 +42,26 @@ class NewsletterController extends BaseController
 
             $html = View::make('emails.newsletter')
                 ->with('image', $image_name . "." . $ext)
-                ->with('content', $content)
+                ->with('content', $new_content)
                 ->render();
 
-            $new_html = str_replace("src=\"/", "src=\"" . getenv('SECURE_URL') . "/", $html);
-
-            return $new_html;
-        }
-
-        if (Input::get('id') > 0) {
-            $newsletter = Newsletter::find(Input::get('id'));
-        } else {
-            $newsletter = new Newsletter();
+            return $html;
         }
 
         list($image_name, $ext) = $this->handleImage();
 
         $title = Input::get('article_title');
         $content = Input::get('article_content');
-        $new_content = str_replace("src=\"/", "src=\"" . getenv('SECURE_URL') . "/", $content);
+        $new_content = str_replace('src="/', 'src="' . getenv('SECURE_URL') . '/', $content);
 
         $html = View::make('emails.newsletter')
             ->with('image', $image_name . "." . $ext)
             ->with('content', $new_content)
             ->render();
 
-        $new_html = str_replace("src=\"/", "src=\"" . getenv('SECURE_URL') . "/", $html);
-
         $newsletter->article_title = $title;
         $newsletter->article_content = $new_content;
-        $newsletter->newsletter = $new_html;
+        $newsletter->newsletter = $html;
 
         if (Input::hasFile('image_name'))
             $newsletter->image_name = $image_name . "." . $ext;
@@ -78,17 +69,15 @@ class NewsletterController extends BaseController
         $id = $newsletter->id;
 
 
-
-
         if (Input::get('action') == 'send') {
 
             $data = [
                 'image'   => $image_name . "." . $ext,
-                'content' => $new_content
+                'content' => $new_content,
             ];
 
             $user_data = [
-                'email' => 'trevor.sawler@gmail.com'
+                'email' => 'trevor.sawler@gmail.com',
             ];
 
             Mail::later(5, 'emails.newsletter', $data, function ($message) use ($user_data) {
@@ -105,10 +94,9 @@ class NewsletterController extends BaseController
     }
 
 
-
-
-    public function drafts() {
-        $newsletters = Newsletter::where('sent','=','0')->orderBy('article_title')->get();
+    public function drafts()
+    {
+        $newsletters = Newsletter::where('sent', '=', '0')->orderBy('article_title')->get();
 
         return View::make('vcms::admin.newsletters-drafts')
             ->with('newsletters', $newsletters);
