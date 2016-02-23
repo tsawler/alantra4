@@ -43,6 +43,8 @@ class NewsletterController extends BaseController
                 ->with('content', $content)
                 ->render();
 
+            $html = str_replace("src=\"/", "src=\"" . getenv('SECURE_URL') . "/", $html);
+
             return $html;
         }
 
@@ -61,6 +63,8 @@ class NewsletterController extends BaseController
             ->with('image', $image_name . "." . $ext)
             ->with('content', $content)
             ->render();
+
+        $html = str_replace("src=\"/", "src=\"" . getenv('SECURE_URL') . "/", $html);
 
         $newsletter->article_title = $title;
         $newsletter->article_content = $content;
@@ -98,12 +102,6 @@ class NewsletterController extends BaseController
         }
     }
 
-
-    public function previewNewsletter()
-    {
-
-
-    }
 
 
 
