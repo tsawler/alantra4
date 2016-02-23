@@ -32,6 +32,7 @@ class NewsletterController extends BaseController
 
             $title = Input::get('article_title');
             $content = Input::get('article_content');
+            $content = str_replace("src=\"/", "src=\"" . getenv('SECURE_URL') . "/", $content);
 
             $newsletter->article_title = $title;
             $newsletter->article_content = $content;
@@ -58,6 +59,7 @@ class NewsletterController extends BaseController
 
         $title = Input::get('article_title');
         $content = Input::get('article_content');
+        $content = str_replace("src=\"/", "src=\"" . getenv('SECURE_URL') . "/", $content);
 
         $html = View::make('emails.newsletter')
             ->with('image', $image_name . "." . $ext)
