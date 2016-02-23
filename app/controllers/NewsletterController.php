@@ -85,7 +85,10 @@ class NewsletterController extends BaseController
                 $message->to($user_data['email'])->subject('Request for Quotation from website');
             });
 
-            return Redirect::to('/admin/dashboard')
+            $newsletter->sent = 1;
+            $newsletter->save();
+
+            return Redirect::to('/admin/newsletter/drafts')
                 ->with("message", "Newsletter sent!");
         } else {
             return Redirect::to('/admin/newsletter/create?id=' . $id)
@@ -99,6 +102,15 @@ class NewsletterController extends BaseController
         $newsletters = Newsletter::where('sent', '=', '0')->orderBy('article_title')->get();
 
         return View::make('vcms::admin.newsletters-drafts')
+            ->with('newsletters', $newsletters);
+    }
+
+
+    public function archives()
+    {
+        $newsletters = Newsletter::where('sent', '=', '1')->orderBy('article_title')->get();
+
+        return View::make('vcms::admin.newsletters-archives')
             ->with('newsletters', $newsletters);
     }
 

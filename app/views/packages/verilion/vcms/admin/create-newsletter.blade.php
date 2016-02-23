@@ -71,9 +71,13 @@
                     <div class="controls">
                         <input type="hidden" name="action" id="action">
                         {{ Form::hidden('id', null, ['id' => 'newsletter_id', 'name' => 'id']) }}
+                        @if($newsletter->sent == 0)
                         <a class="btn btn-warning submit" onclick="saveMessage(); return false;" href="#!">Save</a>
+                        @endif
                         <a class="btn btn-info submit" onclick="previewMessage(); return false;" href="#!">Preview</a>
+                        @if($newsletter->sent == 0)
                         <a class="btn btn-primary submit" onclick="sendMessage(); return false;" href="#!">Save and Send</a>
+                        @endif
                     </div>
                 </div>
 
@@ -85,22 +89,6 @@
         </div>
     </div>
 
-    {{ Form::open(array(
-             'url' => '/admin/newsletter/preview',
-             'role' => 'form',
-             'name' => 'preview_form',
-             'id' => 'preview_form',
-             'method' => 'post',
-             'files' => true,
-             'target' => '_blank',
-             ))
-         }}
-
-    <input type="hidden" name="article_title" id="preview_article_title">
-    <input type="hidden" name="article_content" id="preview_article_content">
-    <input type="hidden" name="id" id="preview_newsletter_id">
-
-    {{ Form::close() }}
 @stop
 
 
