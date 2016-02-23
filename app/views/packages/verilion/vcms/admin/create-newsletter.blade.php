@@ -21,15 +21,15 @@
 
             <div class="ibox-content">
 
-                {{ Form::open(array(
-                     'url' => '/admin/newsletter/create',
-                     'role' => 'form',
-                     'name' => 'bookform',
-                     'id' => 'bookform',
-                     'method' => 'post',
-                     'files' => true,
-                     ))
-                 }}
+                {{ Form::model($newsletter,array(
+                    'url' => '/admin/newsletter/create',
+                    'role' => 'form',
+                    'name' => 'bookform',
+                    'id' => 'bookform',
+                    'method' => 'post',
+                    'files' => true,
+                    ))
+                }}
 
 
                 <br>
@@ -46,6 +46,7 @@
                             <span class="input-group-addon"><i class="fa fa-font"></i></span>
                             {{ Form::text('article_title', null, array('class' => 'required form-control',
                                                                 'style' => 'max-width: 400px;',
+                                                                'id' => 'article_title',
                                                                 'placeholder' => 'Article title')); }}
                         </div>
                     </div>
@@ -55,7 +56,7 @@
                 <div class="form-group">
                     {{ Form::label('article_content', 'Article Content', array('class' => 'control-label')); }}
                     <div class="controls">
-                        {{ Form::textarea('article_content', null); }}
+                        {{ Form::textarea('article_content', null, ['id' => 'article_content']); }}
                     </div>
                 </div>
 
@@ -65,6 +66,7 @@
                 <div class="form-group">
                     <div class="controls">
                         <input type="hidden" name="action" id="action">
+                        {{ Form::hidden('id', null, ['id' => 'newsletter_id', 'name' => 'id']) }}
                         <a class="btn btn-warning submit" onclick="saveMessage(); return false;" href="#!">Save</a>
                         <a class="btn btn-info submit" onclick="previewMessage(); return false;" href="#!">Preview</a>
                         <a class="btn btn-primary submit" onclick="sendMessage(); return false;" href="#!">Save and Send</a>
@@ -79,6 +81,22 @@
         </div>
     </div>
 
+    {{ Form::open(array(
+             'url' => '/admin/newsletter/preview',
+             'role' => 'form',
+             'name' => 'preview_form',
+             'id' => 'preview_form',
+             'method' => 'post',
+             'files' => true,
+             'target' => '_blank',
+             ))
+         }}
+
+    <input type="hidden" name="article_title" id="preview_article_title">
+    <input type="hidden" name="article_content" id="preview_article_content">
+    <input type="hidden" name="id" id="preview_newsletter_id">
+    <input type="file" name="image_name" id="preview_image_name" class="hidden">
+    {{ Form::close() }}
 @stop
 
 
@@ -144,7 +162,11 @@
 
             if (okay) {
                 $("#action").val('preview');
-                $("#bookform").submit();
+                $("#preview_article_title").val($("#article_title").val());
+                var data = CKEDITOR.instances.article_content.getData();
+                $("#preview_article_content").val(data);
+                $("#preview_newsleter_id").val($("#preview_newsletter_id").val());
+                $("#preview_form").submit();
             }
         }
 
