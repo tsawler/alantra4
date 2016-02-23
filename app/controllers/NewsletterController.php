@@ -114,6 +114,36 @@ class NewsletterController extends BaseController
             ->with('newsletters', $newsletters);
     }
 
+
+    public function subscribers()
+    {
+        $subscribers = Subscriber::orderBy('email')->get();
+
+        return View::make('vcms::admin.newsletter-subscribers')
+            ->with('subscribers', $subscribers);
+    }
+
+
+    public function deleteSubscriber() {
+        Subscriber::find(Input::get('id'))->delete();
+        return Redirect::to('/admin/newsletter/subscribers');
+    }
+
+
+    public function addSubscriber() {
+        if (filter_var(Input::get('email'), FILTER_VALIDATE_EMAIL)) {
+            $sub = new Subscriber();
+            $sub->email = Input::get('email');
+            $sub->save();
+
+            return Redirect::to('/admin/newsletter/subscribers')
+                ->with('message', 'Subscriber added');
+        } else {
+            return Redirect::to('/admin/newsletter/subscribers')
+                ->with('error', 'Invalid email!');
+        }
+    }
+
     /**
      * @return array
      */

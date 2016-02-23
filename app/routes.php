@@ -96,6 +96,9 @@ Route::group(array('before' => 'auth.admin'), function ()
 	{
 		Route::get('/admin/newsletter/drafts', 'NewsletterController@drafts');
 		Route::get('/admin/newsletter/archive', 'NewsletterController@archives');
+		Route::get('/admin/newsletter/subscribers', 'NewsletterController@subscribers');
+		Route::get('/admin/newsletter/delete-subscriber', 'NewsletterController@deleteSubscriber');
+		Route::get('/admin/newsletter/add-subscriber', 'NewsletterController@addSubscriber');
 		Route::get('/admin/newsletter/create', 'NewsletterController@getCreate');
 		Route::post('/admin/newsletter/create', 'NewsletterController@postCreate');
 		Route::post('/admin/newsletter/preview', 'NewsletterController@previewNewsletter');
