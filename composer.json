@@ -17,7 +17,8 @@
       "verilion/vcms": "dev-master",
       "barryvdh/laravel-debugbar": "~1.8",
       "roumen/sitemap": "2.4.15",
-      "vlucas/phpdotenv": "~1.1"
+      "vlucas/phpdotenv": "~1.1",
+		"iron-io/iron_mq": "^4.0"
 	},
 	"autoload": {
 		"classmap": [
