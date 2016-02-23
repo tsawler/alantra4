@@ -22,7 +22,7 @@
             <div class="ibox-content">
 
                 {{ Form::open(array(
-                     'url' => '/admin/newsletters/create',
+                     'url' => '/admin/newsletter/create',
                      'role' => 'form',
                      'name' => 'bookform',
                      'id' => 'bookform',
@@ -64,9 +64,10 @@
 
                 <div class="form-group">
                     <div class="controls">
-                        {{ Form::submit('Save', array('class' => 'btn btn-warning submit')) }}
-                        {{ Form::submit('Preview', array('class' => 'btn btn-info submit')) }}
-                        {{ Form::submit('Save and Send', array('class' => 'btn btn-primary submit')) }}
+                        <input type="hidden" name="action" id="action">
+                        <a class="btn btn-warning submit" onclick="saveMessage(); return false;" href="#!">Save</a>
+                        <a class="btn btn-info submit" onclick="previewMessage(); return false;" href="#!">Preview</a>
+                        <a class="btn btn-primary submit" onclick="sendMessage(); return false;" href="#!">Save and Send</a>
                     </div>
                 </div>
 
@@ -105,8 +106,71 @@
                         filebrowserFlashBrowseUrl: '/filemgmt/browse.php?type=flash',
                         enterMode: '1'
                     });
-
-
         });
+
+        function saveMessage() {
+            var okay = false;
+            okay = $("#bookform").validate({
+                errorClass: 'has-error',
+                validClass: 'has-success',
+                errorElement: 'span',
+                highlight: function (element, errorClass, validClass) {
+                    $(element).parents("div[class='form-group']").addClass(errorClass).removeClass(validClass);
+                },
+                unhighlight: function (element, errorClass, validClass) {
+                    $(element).parents(".has-error").removeClass(errorClass).addClass(validClass);
+                }
+            }).form();
+
+            if (okay) {
+                $("#action").val('save');
+                $("#bookform").submit();
+            }
+        }
+
+        function previewMessage() {
+            var okay = false;
+            okay = $("#bookform").validate({
+                errorClass: 'has-error',
+                validClass: 'has-success',
+                errorElement: 'span',
+                highlight: function (element, errorClass, validClass) {
+                    $(element).parents("div[class='form-group']").addClass(errorClass).removeClass(validClass);
+                },
+                unhighlight: function (element, errorClass, validClass) {
+                    $(element).parents(".has-error").removeClass(errorClass).addClass(validClass);
+                }
+            }).form();
+
+            if (okay) {
+                $("#action").val('preview');
+                $("#bookform").submit();
+            }
+        }
+
+        function sendMessage() {
+            var okay = false;
+            okay = $("#bookform").validate({
+                errorClass: 'has-error',
+                validClass: 'has-success',
+                errorElement: 'span',
+                highlight: function (element, errorClass, validClass) {
+                    $(element).parents("div[class='form-group']").addClass(errorClass).removeClass(validClass);
+                },
+                unhighlight: function (element, errorClass, validClass) {
+                    $(element).parents(".has-error").removeClass(errorClass).addClass(validClass);
+                }
+            }).form();
+
+            if (okay) {
+                bootbox.confirm("Are you sure you want to save and send this newsletter to the distribution list?", function(result) {
+                    if (result==true)
+                    {
+                        $("#action").val('send');
+                        $("#bookform").submit();
+                    }
+                });
+            }
+        }
     </script>
 @stop

@@ -5,10 +5,10 @@
 	"license": "MIT",
 	"type": "project",
 	"repositories": [
-	{
-	    "type": "vcs",
-	    "url": "tcs@beta.verilion.com:repo.git/vcms.git"
-	}
+		{
+			"type": "vcs",
+			"url": "git@bitbucket.org:tsawler/vcms.git"
+		}
 	],
 	"require": {
       "laravel/framework": "4.2.*",

@@ -10,3 +10,4 @@ Thumbs.db
 .env
 .idea
 /app/views/packages/verilion/vcms/partials/admin-nav.blade.php
+/public/newsletter_images
