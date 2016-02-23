@@ -34,17 +34,17 @@
 
                 <br>
                 <div class="form-group">
-                    {{ Form::label('image', 'Article Image')}}
+                    {{ Form::label('image', 'Newsletter Image')}}
                     {{ Form::file('image_name',['class' => 'image_name', 'id' => 'image_name']) }}
                 </div>
 
                 @if(strlen($newsletter->image_name) > 0)
-                    image
+                    <img src="/newsletter_images/{{ $newsletter->image_name }}">
                 @endif
 
                 <br>
                 <div class="form-group">
-                    {{ Form::label('title', 'Article title', array('class' => 'control-label')); }}
+                    {{ Form::label('title', 'Newsletter title', array('class' => 'control-label')); }}
                     <div class="controls">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-font"></i></span>
@@ -58,7 +58,7 @@
 
 
                 <div class="form-group">
-                    {{ Form::label('article_content', 'Article Content', array('class' => 'control-label')); }}
+                    {{ Form::label('article_content', 'Newsletter Content', array('class' => 'control-label')); }}
                     <div class="controls">
                         {{ Form::textarea('article_content', null, ['id' => 'article_content']); }}
                     </div>
@@ -172,10 +172,6 @@
             if (okay) {
                 $("#bookform").attr('target', '_blank');
                 $("#action").val('preview');
-//                $("#preview_article_title").val($("#article_title").val());
-//                var data = CKEDITOR.instances.article_content.getData();
-//                $("#preview_article_content").val(data);
-//                $("#preview_newsleter_id").val($("#preview_newsletter_id").val());
                 $("#bookform").submit();
                 $('#bookform').attr('target', '');
             }
