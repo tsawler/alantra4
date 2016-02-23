@@ -51,10 +51,10 @@ return array(
 
 		'iron' => array(
 			'driver'  => 'iron',
-			'host'    => 'mq-aws-us-east-1.iron.io',
-			'token'   => 'your-token',
-			'project' => 'your-project-id',
-			'queue'   => 'your-queue-name',
+			'host'    => getenv('IRON_HOST'),
+			'token'   =>  getenv('IRON_TOKEN'),
+			'project' => getenv('IRON_PROJECT'),
+			'queue'   => getenv('IRON_QUEUE'),
 			'encrypt' => true,
 		),
 
