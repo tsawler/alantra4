@@ -35,8 +35,12 @@
                 <br>
                 <div class="form-group">
                     {{ Form::label('image', 'Article Image')}}
-                    {{ Form::file('image_name',['id' => 'image_name']) }}
+                    {{ Form::file('image_name',['class' => 'image_name', 'id' => 'image_name']) }}
                 </div>
+
+                @if(strlen($newsletter->image_name) > 0)
+                    image
+                @endif
 
                 <br>
                 <div class="form-group">
@@ -95,7 +99,7 @@
     <input type="hidden" name="article_title" id="preview_article_title">
     <input type="hidden" name="article_content" id="preview_article_content">
     <input type="hidden" name="id" id="preview_newsletter_id">
-    <input type="file" name="image_name" id="preview_image_name" class="hidden">
+
     {{ Form::close() }}
 @stop
 
@@ -146,6 +150,11 @@
             }
         }
 
+        $(".image_name").change(function(){
+
+
+        });
+
         function previewMessage() {
             var okay = false;
             okay = $("#bookform").validate({
@@ -161,12 +170,14 @@
             }).form();
 
             if (okay) {
+                $("#bookform").attr('target', '_blank');
                 $("#action").val('preview');
-                $("#preview_article_title").val($("#article_title").val());
-                var data = CKEDITOR.instances.article_content.getData();
-                $("#preview_article_content").val(data);
-                $("#preview_newsleter_id").val($("#preview_newsletter_id").val());
-                $("#preview_form").submit();
+//                $("#preview_article_title").val($("#article_title").val());
+//                var data = CKEDITOR.instances.article_content.getData();
+//                $("#preview_article_content").val(data);
+//                $("#preview_newsleter_id").val($("#preview_newsletter_id").val());
+                $("#bookform").submit();
+                $('#bookform').attr('target', '');
             }
         }
 

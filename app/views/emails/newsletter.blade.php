@@ -29,7 +29,7 @@
     </tr>
     @if(strlen($image) > 1)
     <tr>
-        <td>
+        <td colspan="2">
             <img src="{{ getenv('SECURE_URL') . "/newsletter_images/" . $image }}">
         </td>
     </tr>

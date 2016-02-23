@@ -90,6 +90,7 @@ Route::group(array('before' => 'auth.admin'), function ()
 
 	Route::group(array('before' => 'auth.admin.newsletter'), function()
 	{
+		Route::get('/admin/newsletter/drafts', 'NewsletterController@drafts');
 		Route::get('/admin/newsletter/create', 'NewsletterController@getCreate');
 		Route::post('/admin/newsletter/create', 'NewsletterController@postCreate');
 		Route::post('/admin/newsletter/preview', 'NewsletterController@previewNewsletter');
