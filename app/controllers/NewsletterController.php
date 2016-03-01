@@ -88,7 +88,7 @@ class NewsletterController extends BaseController
 
                 Mail::queue('emails.newsletter', $data, function ($message) use ($user_data) {
                     $message->from('donotreply@alantraleasing.com', 'Do not reply');
-                    $message->to($user_data['email'])->subject('Request for Quotation from website');
+                    $message->to($user_data['email'])->subject('Alantra\'s Newsletter');
                 });
             }
 

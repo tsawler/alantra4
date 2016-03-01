@@ -50,7 +50,8 @@
             <span style="font-size: 10pt">
                 98 Cougle Road<br />
                 Sussex NB E4E 5L5<br />
-                <a href="{{ getenv('SECUREURL') }}">www.alantraleasing.com</a>
+                <a href="{{ getenv('SECUREURL') }}">www.alantraleasing.com</a><br />
+                <a href="mailto:melissa@alantraleasing.com?subject=Unsubscribe">Click here to unsubscribe from our newsletter</a>
             </span>
             <br /><br />
         </td>
