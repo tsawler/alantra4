@@ -84,7 +84,7 @@ class NewsletterController extends BaseController
 
 
                 $user_data = [
-                    'email' => $item->email;
+                    'email' => $item->email,
                 ];
 
                 Mail::later(5, 'emails.newsletter', $data, function ($message) use ($user_data) {
