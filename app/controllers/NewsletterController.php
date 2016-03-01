@@ -82,12 +82,11 @@ class NewsletterController extends BaseController
 
             foreach ($recipients as $item) {
 
-
                 $user_data = [
                     'email' => $item->email,
                 ];
 
-                Mail::later(5, 'emails.newsletter', $data, function ($message) use ($user_data) {
+                Mail::queue('emails.newsletter', $data, function ($message) use ($user_data) {
                     $message->from('donotreply@alantraleasing.com', 'Do not reply');
                     $message->to($user_data['email'])->subject('Request for Quotation from website');
                 });
