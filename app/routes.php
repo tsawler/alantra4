@@ -1,9 +1,15 @@
 <?php
 
+Route::post('/queue', function(){
+    return Queue::marshal();
+});
+
 /**
  * Show home page
  */
 Route::get('/', 'AlantraPageController@showHome');
+
+Route::get('/drawings', 'ProductsController@drawings');
 
 Route::post('/subscribe', 'SubscriberController@postSubscribe');
 
@@ -87,6 +93,20 @@ Route::get('/testimonials', 'TestimonialController@getTestimonialsPage');
  */
 Route::group(array('before' => 'auth.admin'), function ()
 {
+
+	Route::group(array('before' => 'auth.admin.newsletter'), function()
+	{
+		Route::get('/admin/newsletter/drafts', 'NewsletterController@drafts');
+		Route::get('/admin/newsletter/archive', 'NewsletterController@archives');
+		Route::get('/admin/newsletter/subscribers', 'NewsletterController@subscribers');
+		Route::get('/admin/newsletter/delete-subscriber', 'NewsletterController@deleteSubscriber');
+		Route::get('/admin/newsletter/add-subscriber', 'NewsletterController@addSubscriber');
+		Route::get('/admin/newsletter/create', 'NewsletterController@getCreate');
+		Route::post('/admin/newsletter/create', 'NewsletterController@postCreate');
+		Route::post('/admin/newsletter/preview', 'NewsletterController@previewNewsletter');
+	});
+
+
 	// menus
 	Route::group(array('before' => 'auth.admin.menus'), function ()
 	{

@@ -204,6 +204,23 @@
                 </li>
             @endif
 
+            @if (Auth::user()->hasRole('mailing'))
+                @if (Request::segment(2) == 'newsletter')
+                    <li class='active'>
+                @else
+                    <li>
+                        @endif
+                        <a href="#"><i class="fa fa-file"></i> <span
+                                    class="nav-label">Newsletters</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/admin/newsletter/create">Create and Send Newsletter</a></li>
+                            <li><a href="/admin/newsletter/drafts">Draft Newsletters</a></li>
+                            <li><a href="/admin/newsletter/archive">Past Newsletters</a></li>
+                            <li><a href="/admin/newsletter/subscribers">Subscriber List</a></li>
+                        </ul>
+                    </li>
+                @endif
+
             <li>
                 <a href="/"><i class="fa fa-external-link"></i> <span class="nav-label">Public Site</span>
                     <span class="fa arrow"></span></a>

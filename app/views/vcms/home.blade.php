@@ -175,9 +175,15 @@
 
     @include('vcms.partials.top-nav')
 
+    <!-- mobile only -->
+    <div class="visible-xs well text-center">
+        <a class="btn btn-primary" href="tel:18004561800">Click to Call</a>
+        <a class="btn btn-primary" href="/quote">Request Quote</a>
+    </div>
+
 
     <!-- REVOLUTION SLIDER -->
-    <div class="slider fullwidthbanner-container roundedcorners">
+    <div class="slider fullwidthbanner-container roundedcorners hidden-xs">
         <div class="fullwidthbanner">
             <ul class="hide">
 

@@ -30,6 +30,22 @@ class ProductsController extends BaseController {
             ->with('products', $products);
     }
 
+
+    public function drawings()
+    {
+        $id = Input::get('id');
+        $product = Product::find($id);
+        $drawings = Product::find($id)->drawings()->get();
+
+        return View::make('drawings')
+            ->with('drawings', $drawings)
+            ->with('product', $product)
+            ->with('page_title', '')
+            ->with('meta_tags', '')
+            ->with('meta', '');
+    }
+
+
     /**
      * @return mixed
      */
