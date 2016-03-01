@@ -23,9 +23,11 @@ class NewsletterController extends BaseController
 
     public function postCreate()
     {
+        $id = 0;
 
         if (Input::get('id') > 0) {
             $newsletter = Newsletter::find(Input::get('id'));
+            $id = $newsletter->id;
         } else {
             $newsletter = new Newsletter();
         }
@@ -38,7 +40,7 @@ class NewsletterController extends BaseController
             $newsletter->article_title = $title;
             $newsletter->article_content = $new_content;
 
-            list($image_name, $ext) = $this->handleImage();
+            list($image_name, $ext) = $this->handleImage($id);
 
             $html = View::make('emails.newsletter')
                 ->with('image', $image_name . "." . $ext)
@@ -147,7 +149,7 @@ class NewsletterController extends BaseController
     /**
      * @return array
      */
-    protected function handleImage()
+    protected function handleImage($id = 0)
     {
         $image_name = "";
         $ext = "";
@@ -174,6 +176,12 @@ class NewsletterController extends BaseController
             }
 
             return [$image_name, $ext];
+        } else if ($id > 0) {
+                $newsletter = Newsletter::find($id);
+            $image = $newsletter->image_name;
+            $exploded = explode(".", $image);
+            $image_name = $exploded[0];
+            $ext = $exploded[1];
         }
 
         return [$image_name, $ext];
