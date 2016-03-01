@@ -9,6 +9,8 @@ Route::post('/queue', function(){
  */
 Route::get('/', 'AlantraPageController@showHome');
 
+Route::get('/drawings', 'ProductsController@drawings');
+
 Route::post('/subscribe', 'SubscriberController@postSubscribe');
 
 /**

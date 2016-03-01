@@ -45,23 +45,7 @@
                 </div>
                 @endforeach
             </div>
-
-            @if(sizeof($drawings) > 0)
-                <h3>{{ Lang::get('products.drawings') }}</h3>
-                <ul>
-                    @foreach($drawings as $drawing)
-                        <li>
-                            <a href="/product_drawings/{{ $drawing->drawing_file }}">
-                                {{ $drawing->drawing_title }}
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
-            @endif
-
-        </div>
-
-        <div class="col-sm-6 col-md-5">
+            <br>
             @if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
                 <h3>{{ $product->title_fr }}</h3>
             @else
@@ -69,10 +53,19 @@
             @endif
 
             @if ((Session::has('lang')) && (Session::get('lang') == 'fr'))
-                    <p>{{ $product->description_fr }}</p>
+                <p>{{ $product->description_fr }}</p>
             @else
-                    <p>{{ $product->description }}</p>
+                <p>{{ $product->description }}</p>
             @endif
+
+            @if(sizeof($drawings) > 0)
+                <a class="btn btn-primary" href="/drawings?id={{ $product->id }}">{{ Lang::get('products.drawings') }}</a>
+            @endif
+
+        </div>
+
+        <div class="col-sm-6 col-md-5">
+
 
             @if($product->id != 15)
                 <h4>{{ Lang::get('products.features') }}</h4>
