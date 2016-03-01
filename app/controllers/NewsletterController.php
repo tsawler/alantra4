@@ -126,13 +126,16 @@ class NewsletterController extends BaseController
     }
 
 
-    public function deleteSubscriber() {
+    public function deleteSubscriber()
+    {
         Subscriber::find(Input::get('id'))->delete();
+
         return Redirect::to('/admin/newsletter/subscribers');
     }
 
 
-    public function addSubscriber() {
+    public function addSubscriber()
+    {
         if (filter_var(Input::get('email'), FILTER_VALIDATE_EMAIL)) {
             $sub = new Subscriber();
             $sub->email = Input::get('email');
@@ -177,11 +180,13 @@ class NewsletterController extends BaseController
 
             return [$image_name, $ext];
         } else if ($id > 0) {
-                $newsletter = Newsletter::find($id);
+            $newsletter = Newsletter::find($id);
             $image = $newsletter->image_name;
-            $exploded = explode(".", $image);
-            $image_name = $exploded[0];
-            $ext = $exploded[1];
+            if (($image != null) && strlen($image) > 4) {
+                $exploded = explode(".", $image);
+                $image_name = $exploded[0];
+                $ext = $exploded[1];
+            }
         }
 
         return [$image_name, $ext];
