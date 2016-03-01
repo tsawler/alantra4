@@ -78,14 +78,20 @@ class NewsletterController extends BaseController
                 'content' => $new_content,
             ];
 
-            $user_data = [
-                'email' => 'trevor.sawler@gmail.com',
-            ];
+            $recipients = Subscriber::all();
 
-            Mail::later(5, 'emails.newsletter', $data, function ($message) use ($user_data) {
-                $message->from('donotreply@alantraleasing.com', 'Do not reply');
-                $message->to($user_data['email'])->subject('Request for Quotation from website');
-            });
+            foreach ($recipients as $item) {
+
+
+                $user_data = [
+                    'email' => $item->email;
+                ];
+
+                Mail::later(5, 'emails.newsletter', $data, function ($message) use ($user_data) {
+                    $message->from('donotreply@alantraleasing.com', 'Do not reply');
+                    $message->to($user_data['email'])->subject('Request for Quotation from website');
+                });
+            }
 
             $newsletter->sent = 1;
             $newsletter->save();
