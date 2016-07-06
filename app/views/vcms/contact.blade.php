@@ -67,7 +67,6 @@
         <strong>Sharon Turner</strong>, Accounting Department<br>
         <strong>Stacy Mazerolle</strong>, Administration<br>
         <strong>Rob Aiton</strong>, Purchasing<br>
-        <strong>Graham Moore</strong>, PreFab Panel Manager<br>
         <strong>Richard Buxton</strong>, Sales Rep/Manager for Nova Scotia<br>
         <strong>Earl MacLeod</strong>, Sales Rep/Manager for Prince Edward Island<br>
         <strong>Ronald Irving</strong>, Sales Rep/Manager for Quebec<br>
@@ -75,7 +74,9 @@
         <strong>Colin Butt</strong>, Sales Rep/Manager for West Newfoundland<br>
         <strong>Tom Lush</strong>, Sales Rep/Manager for East Newfoundland<br>
         <strong>Eugene Stagg</strong>, Maintenance Manager for East<br>
-        <strong>Claude Belanger</strong>, Maintenance Manager for Quebec<br></p>
+        <strong>Claude Belanger</strong>, Maintenance Manager for Quebec<br>
+        <strong>Melissa de Winter</strong>, Sales Representative<br>
+        <strong>Erika de Winter</strong>, Marketing<br></p>
 
 
         <hr>

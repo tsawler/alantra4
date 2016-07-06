@@ -76,7 +76,6 @@
         <strong>Sharon Turner</strong>, service de comptabilité<br>
         <strong>Stacy Mazerolle</strong>, administration<br>
         <strong>Rob Aiton</strong>, approvisionnement<br>
-        <strong>Graham Moore</strong>, gérant, panneaux préfabriqués<br>
         <strong>Richard Buxton</strong>, rep. des ventes/gérant pour la Nouvelle-Écosse<br>
         <strong>Earl MacLeod</strong>, rep. des ventes/gérant pour l’Île-du-Prince-Édouard<br>
         <strong>Ronald Irving</strong>, rep. des ventes/gérant pour le Québec<br>
@@ -84,7 +83,9 @@
         <strong>Colin Butt</strong>, rep. des ventes/gérant pour l’Ouest de Terre-Neuve<br>
         <strong>Tom Lush</strong>, rep. des ventes/gérant pour l’Est de Terre-Neuve<br>
         <strong>Eugene Stagg</strong>, gérant de l’entretien pour l’Est<br>
-        <strong>Claude Belanger</strong>, gérant de l’entretien pour le Québec<br></p>
+        <strong>Claude Belanger</strong>, gérant de l’entretien pour le Québec<br>
+        <strong>Melissa de Winter</strong>, Sales Representative<br>
+        <strong>Erika de Winter</strong>, Marketing</p>
 
 
         <hr>
