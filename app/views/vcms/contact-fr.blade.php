@@ -84,8 +84,8 @@
         <strong>Tom Lush</strong>, rep. des ventes/gérant pour l’Est de Terre-Neuve<br>
         <strong>Eugene Stagg</strong>, gérant de l’entretien pour l’Est<br>
         <strong>Claude Belanger</strong>, gérant de l’entretien pour le Québec<br>
-        <strong>Melissa de Winter</strong>, Sales Representative<br>
-        <strong>Erika de Winter</strong>, Marketing</p>
+        <strong>Melissa de Winter</strong>, représentante des ventes<br>
+        <strong>Erika de Winter</strong>, commercialisation</p>
 
 
         <hr>
