@@ -181,18 +181,18 @@
         <div class="row">
             <div class="form-group">
                 <div class="col-md-12">
-                    <label>How did you hear about us?</label>
+                    <label>Comment avez-vous entendu parler de nous?</label>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa  fa-fw fa-globe"></i></span>
                         <select name="how_heard" class="form-control required" id="how_heard">
-                            <option value="">Please choose...</option>
-                            <option value="Word of mouth">Word of mouth</option>
-                            <option value="Used products before">Used products before</option>
-                            <option value="Digital advertisement">Digital Advertisement</option>
-                            <option value="Print advertisement">Print advertisement</option>
+                            <option value=""> </option>
+                            <option value="Word of mouth">Bouche à oreille</option>
+                            <option value="Used products before">Utilisé vos produits avant</option>
+                            <option value="Digital advertisement">La publicité en ligne</option>
+                            <option value="Print advertisement">Publicité imprimée</option>
                             <option value="Facebook">Facebook</option>
-                            <option value="Yellow Pages">Yellow Pages</option>
-                            <option value="Other">Other</option>
+                            <option value="Yellow Pages">Pages Jaunes</option>
+                            <option value="Other">Autre</option>
                         </select>
                     </div>
                 </div>
@@ -203,7 +203,7 @@
             <div class="row">
                 <div class="form-group">
                     <div class="col-md-12">
-                        <label>Please Specify</label>
+                        <label>Veuillez préciser</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa  fa-fw fa-font"></i></span>
                             <input type="text"  maxlength="100" class="form-control required" name="other_details">
