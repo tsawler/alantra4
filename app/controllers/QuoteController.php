@@ -1,6 +1,7 @@
 <?php
 
-class QuoteController extends BaseController {
+class QuoteController extends BaseController
+{
 
     /**
      * @return mixed
@@ -46,28 +47,32 @@ class QuoteController extends BaseController {
         $quote->interested_in = Input::get('interested_in');
         $quote->message = Input::get('message');
         $quote->delivery_location = Input::get('delivery_location');
+        $quote->how_heard = Input::get('how_heard');
+        $quote->other_details = Input::get('other_details');
 
         $quote->save();
 
         // build email
-        $user = array(
+        $user = [
             'email' => Input::get('email'),
-            'name'  => Input::get('full_name')
-        );
+            'name'  => Input::get('full_name'),
+        ];
 
         // the data that will be passed into the mail view blade template
-        $data = array(
-            'users_name'    => $user['name'],
-            'company'       => Input::get('company'),
-            'full_name'     => Input::get('full_name'),
-            'phone'         => Input::get('phone'),
-            'email'         => Input::get('email'),
-            'date_needed'   => Input::get('date_needed'),
-            'interested_in' => Input::get('interested_in'),
+        $data = [
+            'users_name'        => $user['name'],
+            'company'           => Input::get('company'),
+            'full_name'         => Input::get('full_name'),
+            'phone'             => Input::get('phone'),
+            'email'             => Input::get('email'),
+            'date_needed'       => Input::get('date_needed'),
+            'interested_in'     => Input::get('interested_in'),
             'delivery_location' => Input::get('delivery_location'),
-            'the_message'   => Input::get('message'),
-            'email'         => Input::get('email')
-        );
+            'how_heard'         => Input::get('how_heard'),
+            'other_details'     => Input::get('other_details'),
+            'the_message'       => Input::get('message'),
+            'email'             => Input::get('email'),
+        ];
 
         // use Mail::send function to send email passing the data and using the $user variable in the closure
         Mail::later(5, 'emails.quote_email', $data, function ($message) use ($user) {
