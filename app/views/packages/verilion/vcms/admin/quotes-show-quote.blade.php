@@ -25,6 +25,8 @@
             <p><strong>Date Needed:</strong> {{ $quote->date_needed }}</p>
             <p><strong>Interested In:</strong> {{ $quote->interested_in }}</p>
             <p><strong>Delivery Location:</strong> {{ $quote->delivery_location }}</p>
+            <p><strong>How Heard:</strong> {{ $quote->how_heard }}</p>
+            <p><strong>Other:</strong> {{ $quote->other_details }}</p>
             <p><strong>Message: </strong><br>
                 {{ nl2br($quote->message) }}
             </p>

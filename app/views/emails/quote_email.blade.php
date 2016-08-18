@@ -7,6 +7,8 @@
 <p><strong>Interested In:</strong> {{ $interested_in }}</p>
 <p><strong>Delivery Location:</strong> {{ $delivery_location }}</p>
 <p><strong>Date Needed:</strong> {{ $date_needed }}</p>
+<p><strong>How heard:</strong>{{ $how_heard }}</p>
+<p><strong>Other:</strong>{{ $other_details }}</p>
 <p><strong>Message</strong>:
     <br>
     {{ $the_message }}
