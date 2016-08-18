@@ -25,7 +25,20 @@
 @stop
 
 @section('banner')
-
+    <div class="fullwidthbanner-container">
+        <div class="owl-carousel controlls-over"
+             data-plugin-options='{
+                                "items": 4,
+                                "singleItem": true,
+                                "navigation": true,
+                                "autoPlay": true,
+                                "pagination": false}'>
+            <div>
+                <img alt="" class="img-responsive" src="/assets/custom/images/rotating/location_map_en.jpg">
+            </div>
+            </div>
+        </div>
+    </div>
 @stop
 
 @section('content')
@@ -49,10 +62,10 @@
         <strong>Alantra Head Office and Manufacturing Plant</strong><br>
         <br>
         <i class="fa fa-fw fa-map-marker"></i> 98 Cougle Road Sussex, NB E4E 5L5<br>
-        <a href="tel:18004561800>"<i class="fa fa-fw fa-phone"></i></a> Toll Free: 800-456-1800<br>
-        <a href="tel:15064333757"><i class="fa fa-fw fa-phone"></i></a> Phone: 506-433-3757<br>
+        <a href="tel:18004561800"><i class="fa fa-fw fa-phone"></i></a> Toll Free: 800-456-1800</a><br>
+        <a href="tel:15064333757"><i class="fa fa-fw fa-phone"></i></a> Phone: 506-433-3757</a><br>
         <i class="fa fa-fw fa-fax"></i> Fax: 506-432-9076<br>
-        <a href mailto:'info@alantraleasing.com'><i class="fa fa-fw fa-envelope"></i> info@alantraleasing.com</a>
+        <a href='mailto:info@alantraleasing.com'><i class="fa fa-fw fa-envelope"></i> info@alantraleasing.com</a>
         <br><br>
 
         <strong>Alantra&rsquo;s Corporate Headquarters Team</strong><br><br>
@@ -73,10 +86,11 @@
         <strong>George Rodgers</strong>, Sales Rep/Manager for Labrador<br>
         <strong>Colin Butt</strong>, Sales Rep/Manager for West Newfoundland<br>
         <strong>Tom Lush</strong>, Sales Rep/Manager for East Newfoundland<br>
-        <strong>Eugene Stagg</strong>, Maintenance Manager for East<br>
+        <strong>Eugene Stagg</strong>, Maintenance Manager for East Newfoundland<br>
         <strong>Claude Belanger</strong>, Maintenance Manager for Quebec<br>
         <strong>Melissa de Winter</strong>, Sales Representative<br>
-        <strong>Erika de Winter</strong>, Marketing<br></p>
+        <strong>Erika de Winter</strong>, Marketing<br>
+        <strong>Matthew Allan</strong>, Design and Quality Assurance</p>
 
 
         <hr>
