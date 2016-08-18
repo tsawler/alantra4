@@ -189,6 +189,27 @@
         <div class="row">
             <div class="form-group">
                 <div class="col-md-12">
+                    <label>How did you hear about us?</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa  fa-fw fa-globe"></i></span>
+                        <select name="how-heard" class="form-control required">
+                            <option value="">Please choose...</option>
+                            <option value="Word of mouth">Word of mouth</option>
+                            <option value="Used products before">Used products before</option>
+                            <option value="Digital advertisement">Digital Advertisement</option>
+                            <option value="Print advertisement">Print advertisement</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Yellow Pages">Yellow Pages</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-12">
                     <label>Message *</label>
                     <textarea  maxlength="5000" rows="10" class="form-control required" name="message" id="contact_comment"></textarea>
                 </div>
