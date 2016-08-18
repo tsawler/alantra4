@@ -189,6 +189,41 @@
         <div class="row">
             <div class="form-group">
                 <div class="col-md-12">
+                    <label>How did you hear about us?</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa  fa-fw fa-globe"></i></span>
+                        <select name="how_heard" class="form-control required" id="how_heard">
+                            <option value="">Please choose...</option>
+                            <option value="Word of mouth">Word of mouth</option>
+                            <option value="Used products before">Used products before</option>
+                            <option value="Digital advertisement">Digital Advertisement</option>
+                            <option value="Print advertisement">Print advertisement</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Yellow Pages">Yellow Pages</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="otherdiv" class="hidden">
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <label>Please Specify</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa  fa-fw fa-font"></i></span>
+                            <input type="text"  maxlength="100" class="form-control required" name="other_details">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-12">
                     <label>Message *</label>
                     <textarea  maxlength="5000" rows="10" class="form-control required" name="message" id="contact_comment"></textarea>
                 </div>
@@ -223,6 +258,14 @@
                     $(element).parents(".text-danger").removeClass(errorClass).addClass(validClass);
                 }
             });
+        });
+
+        $("#how_heard").change(function(){
+           if ($("#how_heard").val() == 'Other') {
+               $("#otherdiv").removeClass('hidden');
+           } else {
+               $("#otherdiv").addClass('hidden');
+           }
         });
     </script>
 @stop
