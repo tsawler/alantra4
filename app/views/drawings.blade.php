@@ -47,6 +47,12 @@
                 </ul>
 
 
+                <a href="/quote"
+                   class="btn btn-primary btn-lg btn-margin-top">
+                    <i class="fa fa-external-link"></i> Request a Quote
+                </a>
+
+
             </div>
 
         </div>
