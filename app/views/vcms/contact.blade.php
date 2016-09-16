@@ -25,20 +25,20 @@
 @stop
 
 @section('banner')
-    <div class="fullwidthbanner-container">
-        <div class="owl-carousel controlls-over"
-             data-plugin-options='{
-                                "items": 4,
-                                "singleItem": true,
-                                "navigation": true,
-                                "autoPlay": true,
-                                "pagination": false}'>
-            <div>
-                <img alt="" class="img-responsive" src="/assets/custom/images/rotating/location_map_en.jpg">
-            </div>
-            </div>
-        </div>
-    </div>
+    {{--<div class="fullwidthbanner-container">--}}
+        {{--<div class="owl-carousel controlls-over"--}}
+             {{--data-plugin-options='{--}}
+                                {{--"items": 4,--}}
+                                {{--"singleItem": true,--}}
+                                {{--"navigation": true,--}}
+                                {{--"autoPlay": true,--}}
+                                {{--"pagination": false}'>--}}
+            {{--<div>--}}
+                {{--<img alt="" class="img-responsive" src="/assets/custom/images/rotating/location_map_en.jpg">--}}
+            {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
 @stop
 
 @section('content')
