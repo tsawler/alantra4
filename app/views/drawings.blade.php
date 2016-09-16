@@ -42,7 +42,7 @@
 
                 <ul> 
                     @foreach($drawings as $drawing) 
-                        <li>  <a href="/product_drawings/{{ $drawing->drawing_file }}">  {{ $drawing->drawing_title }}  </a> </li> 
+                        <li>  <a target="_blank" href="/product_drawings/{{ $drawing->drawing_file }}">  {{ $drawing->drawing_title }}  </a> </li> 
                     @endforeach
                 </ul>
 
