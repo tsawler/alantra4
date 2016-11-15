@@ -74,12 +74,14 @@
         <strong>Kim Benson</strong>, Sales Representative<br>
         <strong>Mark Green</strong>, Comptroller<br>
         <strong>Mary Maxwell</strong>, Accounts Department<br>
+        <strong>Judy Mitton</strong>, Accounts Department<br>
         <strong>Rebecca Richardson</strong>, Operations Manager, Service<br>
         <strong>Ryan Colpitts</strong>, Design<br>
         <strong>Denise Brown</strong>, Design &amp; Quality Assurance<br>
         <strong>Sharon Turner</strong>, Accounting Department<br>
         <strong>Stacy Mazerolle</strong>, Administration<br>
         <strong>Rob Aiton</strong>, Purchasing<br>
+        <strong>Dwight Lunnie</strong>, Sales Rep/Manager for Northern New Brunswick<br>
         <strong>Richard Buxton</strong>, Sales Rep/Manager for Nova Scotia<br>
         <strong>Earl MacLeod</strong>, Sales Rep/Manager for Prince Edward Island<br>
         <strong>Ronald Irving</strong>, Sales Rep/Manager for Quebec<br>
@@ -90,7 +92,7 @@
         <strong>Claude Belanger</strong>, Maintenance Manager for Quebec<br>
         <strong>Melissa de Winter</strong>, Sales Representative<br>
         <strong>Erika de Winter</strong>, Marketing<br>
-        <strong>Matthew Allan</strong>, Design and Quality Assurance</p>
+        <strong>Jennifer Wilcox</strong>, Design and Quality Assurance</p>
 
 
         <hr>
