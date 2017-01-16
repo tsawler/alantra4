@@ -82,7 +82,6 @@
         <strong>Stacy Mazerolle</strong>, Administration<br>
         <strong>Rob Aiton</strong>, Purchasing<br>
         <strong>Dwight Lunnie</strong>, Sales Rep/Manager for Northern New Brunswick<br>
-        <strong>Richard Buxton</strong>, Sales Rep/Manager for Nova Scotia<br>
         <strong>Earl MacLeod</strong>, Sales Rep/Manager for Prince Edward Island<br>
         <strong>Ronald Irving</strong>, Sales Rep/Manager for Quebec<br>
         <strong>George Rodgers</strong>, Sales Rep/Manager for Labrador<br>
