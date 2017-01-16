@@ -93,7 +93,6 @@
         <strong>Stacy Mazerolle</strong>, administration<br>
         <strong>Rob Aiton</strong>, approvisionnement<br>
         <strong>Dwight Lunnie</strong>, eprésentante des ventes, Nouveau-Brunswick (Nord)<br>
-        <strong>Richard Buxton</strong>, rep. des ventes/gérant pour la Nouvelle-Écosse<br>
         <strong>Earl MacLeod</strong>, rep. des ventes/gérant pour l’Île-du-Prince-Édouard<br>
         <strong>Ronald Irving</strong>, rep. des ventes/gérant pour le Québec<br>
         <strong>George Rodgers</strong>, rep. des ventes/gérant pour le Labrador<br>
