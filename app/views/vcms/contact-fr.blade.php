@@ -101,6 +101,7 @@
         <strong>Eugene Stagg</strong>, gestionnaire de maintenance pour l'Est de Terre-Neuve<br>
         <strong>Claude Belanger</strong>, gérant de l’entretien pour le Québec<br>
         <strong>Melissa de Winter</strong>, représentante des ventes<br>
+        <strong>Ron Hatfield</strong>, représentante des ventes<br>
         <strong>Erika de Winter</strong>, commercialisation<br>
         <strong>Jennifer Wilcox </strong>, conception et assurance de la qualité</p></p>
 
