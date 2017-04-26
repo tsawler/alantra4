@@ -90,6 +90,7 @@
         <strong>Eugene Stagg</strong>, Maintenance Manager for East Newfoundland<br>
         <strong>Claude Belanger</strong>, Maintenance Manager for Quebec<br>
         <strong>Melissa de Winter</strong>, Sales Representative<br>
+        <strong>Ron Hatfield</strong>, Sales Representative<br>
         <strong>Erika de Winter</strong>, Marketing<br>
         <strong>Jennifer Wilcox</strong>, Design and Quality Assurance</p>
 
