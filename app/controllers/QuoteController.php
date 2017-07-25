@@ -79,8 +79,9 @@ class QuoteController extends BaseController
             $message->from('donotreply@alantraleasing.com', 'Do not reply');
 //            $message->to('info@alantraleasing.com')->subject('Request for Quotation from website');
             $message->to('erika.dewinter5@gmail.com')->subject('Request for Quotation from website');
-            $message->cc('info@alantraleasing.com')->subject('Request for Quotation from website');
+//            $message->cc('info@alantraleasing.com')->subject('Request for Quotation from website');
 //            $message->to('trevor.sawler@gmail.com')->subject('Request for Quotation from website');
+            $message->cc('trevor.sawler@gmail.com')->subject('Request for Quotation from website');
         });
 
         return Redirect::to('/')->with('message', 'Your request has been delivered');
