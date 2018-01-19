@@ -72,6 +72,8 @@
              src="https://www.facebook.com/tr?id=1064340703677336&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Facebook Pixel Code -->
+    <!-- Google Tag manager -->
+    <!-- Global site tag (gtag.js) - AdWords: 1039606680 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1039606680"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1039606680'); </script>
 </head>
 
 <body class="smoothscroll">
