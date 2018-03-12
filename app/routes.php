@@ -4,6 +4,25 @@ Route::post('/queue', function(){
     return Queue::marshal();
 });
 
+Route::get('/test-email', function(){
+    // the data that will be passed into the mail view blade template
+    $data = array(
+        'users_name'  => 'Trevor',
+        'the_message' => 'The comment',
+        'email'       => 'trevor.sawler@me.com',
+        'subject'     => 'The Subject'
+    );
+
+    // use Mail::send function to send email passing the data and using the $user variable in the closure
+    Mail::queue('emails.contact_email', $data, function ($message)
+    {
+        $message->from('donotreply@alantraleasing.com', 'Do not reply');
+        $message->to('trevor.sawler@me.com')->subject('Contact form from website');
+    });
+
+    return "Done";
+});
+
 /**
  * Show home page
  */
