@@ -44,13 +44,13 @@
             <hr>
         </td>
     </tr>
-    <tr style="background: silver;">
+    <tr>
         <td colspan="2" align="center">
             <br />
             <span style="font-size: 10pt">
-                New Brunswick &bull; Nova Scotial &bull; Prince Edward Island &bull; Newfoundland &amp; Labrador &bull; Quebec &bull; Ontario
+                New Brunswick &bull; Nova Scotial &bull; Prince Edward Island &bull; Newfoundland &amp; Labrador &bull; Quebec &bull; Ontario<br />
                 <a href="{{ getenv('SECUREURL') }}">www.alantraleasing.com</a><br />
-                1-800-456-1800
+                1-800-456-1800<br />
                 <a href="mailto:melissa@alantraleasing.com?subject=Unsubscribe">Click here to unsubscribe from our newsletter</a>
             </span>
             <br /><br />
