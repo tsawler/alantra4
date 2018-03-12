@@ -48,9 +48,9 @@
         <td colspan="2" align="center">
             <br />
             <span style="font-size: 10pt">
-                98 Cougle Road<br />
-                Sussex NB E4E 5L5<br />
+                New Brunswick &bull; Nova Scotial &bull; Prince Edward Island &bull; Newfoundland &amp; Labrador &bull; Quebec &bull; Ontario
                 <a href="{{ getenv('SECUREURL') }}">www.alantraleasing.com</a><br />
+                1-800-456-1800
                 <a href="mailto:melissa@alantraleasing.com?subject=Unsubscribe">Click here to unsubscribe from our newsletter</a>
             </span>
             <br /><br />
