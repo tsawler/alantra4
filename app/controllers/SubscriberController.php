@@ -4,24 +4,30 @@ class SubscriberController extends BaseController {
 
     public function postSubscribe()
     {
-        $sub = new Subscriber;
-        $sub->email = Input::get('email');
-        $sub->save();
+        $email = Input::get('email');
 
-        $data = [
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $sub = new Subscriber;
+            $sub->email = $email;
+            $sub->save();
 
-        ];
+            $data = [
 
-        $user_data = [
-            'email' => Input::get('email'),
-        ];
+            ];
 
-        Mail::queue('emails.join', $data, function ($message) use ($user_data) {
-            $message->from('donotreply@alantraleasing.com', 'Do not reply');
-            $message->to($user_data['email'])->subject('Welcome to Alantra\'s Newsletter');
-        });
+            $user_data = [
+                'email' => $email,
+            ];
 
-        return Redirect::to('/thanks');
+            Mail::queue('emails.join', $data, function ($message) use ($user_data) {
+                $message->from('donotreply@alantraleasing.com', 'Do not reply');
+                $message->to($user_data['email'])->subject('Welcome to Alantra\'s Newsletter');
+            });
+
+            return Redirect::to('/thanks');
+        } else {
+            return Redirect::to('/');
+        }
     }
 
 }
